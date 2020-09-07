@@ -3,15 +3,15 @@ import Navbar from '../Navbar/Navbar'
 import WebTop from '../WebTop/WebTop'
 import USP from '../USP/USP'
 import MobileSection from '../MobileSection/MobileSection'
-import VendorBG from '../../assets/group-13.png'
+import DeliveryBG from '../../assets/DeliveryMain.png'
 
-class Vendor extends React.Component{
+class Delivery extends React.Component{
 
     render(){
         return(
             <React.Fragment>
                 <Navbar />
-                <WebTop BG={VendorBG} highlight="Hurry's there to help you with deliveries" subText="We help your business to cater with the hyperlocal super fast delivery. Join us today" buttonText="BECOME A VENDOR" />
+                <WebTop BG={DeliveryBG} highlight="Change Lives and Start Earning" subText="Help us reach millions hearts by becoming delivery partner for Hurry's" buttonText="BECOME A PARTNER" />
                 <USP />
                 <MobileSection />
             </React.Fragment>
@@ -19,4 +19,4 @@ class Vendor extends React.Component{
     }
 }
 
-export default Vendor
+export default Delivery

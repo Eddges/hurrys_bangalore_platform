@@ -3,10 +3,10 @@ import classes from './WebTop.module.css'
 
 const WebTop = (props) => {
     return(
-        <div className={classes.WebTop}>
-            <span className={classes.Highlight}>Hurry's there to help you with deliveries</span>
-            <span className={classes.SubText}>We help your business to cater with the hyperlocal super fast delivery. Join us today</span>
-            <button className={classes.TopButton}>BECOME A VENDOR</button>
+        <div className={classes.WebTop} style={{'backgroundImage' : `url(${props.BG})`}}>
+            <span className={classes.Highlight}>{props.highlight}</span>
+            <span className={classes.SubText}>{props.subText}</span>
+            <button className={classes.TopButton}>{props.buttonText}</button>
         </div>
     )
 }
