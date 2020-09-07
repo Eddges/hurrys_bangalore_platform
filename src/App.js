@@ -8,8 +8,8 @@ class App extends React.Component{
   render(){
     return(
       <div>
-        {/* <Vendor /> */}
-        <Delivery />
+        <Vendor />
+        {/* <Delivery /> */}
       </div>
     )
   }
