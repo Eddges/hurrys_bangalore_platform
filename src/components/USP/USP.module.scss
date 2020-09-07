@@ -6,4 +6,31 @@
         font-family : 'Avenir Heavy';
         font-size : 2.2rem;
     }
+    .USPDiv{
+        width : 100%;
+        padding : 45px 0px;
+        display : flex;
+        justify-content: space-between;
+        flex-wrap : wrap;
+        .USPItem{
+            display : flex;
+            align-items: center;
+            .USPItemText{
+                display : flex;
+                flex-direction: column;
+                margin-left : 20px;
+                :nth-child(1){
+                    font-family: 'Avenir Heavy';
+                }
+                :nth-child(2){
+                    font-family: 'Avenir';
+                    color : #5a5a5a;
+                }
+                :nth-child(3){
+                    font-family: 'Avenir';
+                    color : #5a5a5a;
+                }
+            }
+        }
+    }
 }

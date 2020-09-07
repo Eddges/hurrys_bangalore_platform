@@ -8,4 +8,51 @@
   font-family: 'Avenir Heavy';
   font-size: 2.2rem;
 }
+
+.USP .USPDiv {
+  width: 100%;
+  padding: 45px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.USP .USPDiv .USPItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.USP .USPDiv .USPItem .USPItemText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 20px;
+}
+
+.USP .USPDiv .USPItem .USPItemText :nth-child(1) {
+  font-family: 'Avenir Heavy';
+}
+
+.USP .USPDiv .USPItem .USPItemText :nth-child(2) {
+  font-family: 'Avenir';
+  color: #5a5a5a;
+}
+
+.USP .USPDiv .USPItem .USPItemText :nth-child(3) {
+  font-family: 'Avenir';
+  color: #5a5a5a;
+}
 /*# sourceMappingURL=USP.module.css.map */

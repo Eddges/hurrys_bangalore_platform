@@ -1,0 +1,78 @@
+.MobileSection{
+    background-color : #00b246;
+    display : flex;
+    overflow: hidden;
+    .Left{
+        width : 50%;
+        padding : 80px 90px;
+        display : flex;
+        flex-direction: column;
+        justify-content: center;
+        position : relative;
+        .Title{
+            color : white;
+            font-family : 'Avenir Heavy';
+            font-size : 2.5rem;
+            position : relative;
+            z-index: 10;
+        }
+        .SubText{
+            color : white;
+            font-family : 'Avenir';
+            font-size : 2rem;
+            margin-top : 10px;
+            position : relative;
+            z-index: 10;
+        }
+        .Icons{
+            display : flex;
+            margin-top : 30px;
+            position : relative;
+            z-index: 10;
+            img{
+                width : 200px;
+            }
+        }
+        .Circle1{
+            width : 80px;
+            height : 80px;
+            position : absolute;
+            background-color : #00bd4a;
+            border-radius: 50%;
+            z-index : 0;
+            top : 30px;
+            right : 160px;
+        }
+        .Circle2{
+            width : 250px;
+            height : 250px;
+            position : absolute;
+            background-color : #00bd4a;
+            border-radius: 50%;
+            z-index : 0;
+            bottom : -200px;
+            right : 0px;
+        }
+        .Circle3{
+
+            position : absolute;
+            background-color : #00bd4a;
+            border-radius: 50%;
+            z-index : 0;
+            top : -100px;
+            left : -100px;
+            img{
+                width : 250px;
+                height : 250px;
+            }
+        }
+    }
+    .Right{
+        width : 50%;
+        display : flex;
+        align-items: center;
+        img{
+            width : 100%;
+        }
+    }
+}

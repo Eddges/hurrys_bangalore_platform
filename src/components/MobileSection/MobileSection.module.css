@@ -1,0 +1,104 @@
+.MobileSection {
+  background-color: #00b246;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.MobileSection .Left {
+  width: 50%;
+  padding: 80px 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.MobileSection .Left .Title {
+  color: white;
+  font-family: 'Avenir Heavy';
+  font-size: 2.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.MobileSection .Left .SubText {
+  color: white;
+  font-family: 'Avenir';
+  font-size: 2rem;
+  margin-top: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.MobileSection .Left .Icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.MobileSection .Left .Icons img {
+  width: 200px;
+}
+
+.MobileSection .Left .Circle1 {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background-color: #00bd4a;
+  border-radius: 50%;
+  z-index: 0;
+  top: 30px;
+  right: 160px;
+}
+
+.MobileSection .Left .Circle2 {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  background-color: #00bd4a;
+  border-radius: 50%;
+  z-index: 0;
+  bottom: -200px;
+  right: 0px;
+}
+
+.MobileSection .Left .Circle3 {
+  position: absolute;
+  background-color: #00bd4a;
+  border-radius: 50%;
+  z-index: 0;
+  top: -100px;
+  left: -100px;
+}
+
+.MobileSection .Left .Circle3 img {
+  width: 250px;
+  height: 250px;
+}
+
+.MobileSection .Right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.MobileSection .Right img {
+  width: 100%;
+}
+/*# sourceMappingURL=MobileSection.module.css.map */
