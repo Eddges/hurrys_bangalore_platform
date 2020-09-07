@@ -1,0 +1,45 @@
+.WebTop {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../assets/group-13.png");
+  background-position-x: left;
+  background-position-y: -200px;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 100px;
+  padding-top: 60px;
+}
+
+.WebTop .Highlight {
+  width: 400px;
+  font-size: 2.5rem;
+  line-height: 1.43;
+  font-family: 'Avenir';
+}
+
+.WebTop .SubText {
+  width: 350px;
+  font-size: 1.3rem;
+  margin-top: 25px;
+}
+
+.WebTop .TopButton {
+  width: 350px;
+  padding: 10px 10px;
+  background-color: black;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin-top: 40px;
+}
+/*# sourceMappingURL=WebTop.module.css.map */

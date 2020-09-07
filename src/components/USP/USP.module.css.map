@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EACA,KAAK,EAAG,IAAI;EACZ,OAAO,EAAG,SAAS;EACnB,gBAAgB,EAAG,OAAO;CAK7B;;AARD,AAII,IAJA,CAIA,WAAW,CAAA;EACP,WAAW,EAAG,cAAc;EAC5B,SAAS,EAAG,MAAM;CACrB",
+    "sources": [
+        "USP.module.scss"
+    ],
+    "names": [],
+    "file": "USP.module.css"
+}
