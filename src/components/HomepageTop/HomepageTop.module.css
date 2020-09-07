@@ -1,0 +1,111 @@
+.HomepageTop {
+  width: 100%;
+  height: 130vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2ff29), to(#fde237));
+  background-image: linear-gradient(to bottom, #f2ff29, #fde237);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 100px;
+}
+
+.HomepageTop .BG {
+  position: absolute;
+  height: 80%;
+  right: 0px;
+  bottom: 0px;
+  z-index: 0;
+}
+
+.HomepageTop .MainText {
+  font-family: 'Avenir';
+  width: 450px;
+  font-size: 3rem;
+  position: relative;
+  z-index: 10;
+}
+
+.HomepageTop .Highlite {
+  font-family: 'Avenir Heavy';
+}
+
+.HomepageTop .Rectangle {
+  margin-top: 50px;
+  width: 700px;
+  height: 80px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.HomepageTop .Rectangle input {
+  border: none;
+  background-color: transparent;
+  width: 46%;
+  font-size: 1.5rem;
+  margin-left: 30px;
+  padding: 10px 2%;
+}
+
+.HomepageTop .Rectangle .Locate {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.HomepageTop .Rectangle .Locate span {
+  color: #00b246;
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.HomepageTop .Rectangle .Locate:hover {
+  cursor: pointer;
+}
+
+.HomepageTop .Rectangle .ProceedButton {
+  color: white;
+  border: none;
+  background-color: black;
+  height: 66px;
+  padding: 0px 30px;
+  border-radius: 10px;
+  margin-right: 7px;
+  font-size: 1.5rem;
+}
+
+.HomepageTop .Rectangle .ProceedButton:hover {
+  cursor: pointer;
+}
+
+.HomepageTop .Frequent {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.HomepageTop .Frequent :nth-child(2) {
+  font-family: 'Avenir Heavy';
+}
+/*# sourceMappingURL=HomepageTop.module.css.map */
