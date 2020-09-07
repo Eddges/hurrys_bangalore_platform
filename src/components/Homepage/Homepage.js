@@ -5,6 +5,8 @@ import USP from '../USP/USP'
 import MobileSection from '../MobileSection/MobileSection'
 import HomepageTop from '../HomepageTop/HomepageTop'
 import Categories from '../Categories/Categories'
+import Testimonial from '../TestimonialSection/Testimonial';
+import Footer from '../Footer/Footer'
 
 class Homepage extends React.Component{
 
@@ -16,6 +18,8 @@ class Homepage extends React.Component{
                 <Categories />
                 <USP />
                 <MobileSection />
+                <Testimonial/>
+                <Footer/>
             </React.Fragment>
         )
     }
