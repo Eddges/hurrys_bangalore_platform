@@ -10,8 +10,9 @@ class App extends React.Component{
     return(
       <div>
         {/* <Vendor /> */}
-        {/* <Delivery /> */}
-        <Homepage />
+        <Delivery />
+        {/* <Homepage /> */}
+
       </div>
     )
   }

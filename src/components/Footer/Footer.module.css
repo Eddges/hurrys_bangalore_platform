@@ -1,0 +1,71 @@
+@import url(//db.onlinewebfonts.com/c/1a045963159927274c92b0444fb83c17?family=Avenir);
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 360px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    font-family: Avenir;
+  }
+  
+  .footer .footer_up {
+    display: flex;
+    flex-basis: 80%;
+    /* margin-top: 1em; */
+    width: 80%;
+    /* height: 259px; */
+    padding-left: 1em;
+    padding-right: 1em;
+    /* background-color: aliceblue; */
+    justify-content: start;
+    align-items: center;
+    border-bottom: 3px solid #55565b;
+  }
+  
+  
+  .footer .footer_up .box {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    background-color: black;
+    justify-content: center;
+  }
+  
+  .footer .footer_up .box img{
+    width: 160px;
+    height: 42px;
+  }
+  
+  
+  
+  .footer .footer_up .box p {
+    color: white;
+    line-height: 40px;
+    font-family: Avenir;
+  }
+  
+  .footer .footer_up .box .label {
+    font-weight: 700;
+  }
+  
+  .footer .footer_up .box .dummy {
+    color: black;
+  }
+  
+  
+  
+  
+  .footer .footer_down {
+    display: flex;
+    flex-basis: 20%;
+    width: 80%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+  
+  }
