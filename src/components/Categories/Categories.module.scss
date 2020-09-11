@@ -6,6 +6,7 @@
     .Heading{
         font-family : 'Avenir Heavy';
         font-size : 2rem;
+        // margin-left : 40px;
     }
     .CategoriesMain{
         margin-top : 40px;
@@ -13,6 +14,6 @@
         display : flex;
         flex-wrap : wrap;
         align-items: center;
-        justify-content: space-between;
+        // justify-content: space-between;
     }
 }
