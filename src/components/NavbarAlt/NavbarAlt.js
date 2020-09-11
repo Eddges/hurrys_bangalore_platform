@@ -5,8 +5,20 @@ import LocationIcon from '../../assets/location.svg'
 import DownIcon from '../../assets/chevron.svg'
 import UserIcon from '../../assets/user.svg'
 import CartIcon from '../../assets/cart.svg'
+import Cart from '../Cart/Cart'
+import CartGreenIcon from '../../assets/cart_green.svg'
 
 class NavbarAlt extends React.Component{
+    state={
+        showCart : false
+    }
+
+    handleCart = () => {
+        this.setState({
+            ...this.state,
+            showCart : !this.state.showCart
+        })
+    }
     render() {
         return(
             <React.Fragment>
@@ -23,13 +35,24 @@ class NavbarAlt extends React.Component{
 
                     <div className={classes.Right}>
                         <img className={classes.User} src={UserIcon} alt="User" />
-                        <div className={classes.Cart}>
-                            <img className={classes.Cart} src={CartIcon} alt="Cart" />
-                            <span className={classes.Count}>2</span>
-                        </div>
+                        {
+                            this.state.showCart ? 
+                            <div className={classes.Cart}>
+                                <img className={classes.Cart} src={CartGreenIcon} alt="Cart" onClick={this.handleCart} />
+                            </div>
+                                :
+                            <div className={classes.Cart}>
+                                <img className={classes.Cart} src={CartIcon} alt="Cart" onClick={this.handleCart} />
+                                <span className={classes.Count}>2</span>
+                            </div>
+                        }
+
                     </div>
                 </div>
                 <div className={classes.Space}></div>
+                {
+                    this.state.showCart ? <Cart /> : null
+                }
             </React.Fragment>
         )
     }

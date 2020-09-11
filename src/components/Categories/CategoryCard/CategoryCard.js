@@ -2,8 +2,13 @@ import React from 'react'
 import classes from './CategoryCard.module.css'
 
 const CategoryCard = (props) => {
+
+    const hrStyle = {
+        flexDirection : 'row'
+    }
+
     return(
-        <div className={classes.Container}>
+        <div className={classes.Container }>
             <div className={classes.Icon}>
                 <img src={props.icon} alt="Icon" />
             </div>

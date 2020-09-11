@@ -1,0 +1,89 @@
+.Container{
+    width : 100%;
+    // height : 100px;
+    // background-color : coral;
+    display : flex;
+    flex-direction: column;
+    .Top{
+        display : flex;
+        justify-content: space-between;
+        align-items: center;
+        .Shop{
+            display : flex;
+            flex-direction: column;
+            .Name{
+                font-family : 'Avenir Heavy';
+                font-size : 1.2rem;
+            }
+            .Details{
+                font-size : 0.9rem;
+                margin-top : 5px;
+            }
+        }
+        .ButtonAddMore{
+            color : #00b246;
+            font-family : 'Avenir Heavy';
+            border : none;
+            background-color : transparent;
+        }
+    }
+    .Mid{
+        display : flex;
+        flex-direction: column;
+        margin-top : 20px;
+        .MidTop{
+            display : flex;
+            justify-content: space-between;
+            .ItemCount{
+                color : #999999;
+                font-size : 0.8rem;
+            }
+            button{
+                background-color : transparent;
+                color : #00b246;
+                border : none;
+                font-family: 'Avenir Heavy';
+            }
+        }
+        .MidMid{
+            width : 100%;
+            display : flex;
+            flex-direction: column;
+            padding : 5px 0px;
+        }
+    }
+    .HRLine{
+        height : 1px;
+        width : 100%;
+        background-color : rgb(223, 223, 223);
+        // margin-top : 10px;
+    }
+    .Cutlery{
+        display : flex;
+        align-items: center;
+        // padding : 20px 0px;
+        justify-content: space-between;
+        padding : 10px 30px;
+        .CutleryText{
+            display : flex;
+            flex-direction: column;
+            .Span2{
+                color : #999;
+                // margin-top : 5px;
+                font-family : 'Avenir Heavy';
+                font-size : 0.8rem;
+            }
+        }
+        .CutleryPrice{
+            font-family: 'Avenir Heavy';
+        }
+    }
+    .Total{
+        width : 100%;
+        padding : 10px 30px;
+        font-family : 'Avenir Heavy';
+        display : flex;
+        justify-content: space-between;
+        font-size : 1.2rem;
+    }
+}

@@ -1,0 +1,63 @@
+.Container {
+  width: 390px;
+  height: 190px;
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.Container .Icon {
+  width: 130px;
+  height: 130px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Container .Icon img {
+  width: 100%;
+}
+
+.Container .Details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 10px 10px 20px 20px;
+  height: 70%;
+}
+
+.Container .Details .Name {
+  font-family: 'Avenir Heavy';
+  font-size: 1.2rem;
+}
+
+.Container .Details .Location {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.Container .Details .Discount {
+  color: #00b246;
+  font-family: 'AvenirNextW10-Medium';
+}
+/*# sourceMappingURL=AvailableShopsCard.module.css.map */

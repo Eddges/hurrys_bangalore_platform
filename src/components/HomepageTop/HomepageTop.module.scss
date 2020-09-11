@@ -15,6 +15,7 @@
         z-index : 0;
     }
     .MainText{
+        
         font-family : 'Avenir';
         width : 450px;
         font-size : 3rem;
@@ -75,6 +76,60 @@
         font-size : 1.2rem;
         :nth-child(2){
             font-family: 'Avenir Heavy';
+        }
+    }
+}
+
+
+@media(max-width : 576px){
+    .HomepageTop{
+        align-items: center;
+        padding : 10px 20px;
+        height : 120vh;
+        overflow: hidden;
+        .BG{
+            left : 0px;
+            height : 70%;
+        }
+        .MainText{
+            text-align: center;
+            width : 100%;
+            font-size : 2rem;
+            margin : 0px;
+        }
+        .Rectangle{
+            flex-wrap: wrap;
+            width : 90%;
+            height : auto;
+            padding : 20px;
+            input{
+                width : 100%;
+                padding : 10px 10px;
+                font-size : 1.2rem;
+                margin : 0px;
+                margin-bottom : 10px;
+            }
+            .Locate{
+                width : 55%;
+                margin : 0px;
+                padding : 5px;
+                span{
+                    font-size : 1.2rem;
+                }
+            }
+            .ProceedButton{
+                width : 45%;
+                padding : 0px;
+                margin : 0px;
+                font-size : 1.2rem;
+                height : 50px;
+            }
+        }
+        .Frequent{
+            z-index : 10;
+            width : 100%;
+            font-size : 1rem;
+            padding : 0px 20px;
         }
     }
 }

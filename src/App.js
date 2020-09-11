@@ -4,6 +4,7 @@ import Vendor from './components/Vendor/Vendor';
 import Delivery from './components/Delivery/Delivery';
 import Homepage from './components/Homepage/Homepage';
 import ProductsGrocery from './components/ProductsGrocery/ProductsGrocery';
+import ShopsAvailable from './components/ShopsAvailable/ShopsAvailable';
 
 class App extends React.Component{
   render(){
@@ -16,7 +17,7 @@ class App extends React.Component{
         <Route path="/delivery" exact render={() => <Delivery />} />
         <Route path="/vendor" exact render={() => <Vendor />} />
         <Route path="/grocery" exact render={() => <ProductsGrocery />} />
-
+        <Route path="/shops" exact render={() => <ShopsAvailable />} />
       </div>
     )
   }

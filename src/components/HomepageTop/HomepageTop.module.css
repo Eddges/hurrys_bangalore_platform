@@ -108,4 +108,60 @@
 .HomepageTop .Frequent :nth-child(2) {
   font-family: 'Avenir Heavy';
 }
+
+@media (max-width: 576px) {
+  .HomepageTop {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 20px;
+    height: 120vh;
+    overflow: hidden;
+  }
+  .HomepageTop .BG {
+    left: 0px;
+    height: 70%;
+  }
+  .HomepageTop .MainText {
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    margin: 0px;
+  }
+  .HomepageTop .Rectangle {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+  .HomepageTop .Rectangle input {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+  .HomepageTop .Rectangle .Locate {
+    width: 55%;
+    margin: 0px;
+    padding: 5px;
+  }
+  .HomepageTop .Rectangle .Locate span {
+    font-size: 1.2rem;
+  }
+  .HomepageTop .Rectangle .ProceedButton {
+    width: 45%;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.2rem;
+    height: 50px;
+  }
+  .HomepageTop .Frequent {
+    z-index: 10;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0px 20px;
+  }
+}
 /*# sourceMappingURL=HomepageTop.module.css.map */

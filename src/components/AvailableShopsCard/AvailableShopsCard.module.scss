@@ -1,0 +1,42 @@
+.Container{
+    width : 390px; 
+    height : 190px;
+    margin-left : 20px;
+    display : flex;
+    align-items: center;
+    padding : 10px;
+    margin-top : 10px;
+    // margin : 0px;
+    // background-color : coral;
+    .Icon{
+        width : 130px;
+        height : 130px;
+        border-radius : 8px;
+        overflow: hidden;
+        display : flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 100%;
+        }
+    }
+    .Details{
+        // background-color : coral;
+        display : flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding : 10px 10px 20px 20px;
+        height : 70%;
+        .Name{
+            font-family : 'Avenir Heavy';
+            font-size : 1.2rem;
+        }
+        .Location{
+            color : rgba(0,0,0,0.5);
+        }
+        .Discount{
+            color : #00b246;
+            font-family : 'AvenirNextW10-Medium';
+        }
+    }
+}

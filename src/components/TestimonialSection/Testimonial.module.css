@@ -1,5 +1,5 @@
-@import url(//db.onlinewebfonts.com/c/1a045963159927274c92b0444fb83c17?family=Avenir);
-@import url(//db.onlinewebfonts.com/c/1a045963159927274c92b0444fb83c17?family=Avenir);
+/* @import url(//db.onlinewebfonts.com/c/1a045963159927274c92b0444fb83c17?family=Avenir);
+@import url(//db.onlinewebfonts.com/c/1a045963159927274c92b0444fb83c17?family=Avenir); */
 
 .testimonial_wrapper {
     display: flex;
@@ -120,4 +120,12 @@
     color: #55565b;
     margin-top: 1em;
     font-family: Avenir;
+}
+
+@media(max-width : 576px) {
+    .header_wrapper{
+        width : 100%;
+        text-align: center;
+        padding : 20px 0px;
+    }
 }

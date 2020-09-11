@@ -1,0 +1,40 @@
+.Main{
+    width : 100%;
+    overflow : auto;
+    display : flex;
+    // margin-bottom : 1px;
+    .Left{
+        // height : 90vh;
+        width : 25%;
+        overflow-y : auto;
+        // background-color : coral;
+        display : flex;
+        flex-direction: column;
+        background-color : rgba(128, 128, 128, 0.109);
+    }
+    .Right{
+        // height : 90vh;
+        width : 75%;
+        padding : 30px;
+        padding-top : 10px;
+        display : flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .Heading{
+            font-size : 1.5rem;
+            font-family : 'Avenir Heavy';
+            padding : 20px;
+            
+        }
+        // :nth-child(3){
+        //     margin-top : 50px;
+        // }
+        .AvailableList{
+            width : 100%;
+            display : flex;
+            flex-wrap: wrap;
+            // background-color: blue;
+            padding-bottom : 40px;
+        }
+    }
+}

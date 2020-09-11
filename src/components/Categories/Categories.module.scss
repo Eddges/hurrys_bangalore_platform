@@ -17,3 +17,15 @@
         // justify-content: space-between;
     }
 }
+
+@media(max-width : 576px) {
+    .Categories{
+        padding : 50px 10px;
+        .Heading{
+            text-align: center;
+        }
+        .CategoriesMain{
+            justify-content: space-evenly;
+        }
+    }
+}

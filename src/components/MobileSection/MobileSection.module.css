@@ -101,4 +101,39 @@
 .MobileSection .Right img {
   width: 100%;
 }
+
+@media (max-width: 576px) {
+  .MobileSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .MobileSection .Left {
+    width: 100%;
+    padding: 40px 20px;
+  }
+  .MobileSection .Left .Title {
+    font-size: 2rem;
+  }
+  .MobileSection .Left .SubText {
+    font-size: 1.5rem;
+  }
+  .MobileSection .Left .Icons img {
+    width: 150px;
+  }
+  .MobileSection .Left .Circle2 {
+    top: 15px;
+    right: -100px;
+  }
+  .MobileSection .Left .Circle3 {
+    bottom: 0px;
+    right: 0px;
+    display: none;
+  }
+  .MobileSection .Right {
+    width: 100%;
+    z-index: 10;
+  }
+}
 /*# sourceMappingURL=MobileSection.module.css.map */

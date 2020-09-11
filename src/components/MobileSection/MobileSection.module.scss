@@ -76,3 +76,42 @@
         }
     }
 }
+
+
+@media(max-width : 576px) {
+    .MobileSection{
+        flex-direction: column-reverse;
+        .Left{
+            width : 100%;
+            padding : 40px 20px;
+            .Title{
+                font-size : 2rem;
+            }
+            .SubText{
+                font-size : 1.5rem;
+            }
+            .Icons{
+                img{
+                    width : 150px;
+                }
+            }
+            .Circle1{
+                // display : none;
+            }
+            .Circle2{
+                top : 15px;
+                right : -100px;
+                // display : none;
+            }
+            .Circle3{
+                bottom : 0px;
+                right : 0px;
+                display : none;
+            }
+        }
+        .Right{
+            width : 100%;
+            z-index: 10;
+        }
+    }
+}

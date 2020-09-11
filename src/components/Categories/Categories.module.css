@@ -27,4 +27,18 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+@media (max-width: 576px) {
+  .Categories {
+    padding: 50px 10px;
+  }
+  .Categories .Heading {
+    text-align: center;
+  }
+  .Categories .CategoriesMain {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
 /*# sourceMappingURL=Categories.module.css.map */

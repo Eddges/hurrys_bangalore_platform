@@ -123,4 +123,8 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+.Container .Right .Cart:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=NavbarAlt.module.css.map */

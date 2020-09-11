@@ -1,0 +1,52 @@
+.Main {
+  width: 100%;
+  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Main .Left {
+  width: 25%;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(128, 128, 128, 0.109);
+}
+
+.Main .Right {
+  width: 75%;
+  padding: 30px;
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Main .Right .Heading {
+  font-size: 1.5rem;
+  font-family: 'Avenir Heavy';
+  padding: 20px;
+}
+
+.Main .Right .AvailableList {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+/*# sourceMappingURL=ShopsAvailable.module.css.map */

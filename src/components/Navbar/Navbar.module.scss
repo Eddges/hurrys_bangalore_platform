@@ -40,3 +40,26 @@
         }
     }
 }
+
+
+@media(max-width : 576px){
+    .Navbar{
+        width : 100%;
+        height : 80px;
+        // background-color : coral;
+        overflow : hidden;
+        .Logo{
+            height : 50%;
+            margin-left : 10px;
+        }
+        .NavButtons{
+            // background-color : coral;
+            .LoginButton{
+                margin-right : 10px;
+            }
+            .SignUpButton{
+                margin-right : 10px;
+            }
+        }
+    }
+}
