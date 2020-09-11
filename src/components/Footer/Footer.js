@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import hurraylogo from '../../assets/hurraylogo.png';
+import {NavLink} from 'react-router-dom'
 
 function Footer() {
     return (
@@ -18,8 +19,8 @@ function Footer() {
           <div className = {styles.box}>
             <p className = {styles.label} >CONTACT</p>
             <p>Help & Support</p>
-            <p>Become a Partner</p>
-            <p>Become a Seller</p>
+            <p><NavLink to="/delivery">Become a Partner</NavLink></p>
+            <p><NavLink to="/vendor">Become a Seller</NavLink></p>
           </div>
           <div className = {styles.box}>
             <p className = {styles.dummy} >CONTACT</p>

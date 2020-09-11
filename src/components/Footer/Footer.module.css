@@ -70,7 +70,11 @@
   
   }
 
-
+a{
+  text-decoration : none;
+  /* color : white; */
+  color : inherit;
+}
 
   @media(max-width : 576px) {
     .footer{
