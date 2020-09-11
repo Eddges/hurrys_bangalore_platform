@@ -11,7 +11,10 @@ function Testimonial() {
             <div className = {styles.box_container}>
                 <div className = {styles.box}>
                     <div className = {styles.box_up}>
+                        <div className={styles.avatar}>
                         <img src = {avatar}/>
+                        </div>
+                        
                         <p className = {styles.name}>Rounak Shah</p>
                         <p className = {styles.place}>Bangalore</p>
                     </div>
@@ -24,7 +27,9 @@ function Testimonial() {
                 </div>
                 <div className = {styles.box}>
                 <div className = {styles.box_up}>
+                    <div className={styles.avatar}>
                         <img src = {avatar}/>
+                    </div>
                         <p className = {styles.name}>Rounak Shah</p>
                         <p className = {styles.place}>Bangalore</p>
                     </div>
@@ -37,8 +42,9 @@ function Testimonial() {
                 </div>
                 <div className = {styles.box}>
                 <div className = {styles.box_up}>
+                    <div className={styles.avatar}>
                         <img src = {avatar}/>
-                        <p className = {styles.name}>Rounak Shah</p>
+                    </div>                        <p className = {styles.name}>Rounak Shah</p>
                         <p className = {styles.place}>Bangalore</p>
                     </div>
                     <div className = {styles.box_down}>
@@ -50,8 +56,9 @@ function Testimonial() {
                 </div>
                 <div className = {styles.box}>
                 <div className = {styles.box_up}>
+                    <div className={styles.avatar}>
                         <img src = {avatar}/>
-                        <p className = {styles.name}>Rounak Shah</p>
+                    </div>                        <p className = {styles.name}>Rounak Shah</p>
                         <p className = {styles.place}>Bangalore</p>
                     </div>
                     <div className = {styles.box_down}>

@@ -109,6 +109,22 @@
   font-family: 'Avenir Heavy';
 }
 
+@media (max-width: 1030px) {
+  .HomepageTop .Rectangle {
+    width: 500px;
+  }
+  .HomepageTop .Rectangle input {
+    width: 35%;
+    font-size: 0.8rem;
+  }
+  .HomepageTop .Rectangle .Locate {
+    width: 30%;
+  }
+  .HomepageTop .Rectangle .Locate span {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 576px) {
   .HomepageTop {
     -webkit-box-align: center;

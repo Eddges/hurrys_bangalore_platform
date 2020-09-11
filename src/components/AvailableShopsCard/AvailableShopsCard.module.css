@@ -60,4 +60,26 @@
   color: #00b246;
   font-family: 'AvenirNextW10-Medium';
 }
+
+@media (max-width: 576px) {
+  .Container {
+    width: 100%;
+    padding: 10px 15px 10px 15px;
+    margin-left: 0px;
+    margin-top: -40px;
+  }
+  .Container .Icon {
+    width: 90px;
+    height: 90px;
+  }
+  .Container .Details .Name {
+    font-size: 1rem;
+  }
+  .Container .Details .Delivery {
+    font-size: 0.9rem;
+  }
+  .Container .Details .Location {
+    font-size: 0.8rem;
+  }
+}
 /*# sourceMappingURL=AvailableShopsCard.module.css.map */

@@ -51,7 +51,7 @@ class NavbarAlt extends React.Component{
                 </div>
                 <div className={classes.Space}></div>
                 {
-                    this.state.showCart ? <Cart /> : null
+                    this.state.showCart ? <Cart handleCartBack={this.handleCart} /> : null
                 }
             </React.Fragment>
         )

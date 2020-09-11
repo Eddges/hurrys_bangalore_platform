@@ -89,3 +89,49 @@
         }
     }
 }
+
+
+
+@media(max-width : 576px) {
+    .Space{
+        height : 50px;
+    }
+    .Container{
+        height : auto;
+        flex-wrap : wrap;
+        // flex-direction: column;
+        justify-content: space-between;
+        .Left{
+            width : auto;
+            height : 50px;
+
+            .Logo{
+                margin-left : 20px;
+            }
+            .Search{
+                display : none;
+            }
+
+            .Location{
+                margin-left : 20px;
+                // min-width : 150px;
+                // background-color : coral;
+                .Text{
+                    font-size : 0.8rem;
+                    margin-left : 5px;
+                }
+                .Chevron{
+                    margin-left : 5px;
+                }
+            }
+        }
+        .Right{
+            width : auto;
+            padding : 0px 10px;
+            margin : 0px;
+            .Cart{
+                margin-left : 5px;
+            }
+        }
+    }
+}

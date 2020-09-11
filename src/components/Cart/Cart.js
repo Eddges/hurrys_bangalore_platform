@@ -68,6 +68,13 @@ class Cart extends React.Component{
         ]
     }
 
+    handleCartBack = () => {
+        this.setState({
+            ...this.state,
+            show : false
+        })
+    }
+
     render(){
         return(
             <div className={classes.Container}>
@@ -80,6 +87,7 @@ class Cart extends React.Component{
                                 )
                         })
                     }
+                    <button className={classes.ExitButton} onClick={this.props.handleCartBack}>Back</button>
                 </div>
             </div>
         )

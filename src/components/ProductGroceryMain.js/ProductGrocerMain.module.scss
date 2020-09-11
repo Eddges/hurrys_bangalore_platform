@@ -43,3 +43,37 @@
         flex-wrap : wrap;
     }
 }
+
+
+@media(max-width : 576px) {
+    .Container{
+        padding : 0px 00px;
+        overflow: hidden;
+        .Menu{
+            padding : 10px 0px;
+            height : 100px;
+            width : auto;
+            flex-wrap : nowrap;
+            overflow : auto;
+            // position : fixed;
+            .MenuItem{
+                // padding : 10px 30px;
+                height : 50px;
+                padding : 0px 00px;
+                min-width : 120px;
+                margin : 0px;
+                margin-left : 10px;
+                font-size : 0.8rem;
+                display : flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .HRLine{
+            margin-top : 5px;
+        }
+        .Main{
+            justify-content: center;
+        }
+    }
+}

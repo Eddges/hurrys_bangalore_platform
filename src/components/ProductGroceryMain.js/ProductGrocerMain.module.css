@@ -61,4 +61,44 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+
+@media (max-width: 576px) {
+  .Container {
+    padding: 0px 00px;
+    overflow: hidden;
+  }
+  .Container .Menu {
+    padding: 10px 0px;
+    height: 100px;
+    width: auto;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow: auto;
+  }
+  .Container .Menu .MenuItem {
+    height: 50px;
+    padding: 0px 00px;
+    min-width: 120px;
+    margin: 0px;
+    margin-left: 10px;
+    font-size: 0.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .Container .HRLine {
+    margin-top: 5px;
+  }
+  .Container .Main {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 /*# sourceMappingURL=ProductGrocerMain.module.css.map */

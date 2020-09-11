@@ -71,12 +71,21 @@
 
 }
 
-.testimonial_wrapper .box_container .box .box_up img{
+.testimonial_wrapper .box_container .box .box_up .avatar{
     margin-top: -60px;
     width: 120px;
     height: 120px;
     border-radius: 60px;
-    object-fit: fit;
+    /* object-fit: fit; */
+    overflow: hidden;
+}
+
+.testimonial_wrapper .box_container .box .box_up img{
+    margin-top: -60px;
+    width: 120%;
+    /* height: 120px; */
+    border-radius: 60px;
+    /* object-fit: fit; */
 }
 
 .testimonial_wrapper .box_container .box .box_up .name {

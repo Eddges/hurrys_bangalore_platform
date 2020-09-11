@@ -127,4 +127,46 @@
 .Container .Right .Cart:hover {
   cursor: pointer;
 }
+
+@media (max-width: 576px) {
+  .Space {
+    height: 50px;
+  }
+  .Container {
+    height: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .Container .Left {
+    width: auto;
+    height: 50px;
+  }
+  .Container .Left .Logo {
+    margin-left: 20px;
+  }
+  .Container .Left .Search {
+    display: none;
+  }
+  .Container .Left .Location {
+    margin-left: 20px;
+  }
+  .Container .Left .Location .Text {
+    font-size: 0.8rem;
+    margin-left: 5px;
+  }
+  .Container .Left .Location .Chevron {
+    margin-left: 5px;
+  }
+  .Container .Right {
+    width: auto;
+    padding: 0px 10px;
+    margin: 0px;
+  }
+  .Container .Right .Cart {
+    margin-left: 5px;
+  }
+}
 /*# sourceMappingURL=NavbarAlt.module.css.map */

@@ -19,7 +19,7 @@ class Homepage extends React.Component{
                 <USP />
                 <MobileSection />
                 <Testimonial/>
-                {/* <Footer/> */}
+                <Footer/>
             </React.Fragment>
         )
     }

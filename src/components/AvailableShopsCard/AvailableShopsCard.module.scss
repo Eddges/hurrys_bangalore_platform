@@ -40,3 +40,27 @@
         }
     }
 }
+
+@media(max-width : 576px) {
+    .Container{
+        width : 100%;
+        padding : 10px 15px 10px 15px;
+        margin-left : 0px;
+        margin-top : -40px;
+        .Icon{
+            width : 90px;
+            height : 90px;
+        }
+        .Details{
+            .Name{
+                font-size : 1rem;
+            }
+            .Delivery{
+                font-size : 0.9rem;
+            }
+            .Location{
+                font-size : 0.8rem;
+            }
+        }
+    }
+}

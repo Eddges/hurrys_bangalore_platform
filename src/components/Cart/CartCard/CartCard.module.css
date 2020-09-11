@@ -143,4 +143,14 @@
           justify-content: space-between;
   font-size: 1.2rem;
 }
+
+@media (max-width: 576px) {
+  .Container .Cutlery {
+    width: 100%;
+    padding: 10px 10px;
+  }
+  .Container .Cutlery .Span2 {
+    width: 80%;
+  }
+}
 /*# sourceMappingURL=CartCard.module.css.map */

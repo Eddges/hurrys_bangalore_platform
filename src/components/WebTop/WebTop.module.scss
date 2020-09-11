@@ -32,3 +32,29 @@
         margin-top : 40px;
     }
 }
+
+
+
+@media(max-width : 576px) {
+    .WebTop{
+        background-size : 180%;
+        background-position-y: 150px;
+        background-position-x : -280px;
+        padding : 20px;
+        overflow: hidden;
+        width : 100%;
+        .Highlight{
+            width : 100%;
+            font-size : 2rem;
+        }
+        .SubText{
+            width : 100%;
+            margin-top: 10px;
+            font-size : 1rem;
+            font-family: 'Avenir Heavy';
+        }
+        .TopButton{
+            width : 100%;
+        }
+    }
+}

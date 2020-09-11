@@ -38,3 +38,28 @@
         }
     }
 }
+
+
+
+@media(max-width : 576px) {
+    .Main{
+        flex-direction: column;
+        .Left{
+            width : 100%;
+            flex-direction: row;
+            overflow : auto;
+        }
+        .Right {
+            width : 100%;
+            padding : 00px;
+            .Heading {
+                padding : 10px 10px;
+                margin-top : 10px;
+            }
+            .AvailableList{
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

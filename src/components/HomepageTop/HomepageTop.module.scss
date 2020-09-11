@@ -81,6 +81,25 @@
 }
 
 
+@media(max-width : 1030px) {
+    .HomepageTop{
+        .Rectangle{
+            width : 500px;
+            input{
+                width : 35%;
+                font-size : 0.8rem;
+            }
+            .Locate{
+                width : 30%;
+                span{
+                    font-size : 1rem;
+                }
+            }
+        }
+    }
+}
+
+
 @media(max-width : 576px){
     .HomepageTop{
         align-items: center;

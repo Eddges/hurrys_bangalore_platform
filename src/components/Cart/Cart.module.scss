@@ -21,5 +21,26 @@
         right : 0px;
         z-index : 10;
         padding : 30px 20px;
+        .ExitButton{
+            font-family: 'Avenir Heavy';
+            color : white;
+            background-color : #00b246;
+            padding : 5px 20px;
+            border : none;
+            border-radius : 5px;
+            margin-left : 20px;
+            margin-top : 20px;
+        }
+    }
+}
+
+
+
+@media(max-width : 576px) {
+    .Container{
+        top : 50px;
+        .Main{
+            width : 100%;
+        }
     }
 }
