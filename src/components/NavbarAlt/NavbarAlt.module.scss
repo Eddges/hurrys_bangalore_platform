@@ -97,34 +97,39 @@
 
 @media(max-width : 576px) {
     .Space{
-        height : 50px;
+        height : 60px;
     }
     .Container{
         height : auto;
-        flex-wrap : wrap;
+        flex-wrap : nowrap;
         // flex-direction: column;
         justify-content: space-between;
         .Left{
             width : auto;
-            height : 50px;
+            height : 60px;
 
             .Logo{
-                margin-left : 20px;
+                margin-left : 15px;
+                height : 50%;
             }
             .Search{
                 display : none;
             }
 
             .Location{
+                // max-height : 1.5rem;
                 margin-left : 20px;
                 // min-width : 150px;
                 // background-color : coral;
+                // max-width : 150px;
+                overflow: hidden;
+                // background-color: coral;
                 .Text{
                     font-size : 0.8rem;
                     margin-left : 5px;
                 }
                 .Chevron{
-                    margin-left : 5px;
+                    margin-left : 3px;
                 }
             }
         }
@@ -132,8 +137,18 @@
             width : auto;
             padding : 0px 10px;
             margin : 0px;
+            .User{
+                height : 20px;
+            }
             .Cart{
-                margin-left : 5px;
+                margin-left : 8px;
+                padding : 0px;
+                height : 20px;
+                .Count{
+                    width : 12px;
+                    height : 12px;
+                    font-size : 0.6rem;
+                }
             }
         }
     }

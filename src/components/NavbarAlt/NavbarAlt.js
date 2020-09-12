@@ -31,7 +31,7 @@ class NavbarAlt extends React.Component{
                         </NavLink>
                         <div className={classes.Location}>
                             <img src={LocationIcon} alt="Location Icon" />
-                            <span className={classes.Text}>HSR Layout</span>
+                            <span className={classes.Text}>{this.props.location.generalAddress ? this.props.location.generalAddress : 'Get Location'}</span>
                             <img className={classes.Chevron} src={DownIcon} alt="Dropdown" />
                         </div>
                         <input className={classes.Search} placeholder="Search for restaurants, shops, brands, items etc." />
@@ -62,4 +62,19 @@ class NavbarAlt extends React.Component{
     }
 }
 
-export default NavbarAlt
+const mapStateToProps = state => {
+    return {
+        location : state.location
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onChangeLocation : (location) => dispatch({
+            type : 'CHANGE_LOCATION',
+            location : location
+        })
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavbarAlt)
