@@ -104,7 +104,8 @@
     .HomepageTop{
         align-items: center;
         padding : 10px 20px;
-        height : 120vh;
+        height : 100vh;
+        justify-content: flex-start;
         overflow: hidden;
         .BG{
             left : 0px;
@@ -115,12 +116,14 @@
             width : 100%;
             font-size : 2rem;
             margin : 0px;
+            margin-top : 30%;
         }
         .Rectangle{
             flex-wrap: wrap;
             width : 90%;
             height : auto;
             padding : 20px;
+            margin-top : 30%;
             input{
                 width : 100%;
                 padding : 10px 10px;

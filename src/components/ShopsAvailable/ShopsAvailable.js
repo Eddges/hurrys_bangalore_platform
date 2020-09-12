@@ -18,16 +18,17 @@ import bazaar from '../../assets/bazaar.jpeg'
 import CategoryCard from '../Categories/CategoryCard/CategoryCard'
 import CategoryCardShops from '../CategoryCardShops/CategoryCardShops'
 import AvailableShopsCard from '../AvailableShopsCard/AvailableShopsCard'
+import { connect } from 'react-redux'
 
 class ShopsAvailable extends React.Component{
 
     state={
-        active: "Food",
+        active: "food",
         shops : [
             {
                 name : 'Bangalore Bazaar',
                 available : true,
-                category : 'Grocery & Essentials',
+                category : 'grocery',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -37,7 +38,7 @@ class ShopsAvailable extends React.Component{
             {
                 name : 'Bangalore Bazaar',
                 available : true,
-                category : 'Grocery & Essentials',
+                category : 'grocery',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -47,7 +48,7 @@ class ShopsAvailable extends React.Component{
             {
                 name : 'Bangalore Bazaar',
                 available : true,
-                category : 'Grocery & Essentials',
+                category : 'grocery',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -57,7 +58,7 @@ class ShopsAvailable extends React.Component{
             {
                 name : 'Bangalore Bazaar',
                 available : true,
-                category : 'Grocery & Essentials',
+                category : 'grocery',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -67,7 +68,7 @@ class ShopsAvailable extends React.Component{
             {
                 name : 'Bangalore Bazaar',
                 available : true,
-                category : 'Grocery & Essentials',
+                category : 'grocery',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -77,7 +78,7 @@ class ShopsAvailable extends React.Component{
             {
                 name : 'Bangalore Bazaar',
                 available : true,
-                category : 'Grocery & Essentials',
+                category : 'grocery',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -87,7 +88,7 @@ class ShopsAvailable extends React.Component{
             {
                 name : 'Bangalore Bazaar',
                 available : true,
-                category : 'Grocery & Essentials',
+                category : 'grocery',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -97,7 +98,7 @@ class ShopsAvailable extends React.Component{
             {
                 name : 'Bangalore Bazaar',
                 available : true,
-                category : 'Grocery & Essentials',
+                category : 'grocery',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -107,7 +108,7 @@ class ShopsAvailable extends React.Component{
             {
                 name : 'Bangalore Bazaar',
                 available : true,
-                category : 'Grocery & Essentials',
+                category : 'grocery',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -117,7 +118,7 @@ class ShopsAvailable extends React.Component{
             {
                 name : 'Bangalore Bazaar',
                 available : false,
-                category : 'Grocery & Essentials',
+                category : 'grocery',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -127,7 +128,7 @@ class ShopsAvailable extends React.Component{
             {
                 name : 'Bangalore Bazaar',
                 available : false,
-                category : 'Grocery & Essentials',
+                category : 'grocery',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -137,7 +138,7 @@ class ShopsAvailable extends React.Component{
             {
                 name : 'Bangalore Bazaar',
                 available : false,
-                category : 'Grocery & Essentials',
+                category : 'grocery',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -147,7 +148,7 @@ class ShopsAvailable extends React.Component{
             {
                 name : 'Bangalore Bazaar',
                 available : false,
-                category : 'Grocery & Essentials',
+                category : 'grocery',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -157,7 +158,7 @@ class ShopsAvailable extends React.Component{
             {
                 name : 'Bangalore Bazaar',
                 available : true,
-                category : 'Food',
+                category : 'food',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -167,7 +168,7 @@ class ShopsAvailable extends React.Component{
             {
                 name : 'Bangalore Bazaar',
                 available : true,
-                category : 'Food',
+                category : 'food',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -177,7 +178,27 @@ class ShopsAvailable extends React.Component{
             {
                 name : 'Bangalore Bazaar',
                 available : false,
-                category : 'Food',
+                category : 'food',
+                delivery : '2 hour',
+                distance : '7 km',
+                icon : bazaar,
+                location : 'HSR Layout',
+                discount : 'Upto 40% off'
+            },
+            {
+                name : 'Fruits Market',
+                available : true,
+                category : 'fruits_veggies',
+                delivery : '2 hour',
+                distance : '7 km',
+                icon : bazaar,
+                location : 'HSR Layout',
+                discount : 'Upto 40% off'
+            },
+            {
+                name : 'Unavailable Fruits Market',
+                available : false,
+                category : 'fruits_veggies',
                 delivery : '2 hour',
                 distance : '7 km',
                 icon : bazaar,
@@ -201,27 +222,29 @@ class ShopsAvailable extends React.Component{
                 <NavbarAlt />
                 <div className={classes.Main}>
                     <div className={classes.Left}>
-                        <CategoryCardShops icon={grocery} text="Grocery & Essentials" active={this.state.active} handleCurrent={(value) => {this.handleCurrent(value)}} />
-                        <CategoryCardShops icon={food} text="Food" active={this.state.active} handleCurrent={(value) => {this.handleCurrent(value)}} />
-                        <CategoryCardShops icon={fruits} text="Fruits & Vegetables" active={this.state.active} handleCurrent={(value) => {this.handleCurrent(value)}}/>
-                        <CategoryCardShops icon={fish} text="Fish & Meat" toLink="/grocery" handleCurrent={(value) => {this.handleCurrent(value)}} />
-                        <CategoryCardShops icon={pet} text="Pet Supplies" toLink="/grocery" handleCurrent={(value) => {this.handleCurrent(value)}} />
-                        <CategoryCardShops icon={gift} text="Gift Shop" toLink="/grocery" handleCurrent={(value) => {this.handleCurrent(value)}} />
-                        <CategoryCardShops icon={meds} text="Medicine Stores" toLink="/grocery" handleCurrent={(value) => {this.handleCurrent(value)}} />
-                        <CategoryCardShops icon={apparels} text="Apparels" toLink="/grocery" handleCurrent={(value) => {this.handleCurrent(value)}} />
-                        <CategoryCardShops icon={health} text="Health & Wellness" toLink="/grocery" handleCurrent={(value) => {this.handleCurrent(value)}} />
-                        <CategoryCardShops icon={pkg} text="Package Pickup" toLink="/grocery" handleCurrent={(value) => {this.handleCurrent(value)}} />
-                        <CategoryCardShops icon={taxi} text="Taxi Service" toLink="/grocery" handleCurrent={(value) => {this.handleCurrent(value)}} />
-                        <CategoryCardShops icon={homeFood} text="Home Food" toLink="/grocery" handleCurrent={(value) => {this.handleCurrent(value)}} />
+                        <CategoryCardShops icon={grocery} text="Grocery & Essentials" toLink="grocery" />
+                        <CategoryCardShops icon={food} text="Food" toLink="food" active={this.state.active} />
+                        <CategoryCardShops icon={fruits} text="Fruits & Vegetables" toLink="fruits_veggies" />
+                        <CategoryCardShops icon={fish} text="Fish & Meat" toLink="fish_meat" />
+                        <CategoryCardShops icon={pet} text="Pet Supplies" toLink="pet" />
+                        <CategoryCardShops icon={gift} text="Gift Shop" toLink="gift" />
+                        <CategoryCardShops icon={meds} text="Medicine Stores" toLinkt="meds" />
+                        <CategoryCardShops icon={apparels} text="Apparels" toLink="apparels" />
+                        <CategoryCardShops icon={health} text="Health & Wellness" toLink="health" />
+                        <CategoryCardShops icon={pkg} text="Package Pickup" toLink="package" />
+                        <CategoryCardShops icon={taxi} text="Taxi Service" toLink="taxi" />
+                        <CategoryCardShops icon={homeFood} text="Home Food" toLink="home" />
                     </div>
                     <div className={classes.Right}>
                         <span className={classes.Heading}>Available Shops</span>
                         <div className={classes.AvailableList}>
                             {
                                 this.state.shops.map((iterator, index) => {
-                                    if(this.state.active===iterator.category && iterator.available) {
+                                    console.log('Active Category : ', this.props.activeCategory)
+                                    if(this.props.activeCategory===iterator.category && iterator.available) {
+                                        
                                         return(
-                                            <AvailableShopsCard {...iterator} available={true} />
+                                            <AvailableShopsCard {...iterator} available={true} key={index} />
                                         )
                                     }
                                 })
@@ -231,9 +254,9 @@ class ShopsAvailable extends React.Component{
                         <div className={classes.AvailableList}>
                         {
                                 this.state.shops.map((iterator, index) => {
-                                    if(this.state.active===iterator.category && !iterator.available) {
+                                    if(this.props.activeCategory===iterator.category && !iterator.available) {
                                         return(
-                                            <AvailableShopsCard {...iterator} available={false} />
+                                            <AvailableShopsCard {...iterator} available={false} key={index} />
                                         )
                                     }
                                 })
@@ -247,4 +270,11 @@ class ShopsAvailable extends React.Component{
     }
 }
 
-export default ShopsAvailable
+const mapStateToProps = state => {
+    return{
+        activeCategory : state.categoryDisplay
+    }
+}
+
+
+export default connect(mapStateToProps)(ShopsAvailable)

@@ -43,9 +43,11 @@
         padding : 20px;
         overflow: hidden;
         width : 100%;
+        justify-content: flex-start;
         .Highlight{
             width : 100%;
             font-size : 2rem;
+            margin-top : 45%;
         }
         .SubText{
             width : 100%;

@@ -64,7 +64,7 @@
 
 @media (max-width: 576px) {
   .Container {
-    padding: 0px 00px;
+    padding: 20px 00px;
     overflow: hidden;
   }
   .Container .Menu {

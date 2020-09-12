@@ -131,7 +131,10 @@
         -ms-flex-align: center;
             align-items: center;
     padding: 10px 20px;
-    height: 120vh;
+    height: 100vh;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     overflow: hidden;
   }
   .HomepageTop .BG {
@@ -143,6 +146,7 @@
     width: 100%;
     font-size: 2rem;
     margin: 0px;
+    margin-top: 30%;
   }
   .HomepageTop .Rectangle {
     -ms-flex-wrap: wrap;
@@ -150,6 +154,7 @@
     width: 90%;
     height: auto;
     padding: 20px;
+    margin-top: 30%;
   }
   .HomepageTop .Rectangle input {
     width: 100%;

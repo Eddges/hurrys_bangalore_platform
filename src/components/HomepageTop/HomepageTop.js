@@ -17,10 +17,10 @@ class HomepageTop extends React.Component{
                     </div>
                     <button className={classes.ProceedButton}>Proceed</button>
                 </div>
-                <div className={classes.Frequent}>
+                {/* <div className={classes.Frequent}>
                     <span>Frequent Locations: </span>
                     <span>Bangalore, Pune, Hyderabad, Chennai</span>   
-                </div>
+                </div> */}
             </div>
         )
     }

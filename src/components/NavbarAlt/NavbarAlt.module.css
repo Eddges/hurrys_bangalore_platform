@@ -35,6 +35,10 @@
   margin-left: 40px;
 }
 
+.Container .Logo img {
+  height: 100%;
+}
+
 .Container .Location {
   height: 100%;
   display: -webkit-box;

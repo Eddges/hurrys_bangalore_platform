@@ -7,6 +7,8 @@ import UserIcon from '../../assets/user.svg'
 import CartIcon from '../../assets/cart.svg'
 import Cart from '../Cart/Cart'
 import CartGreenIcon from '../../assets/cart_green.svg'
+import { NavLink } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 class NavbarAlt extends React.Component{
     state={
@@ -24,7 +26,9 @@ class NavbarAlt extends React.Component{
             <React.Fragment>
                 <div className={classes.Container}>
                     <div className={classes.Left}>
-                        <img className={classes.Logo} src={Logo} alt="Logo" />
+                        <NavLink className={classes.Logo} to="/">
+                            <img src={Logo} alt="Logo" />
+                        </NavLink>
                         <div className={classes.Location}>
                             <img src={LocationIcon} alt="Location Icon" />
                             <span className={classes.Text}>HSR Layout</span>

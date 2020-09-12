@@ -1,16 +1,36 @@
 import React from 'react'
 import classes from './CategoryCardShops.module.css'
+import {connect} from 'react-redux'
 
 const CategoryCardShops = (props) => {
 
     return(
-        <div className={classes.Container } style={props.active===props.text ? {'backgroundColor' : '#00b246'} : null} onClick={() => {props.handleCurrent(props.text)}}>
+        <div className={classes.Container } style={props.activeCategory===props.toLink ? {'backgroundColor' : '#00b246'} : null} 
+            onClick={() => {
+                props.changeCategory(props.toLink)
+                window.scrollTo(0, 0)
+            }}>
             <div className={classes.Icon}>
                 <img src={props.icon} alt="Icon" />
             </div>
-            <span className={classes.Text} style={props.active===props.text ? {'color' : '#fff'} : null}>{props.text}</span>
+            <span className={classes.Text} style={props.activeCategory===props.toLink ? {'color' : '#fff'} : null}>{props.text}</span>
         </div>
     )
 }
 
-export default CategoryCardShops
+const mapStateToProps = state => {
+    return{
+        activeCategory : state.categoryDisplay
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+        changeCategory : (category) => dispatch({
+            type : 'CHANGE_CATEGORY', 
+            category : category
+        })
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CategoryCardShops)

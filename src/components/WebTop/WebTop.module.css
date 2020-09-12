@@ -50,10 +50,14 @@
     padding: 20px;
     overflow: hidden;
     width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .WebTop .Highlight {
     width: 100%;
     font-size: 2rem;
+    margin-top: 45%;
   }
   .WebTop .SubText {
     width: 100%;

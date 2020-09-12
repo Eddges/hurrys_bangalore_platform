@@ -19,6 +19,10 @@
   margin-left: 100px;
 }
 
+.Navbar .Logo img {
+  height: 100%;
+}
+
 .Navbar .NavButtons {
   height: 100%;
   display: -webkit-box;

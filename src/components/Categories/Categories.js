@@ -21,18 +21,18 @@ class Categories extends React.Component{
             <div className={classes.Categories}>
                 <span className={classes.Heading}>Categories we serve</span>
                 <div className={classes.CategoriesMain}>
-                    <CategoryCard icon={grocery} text="Grocery & Essentials" toLink="/grocery" />
-                    <CategoryCard icon={food} text="Food" toLink="/grocery" />
-                    <CategoryCard icon={fruits} text="Fruits & Vegetables" toLink="/grocery" />
-                    <CategoryCard icon={fish} text="Fish & Meat" toLink="/grocery" />
-                    <CategoryCard icon={pet} text="Pet Supplies" toLink="/grocery" />
-                    <CategoryCard icon={gift} text="Gift Shop" toLink="/grocery" />
-                    <CategoryCard icon={meds} text="Medicine Stores" toLink="/grocery" />
-                    <CategoryCard icon={apparels} text="Apparels" toLink="/grocery" />
-                    <CategoryCard icon={health} text="Health & Wellness" toLink="/grocery" />
-                    <CategoryCard icon={pkg} text="Package Pickup" toLink="/grocery" />
-                    <CategoryCard icon={taxi} text="Taxi Service" toLink="/grocery" />
-                    <CategoryCard icon={homeFood} text="Home Food" toLink="/grocery" />
+                    <CategoryCard icon={grocery} text="Grocery & Essentials" toLink="grocery" />
+                    <CategoryCard icon={food} text="Food" toLink="food" />
+                    <CategoryCard icon={fruits} text="Fruits & Vegetables" toLink="fruits_veggies" />
+                    <CategoryCard icon={fish} text="Fish & Meat" toLink="fish_meat" />
+                    <CategoryCard icon={pet} text="Pet Supplies" toLink="pet" />
+                    <CategoryCard icon={gift} text="Gift Shop" toLink="gift" />
+                    <CategoryCard icon={meds} text="Medicine Stores" toLink="meds" />
+                    <CategoryCard icon={apparels} text="Apparels" toLink="apparels" />
+                    <CategoryCard icon={health} text="Health & Wellness" toLink="health" />
+                    <CategoryCard icon={pkg} text="Package Pickup" toLink="package" />
+                    <CategoryCard icon={taxi} text="Taxi Service" toLink="taxi" />
+                    <CategoryCard icon={homeFood} text="Home Food" toLink="home" />
 
                 </div>
             </div>
