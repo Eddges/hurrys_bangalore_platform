@@ -1,6 +1,12 @@
 const initialState = {
     categoryDisplay : 'grocery',
-    productCategoryDisplay : 'snacks'
+    productCategoryDisplay : 'snacks',
+    location : {
+        latitude : null,
+        longitude : null,
+        userAddress : null,
+        generalAddress : null
+    }
 }
 
 const Reducer = (state = initialState, action) => {
@@ -17,6 +23,18 @@ const Reducer = (state = initialState, action) => {
             return {
                 ...state,
                 productCategoryDisplay : action.category
+            }
+        case 'CHANGE_LOCATION' : 
+            console.log('Action dispatch ', action.location)
+            return {
+                ...state,
+                location : {
+                    ...state.location,
+                    latitude : action.location.latitude,
+                    longitude : action.location.longitude,
+                    userAddress : action.location.userAddress,
+                    generalAddress : action.location.generalAddress
+                },
             }
     }
     
