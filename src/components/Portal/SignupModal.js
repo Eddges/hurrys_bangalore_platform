@@ -17,7 +17,7 @@ const Button_el = {
 
 
 
-function ModalSignUp({ open , children, onClose}) {
+function ModalSignUp({ open , onClose}) {
     if(!open) return null;
 
     return ReactDom.createPortal (
