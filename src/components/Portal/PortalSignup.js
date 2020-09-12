@@ -37,16 +37,16 @@ const Other_Content_Styles = {
     padding:'10px'
 }
 
-function Portal() {
+function PortalSignup() {
     const [isOpen, setIsOpen] = useState(false);
     return (
     <>
         <div>
-            <p  onClick = {() => setIsOpen(true)} >Login</p>
+            <p  onClick = {() => setIsOpen(true)} >Signup</p>
         </div>
-        <Modal open = {isOpen} onClose = {()=> setIsOpen(false)}/>
+        <ModalSignUp open = {isOpen} onClose = {()=> setIsOpen(false)}/>
     </>
     )
 }
 
-export default Portal
+export default PortalSignup;
