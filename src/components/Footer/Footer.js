@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import hurraylogo from '../../assets/hurraylogo.png';
-import {NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom';
+import * as FaIcons from 'react-icons/fa';
 
 function Footer() {
     return (
@@ -9,6 +10,12 @@ function Footer() {
       <div className = {styles.footer_up}>
           <div className = {styles.box}>
             <img src = {hurraylogo}/>
+            <div className = {styles.icon_wrapper}>
+              <FaIcons.FaFacebookF style = {{color: 'white',}}/>
+              <FaIcons.FaInstagram style = {{color: 'white', marginLeft:'30px'}}/>
+              <FaIcons.FaTwitter style = {{color: 'white', marginLeft:'30px'}}/>
+            </div>
+            
           </div>
           <div className = {styles.box}>
             <p className = {styles.label} >COMPANY</p>

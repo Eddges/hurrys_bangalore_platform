@@ -34,6 +34,15 @@
     background-color: black;
     justify-content: center;
   }
+
+  .footer .footer_up .box .icon_wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 30px;
+    /* margin-left: 10px; */
+  }
   
   .footer .footer_up .box img{
     width: 160px;
@@ -91,14 +100,16 @@ a{
       flex-basis: 100%;
     }
 
-    .box{
+    .footer .footer_up .box{
       width : 100%;
-      height : 150px;
+      height : 200px;
       display : flex;
       flex-direction: column;
       align-items: flex-start;
-      padding-left : 40px;
+      /* padding-left : 40px; */
     }
+
+    
 
     .footer_down{
       padding : 20px 0px;
