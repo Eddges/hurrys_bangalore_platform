@@ -6,6 +6,7 @@ import {NavLink} from 'react-router-dom'
 // =======
 // import LogoBlack from '../../assets/LogoBlack.png';
 import Portal from '../../components/Portal/Portal';
+import PortalSignup from '../Portal/PortalSignup';
 // >>>>>>> bbefccee4b9b8e4eff56b2465134c1dc5ab1cefb
 
 const Navbar = (props) => {
@@ -17,7 +18,7 @@ const Navbar = (props) => {
             
             <div className={classes.NavButtons}>
                 <button className={classes.LoginButton}> <Portal/> </button>
-                <button className={classes.SignUpButton}>Sign Up</button>
+                <button className={classes.SignUpButton}> <PortalSignup/> </button>
             </div>
         </div>
     )

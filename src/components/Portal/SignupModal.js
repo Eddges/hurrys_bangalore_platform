@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import styles from './modal.module.css';
-import LoginModal from './LoginModal';
+import SignupContent from './SignupContent';
 
 
 
@@ -17,7 +17,7 @@ const Button_el = {
 
 
 
-function Modal({ open , children, onClose}) {
+function ModalSignUp({ open , onClose}) {
     if(!open) return null;
 
     return ReactDom.createPortal (
@@ -25,7 +25,7 @@ function Modal({ open , children, onClose}) {
           <div className = {styles.Overlay_Styles}/>
           <div className = {styles.Modal_Styles}>
             
-            <LoginModal onClose = {onClose} />
+            <SignupContent onClose = {onClose} />
             </div>
             
         </>,
@@ -34,4 +34,4 @@ function Modal({ open , children, onClose}) {
     )
 }
 
-export default Modal
+export default ModalSignUp;
