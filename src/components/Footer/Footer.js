@@ -31,9 +31,9 @@ function Footer() {
           </div>
           <div className = {styles.box}>
             <p className = {styles.dummy} >CONTACT</p>
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
-            <p>Refund & Cancellation</p>
+            <p><NavLink onClick={() => window.scroll(0,0)} to="/terms">Terms & Conditions</NavLink></p>
+            <p><NavLink onClick={() => window.scroll(0,0)} to="/privacy">Privacy Policy</NavLink></p>
+            <p><NavLink onClick={() => window.scroll(0,0)} to="/cancellation">Refund & Cancellation</NavLink></p>
           </div>
       </div>
       <div className = {styles.footer_down}>
