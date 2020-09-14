@@ -56,13 +56,48 @@
           justify-content: space-between;
 }
 
-.HomepageTop .Rectangle input {
+.HomepageTop .Rectangle .SearchDiv {
+  width: 46%;
+  position: relative;
+}
+
+.HomepageTop .Rectangle .SearchDiv input {
   border: none;
   background-color: transparent;
-  width: 46%;
-  font-size: 1.5rem;
+  width: 100%;
+  font-size: 1.2rem;
   margin-left: 30px;
   padding: 10px 2%;
+}
+
+.HomepageTop .Rectangle .SearchDiv .AutocompleteContainer {
+  position: absolute;
+  border-top: solid 1px #b5b5b5;
+  margin-top: 10px;
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.179);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.179);
+}
+
+.HomepageTop .Rectangle .SearchDiv .AutocompleteContainer .SuggestionItem {
+  padding: 15px;
+  font-family: 'Avenir';
+  width: 700px;
+  background-color: white;
+}
+
+.HomepageTop .Rectangle .SearchDiv .AutocompleteContainer .SuggestionItem:hover {
+  cursor: pointer;
+}
+
+.HomepageTop .Rectangle .SearchDiv .AutocompleteContainer .SuggestionItemActive {
+  padding: 15px;
+  font-family: 'Avenir';
+  width: 700px;
+  background-color: #f2f2f2;
+}
+
+.HomepageTop .Rectangle .SearchDiv .AutocompleteContainer .SuggestionItemActive:hover {
+  cursor: pointer;
 }
 
 .HomepageTop .Rectangle .Locate {

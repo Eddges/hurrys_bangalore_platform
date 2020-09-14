@@ -36,14 +36,45 @@
         display : flex;
         align-items: center;
         justify-content: space-between;
-        input{
-            border : none;
-            background-color : transparent;
+        .SearchDiv{
             width : 46%;
-            font-size : 1.5rem;
-            margin-left : 30px;
-            padding : 10px 2%;
+            position : relative;
+            input{
+                border : none;
+                background-color : transparent;
+                width : 100%;
+                font-size : 1.2rem;
+                margin-left : 30px;
+                padding : 10px 2%;
+            }
+            .AutocompleteContainer{
+                position : absolute;
+                // background-color : coral;
+                // left : 30px;
+                border-top : solid 1px #b5b5b5;
+                margin-top : 10px;
+                box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.179);
+                .SuggestionItem{
+                    padding : 15px;
+                    font-family : 'Avenir';
+                    width : 700px;
+                    background-color : white;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                .SuggestionItemActive{
+                    padding : 15px;
+                    font-family : 'Avenir';
+                    width : 700px;
+                    background-color : rgb(242, 242, 242);
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
         }
+
         .Locate{
             width : 25%;
             display : flex;

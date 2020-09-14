@@ -1,0 +1,41 @@
+.Container {
+  width: 100%;
+}
+
+.Container .Main {
+  width: 100%;
+  padding: 20px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container .Main .Logo img {
+  width: 200px;
+}
+
+.Container .Main .Soon {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.Container .Main .Available {
+  margin-top: 10px;
+}
+
+.Container .Main .Categories {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/*# sourceMappingURL=CategoryRedirect.module.css.map */

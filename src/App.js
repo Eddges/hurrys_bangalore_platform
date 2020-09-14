@@ -8,6 +8,8 @@ import ShopsAvailable from './components/ShopsAvailable/ShopsAvailable';
 import Cancellation from './components/FooterComponents/Cancellation';
 import Privacy from './components/FooterComponents/Privacy';
 import Terms from './components/FooterComponents/Terms';
+import CategoryRedirect from './components/CategoryRedirect/CategoryRedirect';
+import LocationSearchInput from './AutoComplete';
 
 class App extends React.Component{
   render(){
@@ -24,6 +26,8 @@ class App extends React.Component{
         <Route path="/cancellation" exact render={() => <Cancellation />} />
         <Route path="/privacy" exact render={() => <Privacy />} />
         <Route path="/terms" exact render={() => <Terms />} />
+        <Route path="/redirect" exact render={() => <CategoryRedirect />} />
+        {/* <LocationSearchInput /> */}
       </div>
     )
   }
