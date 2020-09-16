@@ -96,6 +96,10 @@
           justify-content: flex-end;
 }
 
+.Container .Right .User:hover {
+  cursor: pointer;
+}
+
 .Container .Right .Cart {
   margin-left: 20px;
   display: -webkit-box;
