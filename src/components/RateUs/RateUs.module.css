@@ -1,0 +1,230 @@
+.Container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Container .Main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Container .Main .Left {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 20;
+}
+
+.Container .Main .Left .Feedback {
+  top: 50px;
+  width: 500px;
+  position: absolute;
+  background-color: white;
+  border-radius: 8px;
+  border: solid 1px #f2f2f2;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.083);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.083);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.Container .Main .Left .Feedback .HRLine {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.083);
+}
+
+.Container .Main .Left .Feedback .Top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #999;
+  background-color: white;
+  padding: 20px 30px;
+}
+
+.Container .Main .Left .Feedback .Top ion-icon:hover {
+  cursor: pointer;
+}
+
+.Container .Main .Left .Feedback .DeliveryFeedback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px 100px 20px 30px;
+}
+
+.Container .Main .Left .Feedback .DeliveryFeedback .Stars {
+  margin-top: 10px;
+}
+
+.Container .Main .Left .Feedback .DeliveryFeedback .DeliveryInput {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  margin-top: 15px;
+  padding: 5px 0px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.22);
+}
+
+.Container .Main .Left .Feedback .SubmitButton {
+  border: none;
+  color: white;
+  font-family: 'Avenir Heavy';
+  background-color: #00b246;
+  margin-top: 50px;
+  margin-bottom: 55px;
+  width: 220px;
+  height: 35px;
+  border-radius: 5px;
+  margin-left: 30px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.152);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.152);
+}
+
+.Container .Main .Left .Feedback .SubmitButton:hover {
+  cursor: pointer;
+}
+
+.Container .Main .Right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px 50px;
+}
+
+.Container .Main .Right img {
+  width: 300px;
+}
+
+.Container .Bottom {
+  position: relative;
+}
+
+.Container .Bottom .BG {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.Container .Bottom .Right {
+  z-index: 10;
+  position: absolute;
+  height: 100%;
+  right: 0px;
+  top: 0px;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px 50px;
+  color: white;
+}
+
+.Container .Bottom .Right .Heading {
+  font-family: 'Avenir Heavy';
+  font-size: 1.5rem;
+}
+
+.Container .Bottom .Right .SubHeading {
+  margin-top: 15px;
+}
+
+.Container .Bottom .Right .Icons {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.Container .Bottom .Right .Icons img {
+  width: 150px;
+  margin-right: 20px;
+}
+
+@media (max-width: 576px) {
+  .Container .Main {
+    width: 100%;
+    height: 100%;
+    padding: 30px 0px;
+  }
+  .Container .Main .Right {
+    height: auto;
+    display: none;
+  }
+  .Container .Main .Left {
+    width: 100%;
+    position: relative;
+  }
+  .Container .Main .Left .Feedback {
+    top: 10px;
+    width: 98%;
+    position: relative;
+  }
+  .Container .Bottom {
+    overflow: hidden;
+  }
+  .Container .Bottom .BG {
+    width: 200%;
+  }
+  .Container .Bottom .Right {
+    min-width: 100%;
+    padding: 0px;
+    left: 0px;
+    padding: 10px 10px;
+  }
+  .Container .Bottom .Right .Heading {
+    font-size: 1rem;
+  }
+  .Container .Bottom .Right .SubHeading {
+    font-size: 0.8rem;
+  }
+  .Container .Bottom .Right .Icons {
+    margin-top: 20px;
+  }
+  .Container .Bottom .Right .Icons img {
+    width: 130px;
+  }
+}
+/*# sourceMappingURL=RateUs.module.css.map */

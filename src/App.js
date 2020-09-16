@@ -11,6 +11,7 @@ import Terms from './components/FooterComponents/Terms';
 import CategoryRedirect from './components/CategoryRedirect/CategoryRedirect';
 import LocationSearchInput from './AutoComplete';
 import ShopDetails from './components/ShopDetails/ShopDetails';
+import RateUs from './components/RateUs/RateUs';
 
 class App extends React.Component{
   render(){
@@ -29,6 +30,7 @@ class App extends React.Component{
         <Route path="/privacy" exact render={() => <Privacy />} />
         <Route path="/terms" exact render={() => <Terms />} />
         <Route path="/redirect" exact render={() => <CategoryRedirect />} />
+        <Route path="/rate" exact render={() => <RateUs />} />
         {/* <LocationSearchInput /> */}
       </div>
     )

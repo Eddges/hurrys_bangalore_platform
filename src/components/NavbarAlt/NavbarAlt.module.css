@@ -15,6 +15,7 @@
           align-items: center;
   -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.096);
           box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.096);
+  top: 0px;
   position: fixed;
   z-index: 200;
 }
