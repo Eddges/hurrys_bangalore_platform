@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './ShopCategories.module.css'
 import shopItem from '../../assets/shop-item.png'
+import {NavLink} from 'react-router-dom'
 
 const ShopCategories = (props) => {
 
@@ -8,30 +9,30 @@ const ShopCategories = (props) => {
         <div className={classes.Container}>
             <span className={classes.Heading}>Categories</span>
             <div className={classes.Items}>
-                <div className={classes.Item}>
+                <NavLink to="/grocery" className={classes.Item}>
                     <img src={shopItem} alt="Item" />
                     <span>Health Supplements</span>
-                </div>
-                <div className={classes.Item}>
+                </NavLink>
+                <NavLink to="/grocery" className={classes.Item}>
                     <img src={shopItem} alt="Item" />
                     <span>Beverages</span>
-                </div>
-                <div className={classes.Item}>
+                </NavLink>
+                <NavLink to="/grocery" className={classes.Item}>
                     <img src={shopItem} alt="Item" />
                     <span>Staples</span>
-                </div>
-                <div className={classes.Item}>
+                </NavLink>
+                <NavLink to="/grocery" className={classes.Item}>
                     <img src={shopItem} alt="Item" />
                     <span>Staples</span>
-                </div>
-                <div className={classes.Item}>
+                </NavLink>
+                <NavLink to="/grocery" className={classes.Item}>
                     <img src={shopItem} alt="Item" />
                     <span>Staples</span>
-                </div>
-                <div className={classes.Item}>
+                </NavLink>
+                <NavLink to="/grocery" className={classes.Item}>
                     <img src={shopItem} alt="Item" />
                     <span>Staples</span>
-                </div>
+                </NavLink>
             </div>
 
         </div>
