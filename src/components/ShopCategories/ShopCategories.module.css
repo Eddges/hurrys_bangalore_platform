@@ -1,0 +1,68 @@
+.Container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 30px 100px;
+}
+
+.Container .Heading {
+  padding: 20px 0px;
+  font-family: 'Avenir Heavy';
+  font-size: 1.5rem;
+}
+
+.Container .Items {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Container .Item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 140px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.Container .Item img {
+  width: 100%;
+}
+
+.Container .Item span {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 576px) {
+  .Container {
+    padding: 20px;
+  }
+  .Container .Items .Item {
+    margin-right: 15px;
+  }
+  .Container .Items .Item span {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=ShopCategories.module.css.map */
