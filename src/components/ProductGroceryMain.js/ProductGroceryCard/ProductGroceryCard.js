@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './ProductGroceryCard.module.css'
+import {NavLink} from 'react-router-dom'
 
 class ProductGroceryCard extends React.Component {
 
@@ -19,7 +20,7 @@ class ProductGroceryCard extends React.Component {
 
     render(){
         return(
-            <div className={classes.Container}>
+            <NavLink to="/product" className={classes.Container} onClick={() => { window.scroll(0,0) }}>
             {
                 this.props.few ?
                     <span className={classes.Few}>ONLY FEW LEFT</span> : 
@@ -34,7 +35,7 @@ class ProductGroceryCard extends React.Component {
                         <div className={classes.VegBorder}><div className={classes.VegDot}></div></div>
                         <span>{this.props.brand}</span>
                     </div>
-                    <span classname={classes.Name}>{this.props.name}</span>
+                    <span className={classes.Name}>{this.props.name}</span>
                     <div className={classes.OptionsSelector} onClick={() => { this.setState({...this.state, showOption : true})}}>
                         <span>{this.state.current.value}</span>
                         <span className={classes.Triangle}></span>
@@ -67,7 +68,7 @@ class ProductGroceryCard extends React.Component {
                     </div>
                 </div>
     
-            </div>
+            </NavLink>
         )
     }
 }
