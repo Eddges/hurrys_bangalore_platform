@@ -1,0 +1,251 @@
+.Container{
+    width : 100%;
+    display : flex;
+    flex-direction: column;
+    padding-bottom : 100px;
+    .Main{
+        width : 100%;
+        display : flex;
+        .Left{
+            width : 100%;
+            padding : 50px 70px;
+            .HRLine{
+                width: 100%;
+                height : 1px;
+                background-color: #999;
+                margin : 60px 0px;
+            }
+            .Accordion{
+                width : 100%;
+                display : flex;
+                flex-direction : column;
+                .AccordionTop{
+                    width : 100%;
+                    display : flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    .AccordionTopText{
+                        display : flex;
+                        align-items: flex-start;
+                        img{
+                            width: 30px;
+                        }
+                        span{
+                            margin-left : 20px;
+                        }
+                    }
+                    ion-icon{
+                        color : #00b246;
+                        font-size : 1.5rem;
+                        
+                    }
+                }
+                .AccordionDrop{
+                    min-height: 0px;
+                    height : 0px;
+                    overflow: hidden;
+                    padding-left : 50px;
+                    width : 100%;
+                    padding-top : 10px;
+                    display : flex;
+                    flex-wrap: wrap;
+                    transition : all 0.3s;
+                    .PaymentDropItem{
+                        margin-top : 15px;
+                        display : flex;
+                        align-items: center;
+                        color : #585858;
+                        font-family: 'Avenir Book';
+                        margin-right : 30px;
+                        font-size : 0.9rem;
+                    }
+                    .AddressDropItem{
+                        width : 100%;
+                        display : flex;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        // background-color: blue;
+                        padding : 10px 0px;
+                        .AddressDropItemLeft{
+                            width : 80%;
+                            display : flex;
+                            align-items: flex-start;
+                            input{
+                                transform: translateY(5px);
+                            }
+                            .AddressDropMiddle{
+                                padding : 0px;
+                                margin-left : 15px;
+                                display : flex;
+                                flex-direction: column;
+                                // background-color: coral;
+                                .AddressDropDetail{
+                                    // margin-top : 5px;
+                                    color : #999999;
+                                }
+                            }
+                        }
+                        button{
+                            background-color: transparent;
+                            border : none;
+                            font-family: 'Avenir Heavy';
+                            color : #00b246;
+                        }
+
+                    }
+                    .DeliveryControls{
+                        width : 100%;
+                        margin-top : 30px;
+                        display : flex;
+                        justify-content: space-between;
+                        .AddressAdd{
+                            border : none;
+                            background-color: transparent;
+                            font-family: 'Avenir Heavy';
+                            color : #00b246;
+                            font-size : 0.9rem;
+                        }
+                        .AddressContinue{
+                            background-color: #00b246;
+                            color : white;
+                            font-size : 0.9rem;
+                            border : none;
+                            border-radius : 5px;
+                            width : 200px;
+                            height : 40px;
+                            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.371);
+                        }
+                        button{
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                }
+                .AccordionDropExpand{
+                    min-height : 200px;
+                    height : auto;
+                    overflow: auto;
+                }
+            }
+        }
+        .VerticalLine{
+            width : 2px;
+            height : 70vh;
+            background-color : #999;
+            margin-top : 100px;
+        }
+        .Right{
+            width : 100%;
+            padding : 50px 70px;
+            display : flex;
+            flex-direction: column;
+            .Tip{
+                display : flex;
+                flex-direction: column;
+                margin-top : 40px;
+                .TipHeading{
+                    font-family: 'Avenir Heavy';
+                    font-size : 1.2rem;
+                }
+                .TipText{
+                    color : #999;
+                    margin-top : 10px;
+                    padding-right : 40px;
+                }
+                .TipButtons{
+                    display : flex;
+                    flex-wrap : wrap;
+                    margin-top : 20px;
+                    button{
+                        background-color : white;
+                        padding : 5px 20px;
+                        border : solid 1px rgba(0, 0, 0, 0.309);
+                        margin-right : 10px;
+                        border-radius : 5px;
+                        margin-top : 10px;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                    input{
+                        background-color: white;
+                        border : solid 1px rgba(0, 0, 0, 0.309);
+                        padding : 5px 10px;
+                        width : 100px;
+                        border-radius : 5px;
+                        margin-top : 10px;
+                    }
+                }
+            }
+            .OrderTotal{
+                display : flex;
+                flex-direction : column;
+                margin-top : 50px;
+                .ItemTotal{
+                    padding : 10px 0px;
+                    width : 90%;
+                    display : flex;
+                    justify-content: space-between;
+                    .ItemTotalText{
+                        font-family: 'Avenir Heavy';
+                        color : rgb(112, 112, 112);
+                    }
+                }
+                .ItemOther{
+                    width : 90%;
+                    display : flex;
+                    justify-content: space-between;
+                    padding : 10px 0px;
+                    color : rgb(112, 112, 112);
+                    .ItemOtherText{
+                        // font-family: 'Avenir Heavy';
+                        // color : rgb(112, 112, 112);
+                    }
+                }
+            }
+            .FinalTotal{
+                margin-top : 50px;
+                display : flex;
+                width : 90%;
+                justify-content: space-between;
+                .FinalTotalHeading{
+                    font-size : 1.2rem;
+                    font-family: 'Avenir Heavy';
+                }
+                .FinalTotalTotal{
+                    font-size : 1.2rem;
+                    font-family: 'Avenir Heavy';
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+@media(max-width : 576px) {
+    .Container{
+        .Main{
+            flex-direction: column;
+            .VerticalLine{
+                display : none;
+            }
+            .Left{
+                margin-top : 50px;
+                padding : 40px 20px;
+                .HRLine{
+                    margin : 40px 5%;
+                }
+            }
+            .Right{
+                padding : 40px 20px;
+            }
+        }
+    }
+}
