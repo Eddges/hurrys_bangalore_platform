@@ -1,0 +1,307 @@
+.Container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Container .Main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.Container .Main .Left {
+  width: 50%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0px;
+  top: 0px;
+}
+
+.Container .Main .Left img {
+  width: 400px;
+}
+
+.Container .Main .Right {
+  width: 50%;
+  padding: 20px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Container .Main .Right .Brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container .Main .Right .Brand .Veg {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: solid 2px red;
+}
+
+.Container .Main .Right .Brand .Veg .VegCircle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.Container .Main .Right .Brand span {
+  font-family: 'Avenir Heavy';
+  color: #9b9b9b;
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+
+.Container .Main .Right .ProductName {
+  font-family: 'Avenir Heavy';
+  font-size: 1.5rem;
+  padding: 10px 0px;
+}
+
+.Container .Main .Right .VarietyTable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 8px;
+  border: solid 1px #eaeaea;
+  overflow: hidden;
+  background-color: #eaeaea;
+}
+
+.Container .Main .Right .VarietyTable .Item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px 10px 10px 30px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: white;
+  margin-bottom: 2px;
+}
+
+.Container .Main .Right .VarietyTable .Item .ItemLeft {
+  width: 35%;
+  font-family: 'Avenir Heavy';
+}
+
+.Container .Main .Right .VarietyTable .Item .ItemMiddle {
+  width: 30%;
+  font-family: 'Avenir Heavy';
+}
+
+.Container .Main .Right .VarietyTable .Item .ItemMiddle span {
+  font-size: 0.8rem;
+  color: #9b9b9b;
+}
+
+.Container .Main .Right .VarietyTable .Item .AddButton {
+  justify-self: flex-end;
+  font-family: 'Avenir Heavy';
+  background-color: #eaeaea;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  color: #00b246;
+  margin-left: 28%;
+}
+
+.Container .Main .Right .VarietyTable .Item:hover {
+  background-color: #e8f4ff;
+  cursor: default;
+}
+
+.Container .Main .Right .VarietyTable .Item:hover .AddButton {
+  cursor: pointer;
+}
+
+.Container .Main .Right .HRLine {
+  width: 100%;
+  height: 2px;
+  background-color: #eaeaea;
+  margin: 40px 0px;
+}
+
+.Container .Main .Right .Details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.Container .Main .Right .Details .DetailsItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Container .Main .Right .Details .DetailsItem .DetailsLeft {
+  font-family: 'Avenir Book';
+  width: 25%;
+  padding: 0px 10px 15px 10px;
+  color: #888e9e;
+  font-size: 1.2rem;
+}
+
+.Container .Main .Right .Details .DetailsItem .DetailsRight {
+  font-family: 'Avenir Book';
+  width: 75%;
+  padding: 0px 10px 10px 10px;
+  font-size: 1.2rem;
+}
+
+.Container .Main .Right .Description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Container .Main .Right .Description .DescriptionHeading {
+  font-family: 'Avenir Heavy';
+  font-size: 1.5rem;
+}
+
+.Container .Main .Right .Description .DescriptionContent {
+  color: #55565b;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.Container .Main .Right .Features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 100px;
+}
+
+.Container .Main .Right .Features .FeaturesHeading {
+  font-family: 'Avenir Heavy';
+  font-size: 1.5rem;
+}
+
+.Container .Main .Right .Features .FeaturesItem {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Container .Main .Right .Features .FeaturesItem .FeaturesItemLeft {
+  width: 40px;
+  font-size: 1.5rem;
+  color: #999999;
+}
+
+.Container .Main .Right .Features .FeaturesItem .FeaturesItemRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Container .Main .Right .Features .FeaturesItem .FeaturesItemRight .FeaturesItemHeading {
+  font-family: 'Avenir Heavy';
+  font-size: 1.2rem;
+}
+
+.Container .Main .Right .Features .FeaturesItem .FeaturesItemRight .FeaturesItemContent {
+  margin-top: 5px;
+  font-family: 'Avenir Book';
+  color: #55565b;
+}
+
+@media (max-width: 576px) {
+  .Container .Main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Container .Main .Left {
+    width: 100%;
+    height: auto;
+  }
+  .Container .Main .Left img {
+    width: 80%;
+  }
+  .Container .Main .Right {
+    width: 100%;
+    padding: 20px 10px;
+  }
+  .Container .Main .Right .Details .DetailsItem .DetailsLeft {
+    font-size: 0.8rem;
+    width: 30%;
+  }
+  .Container .Main .Right .Details .DetailsItem .DetailsRight {
+    font-size: 0.8rem;
+    width: 70%;
+  }
+  .Container .Main .Right .Description .DescriptionHeading {
+    font-size: 1.2rem;
+  }
+  .Container .Main .Right .Description .DescriptionContent {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=ProductDetails.module.css.map */

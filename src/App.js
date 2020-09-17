@@ -13,6 +13,7 @@ import LocationSearchInput from './AutoComplete';
 import ShopDetails from './components/ShopDetails/ShopDetails';
 import RateUs from './components/RateUs/RateUs';
 import ContactUs from './components/ContactUs/ContactUs';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
 class App extends React.Component{
   render(){
@@ -33,6 +34,7 @@ class App extends React.Component{
         <Route path="/redirect" exact render={() => <CategoryRedirect />} />
         <Route path="/rate" exact render={() => <RateUs />} />
         <Route path="/contact" exact render={() => <ContactUs />} />
+        <Route path="/product" exact render={() => <ProductDetails />} />
         {/* <LocationSearchInput /> */}
       </div>
     )
