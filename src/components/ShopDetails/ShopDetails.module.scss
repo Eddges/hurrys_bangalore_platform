@@ -1,0 +1,40 @@
+.Container{
+    display : flex;
+    flex-direction : column;
+
+}
+
+.Others{
+    display : flex;
+    flex-direction: column;
+    padding : 10px 100px;
+    width : 100%;
+    .Heading{
+        margin-top : 25px;
+        font-size : 1.2rem;
+        font-family: 'Avenir Heavy';
+    }
+    .Main{
+        width : 100%;
+        flex-wrap : wrap;
+        display : flex;
+        // justify-content: space-evenly;
+        padding : 20px 0px;
+        .Item{
+            width : 300px;
+            margin-bottom : 20px;
+            margin-right : 50px;
+            img{
+                width : 100%;
+            }
+        }
+    }
+}
+
+
+
+@media(max-width : 576px) {
+    .Others{
+        padding : 20px;
+    }
+}

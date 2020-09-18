@@ -21,19 +21,20 @@ function Footer() {
             <p className = {styles.label} >COMPANY</p>
             <p>About Us</p>
             <p>Careers</p>
-            <p>General Enquiry</p>
+            <p><NavLink onClick={() => window.scroll(0,0)} to="/contact">Contact Us</NavLink></p>
           </div>
           <div className = {styles.box}>
             <p className = {styles.label} >CONTACT</p>
             <p><NavLink to="/referral">Help and Support</NavLink></p>
-            <p><NavLink to="/delivery">Become a Partner</NavLink></p>
-            <p><NavLink to="/vendor">Become a Seller</NavLink></p>
+        
+            <p><NavLink onClick={() => window.scroll(0,0)} to="/delivery">Become a Partner</NavLink></p>
+            <p><NavLink onClick={() => window.scroll(0,0)} to="/vendor">Become a Seller</NavLink></p>
           </div>
           <div className = {styles.box}>
             <p className = {styles.dummy} >CONTACT</p>
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
-            <p>Refund & Cancellation</p>
+            <p><NavLink onClick={() => window.scroll(0,0)} to="/terms">Terms & Conditions</NavLink></p>
+            <p><NavLink onClick={() => window.scroll(0,0)} to="/privacy">Privacy Policy</NavLink></p>
+            <p><NavLink onClick={() => window.scroll(0,0)} to="/cancellation">Refund & Cancellation</NavLink></p>
           </div>
       </div>
       <div className = {styles.footer_down}>

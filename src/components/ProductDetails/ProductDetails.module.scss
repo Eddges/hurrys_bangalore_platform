@@ -1,0 +1,228 @@
+.Container{
+    width : 100%;
+    display : flex;
+    flex-direction: column;
+    .Main{
+        display : flex;
+        justify-content: flex-end;
+        .Left{
+            // position : fixed;
+            width : 50%;
+            height : 100vh;
+            display : flex;
+            justify-content: center;
+            align-items: center;
+            left : 0px;
+            top : 0px;
+            img{    
+                width : 400px;
+            }
+        }
+        .Right{
+            width : 50%;
+            padding : 20px 30px;
+            display : flex;
+            flex-direction: column;
+            .Brand{
+                display : flex;
+                align-items: center;
+                .Veg{
+                    width: 15px;
+                    height : 15px;
+                    border-radius : 2px;
+                    display : flex;
+                    align-items: center;
+                    justify-content: center;
+                    border : solid 2px red;
+                    .VegCircle{
+                        width : 6px;
+                        height : 6px;
+                        border-radius: 50%;
+                        background-color: red;
+                    }
+                }
+                span{
+                    font-family: 'Avenir Heavy';
+                    color : #9b9b9b;
+                    margin-left : 10px;
+                    font-size : 0.8rem;
+                }
+            }
+            .ProductName{
+                font-family: 'Avenir Heavy';
+                font-size : 1.5rem;
+                padding : 10px 0px;
+            }
+            .VarietyTable{
+                // width : 100%;
+                display : flex;
+                flex-direction : column;
+                border-radius : 8px;
+                border : solid 1px #eaeaea;
+                overflow : hidden;
+                background-color : #eaeaea;
+                .Item{
+                    display : flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding : 10px 10px 10px 30px;
+                    transition : all 0.2s;
+                    background-color: white;
+                    margin-bottom : 2px;
+                    .ItemLeft{
+                        width : 35%;
+                        // background-color: coral;
+                        font-family: 'Avenir Heavy';
+                    }
+                    .ItemMiddle{
+                        width: 30%;
+                        font-family: 'Avenir Heavy';
+                        span{
+                            font-size : 0.8rem;
+                            color : #9b9b9b;
+                        }
+                    }
+                    .AddButton{
+                        justify-self: flex-end;
+                        font-family: 'Avenir Heavy';
+                        background-color: #eaeaea;
+                        padding : 8px 20px;
+                        border-radius: 5px;
+                        border : none;
+                        color : #00b246;
+                        margin-left : 28%;
+                    }
+                    &:hover{
+                        background-color : #e8f4ff;
+                        cursor: default;
+                        .AddButton{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .HRLine{
+                width : 100%;
+                height : 2px;
+                background-color : #eaeaea;
+                margin : 40px 0px;
+            }
+            .Details{
+                display : flex;
+                flex-direction: column;
+                width : 100%;
+                .DetailsItem{
+                    display : flex;
+                    .DetailsLeft{
+                        font-family: 'Avenir Book';
+                        width : 25%;
+                        padding : 0px 10px 15px 10px;
+                        color : #888e9e;
+                        font-size : 1.2rem;
+                    }
+                    .DetailsRight{
+                        font-family: 'Avenir Book';
+                        width : 75%;
+                        padding : 0px 10px 10px 10px;
+                        font-size : 1.2rem;
+
+                    }
+                }
+            }
+            .Description{
+                display : flex;
+                flex-direction: column;
+                .DescriptionHeading{
+                    font-family: 'Avenir Heavy';
+                    font-size : 1.5rem;
+                }
+                .DescriptionContent{
+                    color : #55565b;
+                    font-size : 1.2rem;
+                    margin-top : 20px;
+                }
+            }
+
+            .Features{
+                display : flex;
+                flex-direction: column;
+                padding-bottom : 100px;
+                .FeaturesHeading{
+                    font-family: 'Avenir Heavy';
+                    font-size : 1.5rem;
+                }
+                .FeaturesItem{
+                    margin-top : 20px;
+                    display : flex;
+                    .FeaturesItemLeft{
+                        width : 40px;
+                        font-size : 1.5rem;
+                        color : #999999;
+                    }
+                    .FeaturesItemRight{
+                        // width : 90%;
+                        display : flex;
+                        flex-direction: column;
+                        .FeaturesItemHeading{
+                            font-family: 'Avenir Heavy';
+                            font-size : 1.2rem;
+                        }
+                        .FeaturesItemContent{
+                            margin-top : 5px;
+                            font-family: 'Avenir Book';
+                            color : #55565b;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+@media(max-width : 576px) {
+    .Container{
+        .Main{
+            flex-direction: column;
+            .Left{
+                width : 100%;
+                height : auto;
+                img{
+                    width : 80%;
+                }
+            }
+            .Right{
+                width : 100%;
+                padding : 20px 10px;
+                .Details{
+                    .DetailsItem{
+                        .DetailsLeft{
+                            font-size : 0.8rem;
+                            width : 30%;
+                        }
+                        .DetailsRight{
+                            font-size : 0.8rem;
+                            width : 70%;
+                        }
+                    }
+
+                }
+                .Description{
+                    .DescriptionHeading{
+                        font-size : 1.2rem;
+                    }
+                    .DescriptionContent{
+                        font-size : 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

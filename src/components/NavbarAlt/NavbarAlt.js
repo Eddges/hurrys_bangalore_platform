@@ -9,10 +9,13 @@ import Cart from '../Cart/Cart'
 import CartGreenIcon from '../../assets/cart_green.svg'
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
+import ProfileGreen from '../../assets/profileGreen.svg'
+import ProfileDrawer from '../ProfileDrawer/ProfileDrawer'
 
 class NavbarAlt extends React.Component{
     state={
-        showCart : false
+        showCart : false,
+        showProfile : false
     }
 
     handleCart = () => {
@@ -21,6 +24,13 @@ class NavbarAlt extends React.Component{
             showCart : !this.state.showCart
         })
     }
+    handleProfile = () => {
+        this.setState({
+            ...this.state,
+            showProfile : !this.state.showProfile
+        })
+    }
+
     render() {
         return(
             <React.Fragment>
@@ -38,7 +48,12 @@ class NavbarAlt extends React.Component{
                     </div>
 
                     <div className={classes.Right}>
-                        <img className={classes.User} src={UserIcon} alt="User" />
+                        {
+                            this.state.showProfile ? 
+                            <img className={classes.User} src={ProfileGreen} onClick={this.handleProfile} alt="User" /> : 
+                            <img className={classes.User} src={UserIcon} alt="User" onClick={this.handleProfile} />
+                        }
+                        
                         {
                             this.state.showCart ? 
                             <div className={classes.Cart}>
@@ -56,6 +71,9 @@ class NavbarAlt extends React.Component{
                 <div className={classes.Space}></div>
                 {
                     this.state.showCart ? <Cart handleCartBack={this.handleCart} /> : null
+                }
+                {
+                    this.state.showProfile ? <ProfileDrawer handleProfile={this.handleProfile} /> : null
                 }
             </React.Fragment>
         )

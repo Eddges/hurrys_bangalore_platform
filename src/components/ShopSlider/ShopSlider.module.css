@@ -1,0 +1,82 @@
+.Container {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  position: relative;
+}
+
+.Container .Heading {
+  margin-bottom: 20px;
+  padding-left: 100px;
+  font-size: 1.5rem;
+  font-family: 'Avenir Heavy';
+}
+
+.Container .Slider {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.Container .Slider .SliderItem {
+  min-width: 300px;
+  max-width: 300px;
+  margin-left: 80px;
+}
+
+.Container .Slider .SliderItem img {
+  width: 100%;
+}
+
+.Container .Controls {
+  padding-top: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Container .Controls .Right {
+  padding-right: 5%;
+}
+
+.Container .Controls .Right ion-icon {
+  margin-left: 10px;
+}
+
+.Container .Controls .Right ion-icon:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .Container .Heading {
+    padding-left: 30px;
+  }
+  .Container .Slider .SliderItem {
+    margin-left: 50px;
+  }
+}
+/*# sourceMappingURL=ShopSlider.module.css.map */

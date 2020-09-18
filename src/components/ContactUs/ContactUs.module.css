@@ -1,0 +1,132 @@
+.Container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Container .Background {
+  width: 100%;
+}
+
+.Container .Main {
+  width: 100%;
+  background-color: #fafbfc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Container .Main .Contact {
+  width: 100%;
+  -webkit-transform: translateY(-250px);
+          transform: translateY(-250px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container .Main .Contact .HeadingContact {
+  color: white;
+  font-size: 2rem;
+}
+
+.Container .Main .Contact .InfoPanel {
+  width: 70%;
+  background-color: white;
+  margin-top: 40px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.213);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.213);
+  padding: 30px 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Container .Main .Contact .InfoPanel .Left {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Container .Main .Contact .InfoPanel .Left .Heading {
+  color: #55565b;
+  margin-top: 40px;
+  font-family: 'Avenir';
+  margin-bottom: 20px;
+}
+
+.Container .Main .Contact .InfoPanel .Left .Info {
+  font-family: 'Avenir Heavy';
+}
+
+.Container .Main .Contact .InfoPanel .Left .Support {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.Container .Main .Contact .InfoPanel .Left .Support span {
+  color: #00b246;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.Container .Main .Contact .InfoPanel .Left .Support span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.Container .Main .Contact .InfoPanel .Right {
+  width: 40%;
+  padding: 80px 5px;
+}
+
+@media (max-width: 576px) {
+  .Container .Main {
+    height: auto;
+  }
+  .Container .Main .Contact {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+  }
+  .Container .Main .Contact .InfoPanel {
+    width: 95%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+  }
+  .Container .Main .Contact .InfoPanel .Left {
+    width: 100%;
+  }
+  .Container .Main .Contact .InfoPanel .Left .Heading {
+    margin-top: 25px;
+  }
+  .Container .Main .Contact .InfoPanel .Right {
+    width: 100%;
+    padding: 10px;
+    height: 300px;
+  }
+}
+/*# sourceMappingURL=ContactUs.module.css.map */

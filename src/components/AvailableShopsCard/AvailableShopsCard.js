@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 const AvailableShopsCard = (props) => {
     return(
-        <NavLink to="/grocery" className={classes.Container} 
+        <NavLink to="/shopdetails" className={classes.Container} 
             onClick={() => {
                 window.scrollTo(0, 0)
             }}

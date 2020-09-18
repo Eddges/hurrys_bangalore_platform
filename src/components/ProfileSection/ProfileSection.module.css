@@ -1,0 +1,144 @@
+.Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Container .Main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Container .Main .ContainerLeft {
+  width: 30%;
+  padding-top: 30px;
+  border-right: solid 2px rgba(128, 128, 128, 0.118);
+}
+
+.Container .Main .ContainerLeft .HRLine {
+  width: 95%;
+  min-height: 2px;
+  background-color: #eaeaea;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.Container .Main .ContainerLeft .ProfileInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.Container .Main .ContainerLeft .ProfileInfo .Left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Container .Main .ContainerLeft .ProfileInfo .Left .Name {
+  font-size: 1.2rem;
+}
+
+.Container .Main .ContainerLeft .ProfileInfo .Left .Info {
+  color: #55565b;
+  font-family: 'Avenir';
+  margin-top: 5px;
+}
+
+.Container .Main .ContainerLeft .ProfileInfo .EditButton {
+  border: none;
+  background-color: transparent;
+  color: #00b246;
+  font-family: 'Avenir Heavy';
+}
+
+.Container .Main .ContainerLeft .ProfileItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 35px;
+  color: #2c2c2c;
+  font-family: 'Avenir';
+  background-color: white;
+}
+
+.Container .Main .ContainerLeft .ProfileItem .Left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+}
+
+.Container .Main .ContainerLeft .ProfileItem .Left img {
+  width: 15px;
+}
+
+.Container .Main .ContainerLeft .ProfileItem .Left span {
+  margin-left: 15px;
+}
+
+.Container .Main .ContainerLeft .ProfileItem:hover {
+  cursor: pointer;
+}
+
+.Container .Main .ContainerLeft .ButtonDiv {
+  width: 100%;
+  min-height: 150px;
+  background-color: white;
+  margin-bottom: 50px;
+}
+
+.Container .Main .ContainerLeft .ExitButton {
+  font-family: 'Avenir Heavy';
+  color: white;
+  background-color: #00b246;
+  border: none;
+  min-width: 90px;
+  min-height: 30px;
+  border-radius: 5px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.Container .Main .ProfileRight {
+  width: 70%;
+  padding: 30px 30px;
+}
+
+@media (max-width: 576px) {
+  .Container .Main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 10px;
+  }
+  .Container .Main .ContainerLeft {
+    width: 100%;
+    border: none;
+  }
+  .Container .Main .ProfileRight {
+    width: 100%;
+    padding: 30px 10px;
+  }
+}
+/*# sourceMappingURL=ProfileSection.module.css.map */

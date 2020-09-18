@@ -24,15 +24,16 @@ class Categories extends React.Component{
                     <CategoryCard icon={grocery} text="Grocery & Essentials" toLink="grocery" />
                     <CategoryCard icon={food} text="Food" toLink="food" />
                     <CategoryCard icon={fruits} text="Fruits & Vegetables" toLink="fruits_veggies" />
-                    <CategoryCard icon={fish} text="Fish & Meat" toLink="fish_meat" />
-                    <CategoryCard icon={pet} text="Pet Supplies" toLink="pet" />
-                    <CategoryCard icon={gift} text="Gift Shop" toLink="gift" />
-                    <CategoryCard icon={meds} text="Medicine Stores" toLink="meds" />
-                    <CategoryCard icon={apparels} text="Apparels" toLink="apparels" />
-                    <CategoryCard icon={health} text="Health & Wellness" toLink="health" />
-                    <CategoryCard icon={pkg} text="Package Pickup" toLink="package" />
-                    <CategoryCard icon={taxi} text="Taxi Service" toLink="taxi" />
                     <CategoryCard icon={homeFood} text="Home Food" toLink="home" />
+                    <CategoryCard icon={fish} text="Fish & Meat" toLink="fish_meat" unavailable={true} />
+                    <CategoryCard icon={pet} text="Pet Supplies" toLink="pet" unavailable={true} />
+                    <CategoryCard icon={gift} text="Gift Shop" toLink="gift" unavailable={true} />
+                    <CategoryCard icon={meds} text="Medicine Stores" toLink="meds" unavailable={true} />
+                    <CategoryCard icon={apparels} text="Apparels" toLink="apparels" unavailable={true} />
+                    <CategoryCard icon={health} text="Health & Wellness" toLink="health" unavailable={true} />
+                    <CategoryCard icon={pkg} text="Package Pickup" toLink="package" unavailable={true} />
+                    <CategoryCard icon={taxi} text="Taxi Service" toLink="taxi" unavailable={true} />
+                    
 
                 </div>
             </div>

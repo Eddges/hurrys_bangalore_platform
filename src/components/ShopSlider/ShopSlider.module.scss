@@ -1,0 +1,61 @@
+.Container{
+    width : 100%;
+    overflow: hidden;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom : 30px;
+    // background-color : coral;
+    padding-top : 30px;
+    position : relative;
+    .Heading{
+        margin-bottom : 20px;
+        padding-left : 100px;
+        font-size : 1.5rem;
+        font-family : 'Avenir Heavy';
+    }
+    .Slider{
+        min-width : 100%;
+        display : flex;
+        align-items: center;
+        transition : all 0.3s;
+        .SliderItem{
+            min-width: 300px;
+            max-width : 300px;
+            margin-left : 80px;
+            img{
+                width : 100%;
+            }
+        }
+    }
+    .Controls{
+        padding-top : 20px;
+        width : 100%;
+        display : flex;
+        align-items: center;
+        justify-content: space-between;
+        .Right{
+            padding-right : 5%;
+            ion-icon{
+                margin-left : 10px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width : 576px) {
+    .Container{
+        .Heading{
+            padding-left : 30px;
+        }
+        .Slider{
+            .SliderItem{
+                margin-left : 50px;
+            }
+        }
+    }
+}

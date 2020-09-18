@@ -1,0 +1,104 @@
+.Top {
+  padding: 20px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+}
+
+.Top .Left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Top .Left img {
+  width: 180px;
+  border-radius: 8px;
+}
+
+.Top .Left .Details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 5px 40px;
+}
+
+.Top .Left .Details .ShopName {
+  font-family: 'Avenir Heavy';
+  font-size: 2rem;
+}
+
+.Top .Left .Details .Location {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.501);
+}
+
+.Top .Right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Top .Right .Heading {
+  font-size: 1.2rem;
+}
+
+.Top .Right .OfferItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.Top .Right .OfferItem img {
+  width: 20px;
+  height: 20px;
+}
+
+.Top .Right .OfferItem span {
+  margin-left: 20px;
+  color: #0e4d97;
+}
+
+@media (max-width: 576px) {
+  .Top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  .Top .Left img {
+    width: 100px;
+  }
+  .Top .Left .Details {
+    padding: 5px 10px;
+  }
+  .Top .Left .Details .ShopName {
+    font-size: 1.2rem;
+  }
+  .Top .Right {
+    margin-top: 30px;
+    padding: 25px 20px;
+  }
+}
+/*# sourceMappingURL=ShopDetailsTop.module.css.map */

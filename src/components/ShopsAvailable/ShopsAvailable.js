@@ -225,15 +225,15 @@ class ShopsAvailable extends React.Component{
                         <CategoryCardShops icon={grocery} text="Grocery & Essentials" toLink="grocery" />
                         <CategoryCardShops icon={food} text="Food" toLink="food" active={this.state.active} />
                         <CategoryCardShops icon={fruits} text="Fruits & Vegetables" toLink="fruits_veggies" />
-                        <CategoryCardShops icon={fish} text="Fish & Meat" toLink="fish_meat" />
+                        <CategoryCardShops icon={homeFood} text="Home Food" toLink="home" />
+                        {/* <CategoryCardShops icon={fish} text="Fish & Meat" toLink="fish_meat" />
                         <CategoryCardShops icon={pet} text="Pet Supplies" toLink="pet" />
                         <CategoryCardShops icon={gift} text="Gift Shop" toLink="gift" />
                         <CategoryCardShops icon={meds} text="Medicine Stores" toLinkt="meds" />
                         <CategoryCardShops icon={apparels} text="Apparels" toLink="apparels" />
                         <CategoryCardShops icon={health} text="Health & Wellness" toLink="health" />
                         <CategoryCardShops icon={pkg} text="Package Pickup" toLink="package" />
-                        <CategoryCardShops icon={taxi} text="Taxi Service" toLink="taxi" />
-                        <CategoryCardShops icon={homeFood} text="Home Food" toLink="home" />
+                        <CategoryCardShops icon={taxi} text="Taxi Service" toLink="taxi" /> */}
                     </div>
                     <div className={classes.Right}>
                         <span className={classes.Heading}>Available Shops</span>

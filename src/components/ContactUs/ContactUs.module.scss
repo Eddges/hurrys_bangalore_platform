@@ -1,0 +1,101 @@
+.Container{
+    width : 100%;
+    display : flex;
+    flex-direction: column;
+    .Background{
+        width : 100%;
+    }
+    .Main{
+        // height : 500px;
+        width : 100%;
+        background-color : #fafbfc;
+        display : flex;
+        justify-content: center;
+        .Contact{
+            width : 100%;
+            // height : 500px;
+            transform : translateY(-250px);
+            display : flex;
+            flex-direction: column;
+            align-items: center;
+            .HeadingContact{
+                color : white;
+                font-size : 2rem;
+            }
+            .InfoPanel{
+                width : 70%;
+                // height : 100%;
+                background-color : white;
+                margin-top : 40px;
+                border-radius : 8px;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.213);
+                padding : 30px 70px;
+                display : flex;
+                .Left{
+                    width : 60%;
+                    display : flex;
+                    flex-direction: column;
+                    .Heading{
+                        color : #55565b;
+                        margin-top : 40px;
+                        font-family : 'Avenir';
+                        margin-bottom : 20px;
+                    }
+                    .Info{
+                        font-family: 'Avenir Heavy';
+                    }
+                    .Support{
+                        margin-top : 80px;
+                        margin-bottom : 50px;
+                        span{
+                            color : #00b246;
+                            transition : all 0.2s;
+                            &:hover{
+                                cursor: pointer;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .Right{
+                    width : 40%;
+                    padding : 80px 5px;
+                    .Marker{
+                        // background-color : coral;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media(max-width : 576px) {
+    .Container{
+        .Main{
+            height : auto;
+            .Contact{
+                transform: translateY(-70px);
+                .InfoPanel{
+                    width : 95%;
+                    flex-direction: column;
+                    padding : 20px;
+                    .Left{
+                        width : 100%;
+                        .Heading{
+                            margin-top : 25px;
+                        }
+                    }
+                    .Right{
+                        width : 100%;
+                        // background-color: coral;
+                        padding : 10px;
+                        height : 300px;
+                    }
+                }
+            }
+        }
+    }
+}
