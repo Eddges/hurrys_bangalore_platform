@@ -25,7 +25,7 @@ function Footer() {
           </div>
           <div className = {styles.box}>
             <p className = {styles.label} >CONTACT</p>
-            <p>Help & Support</p>
+            <p><NavLink to="/referral">Help and Support</NavLink></p>
             <p><NavLink to="/delivery">Become a Partner</NavLink></p>
             <p><NavLink to="/vendor">Become a Seller</NavLink></p>
           </div>
