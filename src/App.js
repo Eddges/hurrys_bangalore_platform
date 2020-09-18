@@ -15,6 +15,7 @@ import RateUs from './components/RateUs/RateUs';
 import ContactUs from './components/ContactUs/ContactUs';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import Checkout from './components/Checkout/Checkout';
+import ProfileSection from './components/ProfileSection/ProfileSection';
 
 class App extends React.Component{
   render(){
@@ -37,6 +38,8 @@ class App extends React.Component{
         <Route path="/contact" exact render={() => <ContactUs />} />
         <Route path="/product" exact render={() => <ProductDetails />} />
         <Route path="/checkout" exact render={() => <Checkout />} />
+        <Route path="/profile" exact render={() => <ProfileSection />} />
+        <Route path="/profile-orders" exact render={() => <ProfileSection active="orders" />} />
         {/* <LocationSearchInput /> */}
       </div>
     )

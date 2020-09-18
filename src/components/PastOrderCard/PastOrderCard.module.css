@@ -1,0 +1,111 @@
+.Container {
+  width: 400px;
+  padding: 20px 10px;
+  height: auto;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.165);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.165);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.Container .PastTop {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Container .PastTop .Icon {
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.Container .PastTop .Icon img {
+  width: 60px;
+}
+
+.Container .PastTop .Details {
+  margin-left: 10px;
+}
+
+.Container .PastTop .Details .Time {
+  color: #999999;
+  font-size: 0.8rem;
+}
+
+.Container .HRLine {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(153, 153, 153, 0.165);
+  margin: 15px 0px;
+}
+
+.Container .Payment {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.Container .Payment .AmountPaid {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.Container .Payment .AmountPaid span {
+  font-size: 1rem;
+  font-family: 'Avenir Heavy';
+  color: black;
+}
+
+.Container .Payment .OrderID {
+  color: #0e4d97;
+}
+
+.Container .RateOrder {
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  font-family: 'Avenir Heavy';
+  color: #00b246;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.Container .RateOrder:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .Container {
+    width: 100%;
+    margin: 20px 0px;
+  }
+}
+/*# sourceMappingURL=PastOrderCard.module.css.map */

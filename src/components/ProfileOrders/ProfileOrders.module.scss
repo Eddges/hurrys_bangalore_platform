@@ -1,0 +1,19 @@
+.Container{
+    width : 100%;
+    display : flex;
+    flex-direction: column;
+    .Orders{
+        display : flex;
+        flex-direction: column;
+        .OrdersHeading{
+            font-size : 1.5rem;
+            font-family: 'Avenir Heavy';
+            padding : 10px 0px;
+        }
+        .OrdersCards{
+            padding-top : 20px;
+            display : flex;
+            flex-wrap: wrap;
+        }
+    }
+}
