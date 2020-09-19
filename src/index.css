@@ -4,3 +4,7 @@
   box-sizing : border-box;
   font-family : 'Avenir Medium', 'Roboto';
 }
+
+input:focus {
+  outline: none;
+}
