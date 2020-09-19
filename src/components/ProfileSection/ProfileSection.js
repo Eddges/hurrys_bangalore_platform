@@ -112,7 +112,7 @@ class ProfileSection extends React.Component{
                         <div className={classes.ProfileItem}>
                             <div className={classes.Left}>
                                 <img src={Gift} alt="Location" />
-                                <span>Refer Your Friends</span>
+                                <NavLink to = "/referral" > <span>Refer Your Friends</span> </NavLink>
                             </div>
                             <div className={classes.ProfileItemRight}>
                                 <ion-icon name="chevron-forward"></ion-icon>

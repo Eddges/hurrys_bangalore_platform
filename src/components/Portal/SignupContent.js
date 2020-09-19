@@ -1,10 +1,5 @@
 import React from 'react';
-import * as AiIcons from 'react-icons/ai';
 import * as LoIcons from 'react-icons/io';
-import logo from '../../assets/LogoBlack.png';
-import logoImage from '../../assets/loginImage.png';
-import fbLogin from '../../assets/facebookLogin.png';
-import gLogin from '../../assets/bitmap.png';
 import styles from './Signupcontent.module.css';
 // import LoginModal from './LoginModal';
 
