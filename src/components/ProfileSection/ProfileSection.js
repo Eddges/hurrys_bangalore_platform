@@ -14,7 +14,8 @@ import {connect} from 'react-redux'
 import ProfileOrders from '../ProfileOrders/ProfileOrders'
 import {NavLink, Route} from 'react-router-dom'
 import ProfileDash from '../ProfileDash/ProfileDash'
-import MyWallet from '../MyWallet/MyWallet'
+import MyWallet from '../MyWallet/MyWallet';
+import ProfileEditPortal from '../Portal/ProfileEdit/ProfileEditPortal';
 
 class ProfileSection extends React.Component{
 
@@ -54,7 +55,7 @@ class ProfileSection extends React.Component{
                                 <span className={classes.Info}>{this.props.user.phone}</span>
                                 <span className={classes.Info}>{this.props.user.email}</span>
                             </div>
-                            <button type="button" className={classes.EditButton}>EDIT</button>
+                            <button type="button" className={classes.EditButton}> <ProfileEditPortal/> </button>
                         </div>
                         <span className={classes.HRLine}></span>
 
