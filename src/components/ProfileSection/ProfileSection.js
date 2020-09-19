@@ -126,12 +126,12 @@ class ProfileSection extends React.Component{
                             </div>
                         </div>
 
-                        <div className={classes.ProfileItem}>
+                        <NavLink to="/about" className={classes.ProfileItem}>
                             <div className={classes.Left}>
                                 <img src={Info} alt="Location" />
                                 <span>About Us</span>
                             </div>
-                        </div>
+                        </NavLink>
 
                         <div className={classes.ProfileItem}>
                             <div className={classes.Left}>

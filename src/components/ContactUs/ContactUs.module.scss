@@ -60,8 +60,11 @@
                 .Right{
                     width : 40%;
                     padding : 80px 5px;
-                    .Marker{
-                        // background-color : coral;
+                    display : flex;
+                    align-items: center;
+                    justify-content: center;
+                    .Logo{
+                        width : 80%;
                     }
                 }
             }
@@ -93,6 +96,9 @@
                         // background-color: coral;
                         padding : 10px;
                         height : 300px;
+                        .Logo{
+                            width : 80%;
+                        }
                     }
                 }
             }

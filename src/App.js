@@ -18,6 +18,7 @@ import ContactUs from './components/ContactUs/ContactUs';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import Checkout from './components/Checkout/Checkout';
 import ProfileSection from './components/ProfileSection/ProfileSection';
+import PackageDrop from './components/PackageDrop/PackageDrop';
 
 class App extends React.Component{
   render(){
@@ -39,12 +40,14 @@ class App extends React.Component{
         <Route path="/terms" exact render={() => <Terms />} />
         <Route path="/redirect" exact render={() => <CategoryRedirect />} />
         <Route path="/rate" exact render={() => <RateUs />} />
-        <Route path="/contact" exact render={() => <ContactUs />} />
+        <Route path="/contact" exact render={() => <ContactUs about='false' />} />
+        <Route path="/about" exact render={() => <ContactUs about='true' />} />
         <Route path="/product" exact render={() => <ProductDetails />} />
         <Route path="/checkout" exact render={() => <Checkout />} />
         <Route path="/profile" exact render={() => <ProfileSection />} />
         <Route path="/profile-orders" exact render={() => <ProfileSection active="orders" />} />
         <Route path="/wallet" exact render={() => <ProfileSection active="wallet" />} />
+        <Route path="/package" exact render={() => <PackageDrop />} />
         {/* <LocationSearchInput /> */}
       </div>
     )

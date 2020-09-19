@@ -43,10 +43,6 @@
   margin-right: 40px;
 }
 
-.Navbar .NavButtons .LoginButton:focus {
-  outline: none;
-}
-
 .Navbar .NavButtons .LoginButton:hover {
   cursor: pointer;
 }

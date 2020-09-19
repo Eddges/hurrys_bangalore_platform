@@ -4,17 +4,19 @@ import classes from './ContactUs.module.css'
 import GreenBG from '../../assets/GreenBottom.svg'
 import Footer from '../Footer/Footer'
 import GoogleMapReact from 'google-map-react'
+import Logo from '../../assets/LogoBlack.png'
 
 const AnyReactComponent = ({ text }) => <div className={classes.Marker}>{text}</div>;
 
 const ContactUs = (props) => {
+    console.log('About : ', props.about==='true')
     return(
         <div className={classes.Container}>
             <NavbarAlt />
             <img className={classes.Background} src={GreenBG} alt="Background" />
             <div className={classes.Main}>
                 <div className={classes.Contact}>
-                    <span className={classes.HeadingContact}>Contact Us</span>
+                    <span className={classes.HeadingContact}>{props.about==='true' ? 'About' : 'Contact'} Us</span>
                     <div className={classes.InfoPanel}>
                         <div className={classes.Left}>
                             <span className={classes.Heading}>Address :</span>
@@ -27,17 +29,24 @@ const ContactUs = (props) => {
                             <span className={classes.Support}>Looking for support? <span>Click Here</span></span>
                         </div>
                         <div className={classes.Right}>
-                        <GoogleMapReact
-                            bootstrapURLKeys={{ key: 'AIzaSyBhYZ7B9Qf6DWiixOxZf2GYciJIrmbQHoA`' }}
-                            defaultCenter={{lat : 59.95, lng : 30.33}}
-                            defaultZoom={11}
-                        >
-                            <AnyReactComponent
-                            lat={59.955413}
-                            lng={30.337844}
-                            text="Hurrys"
-                            />
-                        </GoogleMapReact>
+                        {
+                            props.about==='true' ? 
+                                <img className={classes.Logo} src={Logo} alt="Logo" />
+                                : 
+                                
+                                <GoogleMapReact
+                                    bootstrapURLKeys={{ key: 'AIzaSyBhYZ7B9Qf6DWiixOxZf2GYciJIrmbQHoA`' }}
+                                    defaultCenter={{lat : 59.95, lng : 30.33}}
+                                    defaultZoom={11}
+                                >
+                                    <AnyReactComponent
+                                    lat={59.955413}
+                                    lng={30.337844}
+                                    text="Hurrys"
+                                    />
+                                </GoogleMapReact>
+                        }
+
                         </div>
                     </div>
                 </div>

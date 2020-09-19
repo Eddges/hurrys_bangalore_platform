@@ -8,6 +8,7 @@ import haldirams from '../../assets/haldirams.jpeg'
 import deliveryLocation from '../../assets/deliveryLocation.svg'
 import payment from '../../assets/payment.jpeg'
 import debitCard from '../../assets/debitCard.svg'
+import PaymentAccordion from '../PaymentAccordion/PaymentAccordion'
 
 class Checkout extends React.Component{
     state = {
@@ -146,34 +147,7 @@ class Checkout extends React.Component{
 
                             <div className={classes.HRLine}></div>
                             
-                            <div className={classes.Accordion} onClick={this.handlePaymentAccordion}>
-                                <div className={classes.AccordionTop}>
-                                    <div className={classes.AccordionTopText}>
-                                        <img src={payment} alt="Payment Icon" />
-                                        <span>Payment Method</span>
-                                    </div>
-                                    <ion-icon name={this.state.paymentOpen ? "chevron-up-sharp" : "chevron-down-sharp"}></ion-icon>
-                                </div>
-                                <div className={this.state.paymentOpen ? `${classes.AccordionDrop} ${classes.AccordionDropExpand}` : `${classes.AccordionDrop}`}>
-
-                                    <div className={classes.PaymentDropItem}>
-                                        <input type="checkbox" />
-                                        <img src={debitCard} alt="Debit Card" />
-                                        <span>Debit/Credit Card</span>
-                                    </div>
-                                    <div className={classes.PaymentDropItem}>
-                                        <input type="checkbox" />
-                                        <img src={debitCard} alt="Debit Card" />
-                                        <span>Debit/Credit Card</span>
-                                    </div>
-                                    <div className={classes.PaymentDropItem}>
-                                        <input type="checkbox" />
-                                        <img src={debitCard} alt="Debit Card" />
-                                        <span>Debit/Credit Card</span>
-                                    </div>
-
-                                </div>
-                            </div>
+                            <PaymentAccordion />
                         </div>
                         <div className={classes.VerticalLine}></div>
                         <div className={classes.Right}>

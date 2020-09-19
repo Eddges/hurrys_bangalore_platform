@@ -1,0 +1,173 @@
+.Accordion {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Accordion .AccordionTop {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.Accordion .AccordionTop .AccordionTopText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.Accordion .AccordionTop .AccordionTopText img {
+  width: 30px;
+}
+
+.Accordion .AccordionTop .AccordionTopText span {
+  margin-left: 20px;
+}
+
+.Accordion .AccordionTop ion-icon {
+  color: #00b246;
+  font-size: 1.5rem;
+}
+
+.Accordion .AccordionDrop {
+  min-height: 0px;
+  height: 0px;
+  overflow: hidden;
+  padding-left: 50px;
+  width: 100%;
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.Accordion .AccordionDrop .PaymentDropItem {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #585858;
+  font-family: 'Avenir Book';
+  margin-right: 30px;
+  font-size: 0.9rem;
+}
+
+.Accordion .AccordionDrop .AddressDropItem {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.Accordion .AccordionDrop .AddressDropItem .AddressDropItemLeft {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.Accordion .AccordionDrop .AddressDropItem .AddressDropItemLeft input {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.Accordion .AccordionDrop .AddressDropItem .AddressDropItemLeft .AddressDropMiddle {
+  padding: 0px;
+  margin-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Accordion .AccordionDrop .AddressDropItem .AddressDropItemLeft .AddressDropMiddle .AddressDropDetail {
+  color: #999999;
+}
+
+.Accordion .AccordionDrop .AddressDropItem button {
+  background-color: transparent;
+  border: none;
+  font-family: 'Avenir Heavy';
+  color: #00b246;
+}
+
+.Accordion .AccordionDrop .DeliveryControls {
+  width: 100%;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Accordion .AccordionDrop .DeliveryControls .AddressAdd {
+  border: none;
+  background-color: transparent;
+  font-family: 'Avenir Heavy';
+  color: #00b246;
+  font-size: 0.9rem;
+}
+
+.Accordion .AccordionDrop .DeliveryControls .AddressContinue {
+  background-color: #00b246;
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  height: 40px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.371);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.371);
+}
+
+.Accordion .AccordionDrop .DeliveryControls button:hover {
+  cursor: pointer;
+}
+
+.Accordion .AccordionDropExpand {
+  min-height: 200px;
+  height: auto;
+  overflow: auto;
+}
+
+.Accordion:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=PaymentAccordion.module.css.map */

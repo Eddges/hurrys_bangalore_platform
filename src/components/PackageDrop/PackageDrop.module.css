@@ -1,0 +1,233 @@
+.Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px 40px;
+}
+
+.Container .PackageLeft {
+  width: 50%;
+  border-right: 2px solid rgba(153, 153, 153, 0.296);
+  padding: 0px 20px;
+}
+
+.Container .PackageLeft .PackageLeftTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container .PackageLeft .PackageLeftTop img {
+  width: 40px;
+  border: solid 1px rgba(128, 128, 128, 0.275);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.Container .PackageLeft .PackageLeftTop span {
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container .PackageLeft .PackageLeftTop span ion-icon {
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+.Container .PackageLeft .Instructions {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container .PackageLeft .Instructions .Left {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #999999;
+}
+
+.Container .PackageLeft .Instructions .Left span {
+  margin-top: 10px;
+}
+
+.Container .PackageLeft .Instructions .Right {
+  width: 55%;
+}
+
+.Container .PackageLeft .Instructions .Right img {
+  width: 100%;
+}
+
+.Container .PackageLeft .Form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.Container .PackageLeft .Form .FormItem {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+  padding: 10px 0px;
+}
+
+.Container .PackageLeft .Form .FormItem .Title {
+  padding: 0px 5px;
+}
+
+.Container .PackageLeft .Form .FormItem .Title span {
+  font-family: 'Avenir Heavy';
+}
+
+.Container .PackageLeft .Form .FormItem .Select {
+  width: 90%;
+  margin-top: 10px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #00b246;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+}
+
+.Container .PackageLeft .Form .FormItem .Select button {
+  background-color: transparent;
+  border: none;
+  font-family: 'Avenir Heavy';
+  font-size: 0.9rem;
+  color: #00b246;
+}
+
+.Container .PackageLeft .Form .FormItem .Select button:hover {
+  cursor: pointer;
+}
+
+.Container .PackageLeft .Form .FormItem .Select .ButtonDropAddress {
+  font-size: 0.8rem;
+  color: #999;
+  font-family: 'Avenir';
+}
+
+.Container .PackageLeft .PackageInstructions {
+  margin-top: 20px;
+  padding: 10px;
+  border: solid 3px rgba(153, 153, 153, 0.241);
+}
+
+.Container .PackageLeft .Coupon {
+  margin-top: 20px;
+  padding: 20px 5px;
+  border-top: solid 1px rgba(153, 153, 153, 0.337);
+  border-bottom: solid 1px rgba(153, 153, 153, 0.337);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Avenir Heavy';
+}
+
+.Container .PackageLeft .Coupon img {
+  margin-right: 10px;
+}
+
+.Container .PackageLeft .Total {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-family: 'Avenir Heavy';
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.Container .PackageLeft .Total span {
+  font-family: 'Avenir Heavy';
+}
+
+.Container .PackageRight {
+  width: 50%;
+  padding: 0px 50px;
+}
+
+.Container .VRLine {
+  width: 2px;
+  height: 80vh;
+  background-color: #999999;
+}
+
+@media (max-width: 576px) {
+  .Container {
+    padding: 40px 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Container .PackageLeft {
+    width: 100%;
+    border: none;
+  }
+  .Container .PackageLeft .Instructions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .Container .PackageLeft .Instructions .Left {
+    width: 100%;
+  }
+  .Container .PackageLeft .Instructions .Right {
+    width: 100%;
+  }
+  .Container .PackageRight {
+    width: 100%;
+    padding: 10px;
+    margin-top: 50px;
+  }
+}
+/*# sourceMappingURL=PackageDrop.module.css.map */

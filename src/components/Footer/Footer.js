@@ -19,13 +19,13 @@ function Footer() {
           </div>
           <div className = {styles.box}>
             <p className = {styles.label} >COMPANY</p>
-            <p>About Us</p>
+            <p><NavLink onClick={() => window.scroll(0,0)} to="/about">About Us</NavLink></p>
             <p>Careers</p>
             <p><NavLink onClick={() => window.scroll(0,0)} to="/contact">Contact Us</NavLink></p>
           </div>
           <div className = {styles.box}>
             <p className = {styles.label} >CONTACT</p>
-            <p><NavLink to="/referral">Help and Support</NavLink></p>
+            <p><NavLink onClick={() => window.scroll(0,0)} to="/referral">Help and Support</NavLink></p>
         
             <p><NavLink onClick={() => window.scroll(0,0)} to="/delivery">Become a Partner</NavLink></p>
             <p><NavLink onClick={() => window.scroll(0,0)} to="/vendor">Become a Seller</NavLink></p>

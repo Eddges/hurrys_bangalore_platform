@@ -31,7 +31,7 @@ class Categories extends React.Component{
                     <CategoryCard icon={meds} text="Medicine Stores" toLink="meds" unavailable={true} />
                     <CategoryCard icon={apparels} text="Apparels" toLink="apparels" unavailable={true} />
                     <CategoryCard icon={health} text="Health & Wellness" toLink="health" unavailable={true} />
-                    <CategoryCard icon={pkg} text="Package Pickup" toLink="package" unavailable={true} />
+                    <CategoryCard icon={pkg} text="Package Pickup" toLink="package" />
                     <CategoryCard icon={taxi} text="Taxi Service" toLink="taxi" unavailable={true} />
                     
 

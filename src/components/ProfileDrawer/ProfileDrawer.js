@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './ProfileDrawer.module.css'
 import haldirams from '../../assets/haldirams.jpeg'
 import {connect} from 'react-redux'
+import {NavLink} from 'react-router-dom'
 import Location from '../../assets/locationMarker.svg'
 import Wallet from '../../assets/wallet.svg'
 import Support from '../../assets/support.svg'
@@ -50,7 +51,7 @@ class ProfileDrawer extends React.Component{
                         </div>
                     </div>
 
-                    <div className={classes.ProfileItem}>
+                    <NavLink to="/profile-orders" className={classes.ProfileItem}>
                         <div className={classes.Left}>
                             <img src={CartIcon} alt="Location" />
                             <span>My Orders</span>
@@ -58,9 +59,9 @@ class ProfileDrawer extends React.Component{
                         <div className={classes.Right}>
                             <ion-icon name="chevron-forward"></ion-icon>
                         </div>
-                    </div>
+                    </NavLink>
 
-                    <div className={classes.ProfileItem}>
+                    <NavLink to="/wallet" className={classes.ProfileItem}>
                         <div className={classes.Left}>
                             <img src={Wallet} alt="Location" />
                             <span>My Wallet</span>
@@ -68,7 +69,7 @@ class ProfileDrawer extends React.Component{
                         <div className={classes.Right}>
                             <ion-icon name="chevron-forward"></ion-icon>
                         </div>
-                    </div>
+                    </NavLink>
 
                     <div className={classes.ProfileItem}>
                         <div className={classes.Left}>
@@ -107,12 +108,12 @@ class ProfileDrawer extends React.Component{
                         </div>
                     </div>
 
-                    <div className={classes.ProfileItem}>
+                    <NavLink to="/about" className={classes.ProfileItem}>
                         <div className={classes.Left}>
                             <img src={Info} alt="Location" />
                             <span>About Us</span>
                         </div>
-                    </div>
+                    </NavLink>
 
                     <div className={classes.ProfileItem}>
                         <div className={classes.Left}>

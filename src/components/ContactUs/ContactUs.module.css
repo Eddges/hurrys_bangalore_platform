@@ -99,6 +99,19 @@
 .Container .Main .Contact .InfoPanel .Right {
   width: 40%;
   padding: 80px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Container .Main .Contact .InfoPanel .Right .Logo {
+  width: 80%;
 }
 
 @media (max-width: 576px) {
@@ -127,6 +140,9 @@
     width: 100%;
     padding: 10px;
     height: 300px;
+  }
+  .Container .Main .Contact .InfoPanel .Right .Logo {
+    width: 80%;
   }
 }
 /*# sourceMappingURL=ContactUs.module.css.map */

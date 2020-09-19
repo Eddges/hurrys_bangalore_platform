@@ -10,9 +10,16 @@ const CategoryCard = (props) => {
     }
 
     // console.log('State : ', props.ctr)
+    let link = '/shops'
+
+    switch(props.toLink) {
+        case 'package' : 
+            link = '/package'
+            break
+    }
 
     return(
-        <NavLink className={classes.Container } to={props.unavailable ? "/redirect" : '/shops'} onClick={() => {
+        <NavLink className={classes.Container } to={props.unavailable ? "/redirect" : link } onClick={() => {
             props.onChangeCategory(props.toLink)
             window.scrollTo(0, 0)
             }} >
