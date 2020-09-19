@@ -14,11 +14,19 @@ import {connect} from 'react-redux'
 import ProfileOrders from '../ProfileOrders/ProfileOrders'
 import {NavLink, Route} from 'react-router-dom'
 import ProfileDash from '../ProfileDash/ProfileDash'
+import MyWallet from '../MyWallet/MyWallet'
 
 class ProfileSection extends React.Component{
 
     state = {
         activeComponent : 'orders'
+    }
+
+    changeDisplay = (active) => {
+        this.setState({
+            ...this.state,
+            activeComponent : active
+        })
     }
 
     render(){
@@ -27,9 +35,11 @@ class ProfileSection extends React.Component{
 
         switch(this.props.active) {
             case 'orders' : 
-                console.log(this.props.active)
                 active = <ProfileOrders />
-
+                break
+            case 'wallet' : 
+                active = <MyWallet />
+                break
         }
 
 
@@ -59,7 +69,7 @@ class ProfileSection extends React.Component{
                             </div>
                         </div>
 
-                        <NavLink to="/profile-orders" className={classes.ProfileItem}>
+                        <NavLink to="/profile-orders" className={classes.ProfileItem} onClick={() => this.changeDisplay('orders')}>
                             <div className={classes.Left}>
                                 <img src={CartIcon} alt="Location" style={{filter : 'invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%)'}} />
                                 <span>My Orders</span>
@@ -69,7 +79,7 @@ class ProfileSection extends React.Component{
                             </div>
                         </NavLink>
 
-                        <div className={classes.ProfileItem}>
+                        <NavLink to="/wallet" className={classes.ProfileItem} onClick={() => this.changeDisplay('wallet')}>
                             <div className={classes.Left}>
                                 <img src={Wallet} alt="Location" />
                                 <span>My Wallet</span>
@@ -77,7 +87,7 @@ class ProfileSection extends React.Component{
                             <div className={classes.ProfileItemRight}>
                                 <ion-icon name="chevron-forward"></ion-icon>
                             </div>
-                        </div>
+                        </NavLink>
 
                         <div className={classes.ProfileItem}>
                             <div className={classes.Left}>

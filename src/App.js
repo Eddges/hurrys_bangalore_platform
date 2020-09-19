@@ -40,6 +40,7 @@ class App extends React.Component{
         <Route path="/checkout" exact render={() => <Checkout />} />
         <Route path="/profile" exact render={() => <ProfileSection />} />
         <Route path="/profile-orders" exact render={() => <ProfileSection active="orders" />} />
+        <Route path="/wallet" exact render={() => <ProfileSection active="wallet" />} />
         {/* <LocationSearchInput /> */}
       </div>
     )

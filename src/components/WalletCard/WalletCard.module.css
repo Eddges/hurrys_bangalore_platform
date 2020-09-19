@@ -1,0 +1,87 @@
+.Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 15px 20px;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.Container .Left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+}
+
+.Container .Left .Icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: solid 1px rgba(128, 128, 128, 0.44);
+}
+
+.Container .Left .Icon img {
+  width: 80%;
+}
+
+.Container .Left .Main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 20px;
+}
+
+.Container .Left .Main .Heading {
+  font-size: 1.2rem;
+}
+
+.Container .Left .Main .Time {
+  margin-top: 30px;
+  color: #999999;
+  font-size: 0.8rem;
+}
+
+.Container .Amount {
+  font-size: 1.5rem;
+  font-family: 'Avenir Heavy';
+}
+
+@media (max-width: 576px) {
+  .Container {
+    padding: 15px 10px;
+  }
+  .Container .Left .Icon {
+    min-width: 30px;
+    min-height: 30px;
+    width: 30px;
+    height: 30px;
+  }
+  .Container .Left .Main {
+    margin-left: 10px;
+  }
+  .Container .Left .Main .Heading {
+    font-size: 1rem;
+  }
+  .Container .Amount {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=WalletCard.module.css.map */
