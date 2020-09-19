@@ -17,6 +17,7 @@ import ProfileDash from '../ProfileDash/ProfileDash'
 import MyWallet from '../MyWallet/MyWallet';
 import ProfileEditPortal from '../Portal/ProfileEdit/ProfileEditPortal';
 
+
 class ProfileSection extends React.Component{
 
     state = {
@@ -103,7 +104,7 @@ class ProfileSection extends React.Component{
                         <div className={classes.ProfileItem}>
                             <div className={classes.Left}>
                                 <img src={Offers} alt="Location" />
-                                <span>Offer Zone</span>
+                                <span> Offer Zone </span>
                             </div>
                             <div className={classes.ProfileItemRight}>
                                 <ion-icon name="chevron-forward"></ion-icon>

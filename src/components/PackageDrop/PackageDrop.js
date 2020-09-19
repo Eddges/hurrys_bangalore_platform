@@ -4,7 +4,8 @@ import PaymentAccordion from '../PaymentAccordion/PaymentAccordion'
 import classes from './PackageDrop.module.css'
 import deliveryIcon from '../../assets/delivery.svg'
 import PackageIcon from '../../assets/packageDrop.png'
-import offer from '../../assets/offers.svg'
+import offer from '../../assets/offers.svg';
+import CouponPortal from '../Portal/CouponCode/CouponPortal';
 
 const PackageDrop = (props) => {
     return(
@@ -45,7 +46,7 @@ const PackageDrop = (props) => {
                             <input className={classes.Select} placeholder="e.g. Documents" />
                         </div>
                         <textarea className={classes.PackageInstructions} rows="4" placeholder="Any instructions for delivery? E.g. Don’t ring bell" ></textarea>
-                        <span className={classes.Coupon}><img src={offer} alt="Icon" />Apply Coupon Code</span>
+                        <span className={classes.Coupon}><img src={offer} alt="Icon" /> <CouponPortal/> </span>
                         <div className={classes.Total}>
                             <span>Total Payable</span>
                             <span>₹234</span>

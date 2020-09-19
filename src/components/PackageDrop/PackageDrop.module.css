@@ -159,6 +159,7 @@
       -ms-flex-align: center;
           align-items: center;
   font-family: 'Avenir Heavy';
+  cursor: pointer;
 }
 
 .Container .PackageLeft .Coupon img {
