@@ -10,8 +10,12 @@ function SignupContent({onClose}) {
              <div className = {styles.signup_header}>
                 <LoIcons.IoIosClose onClick = {onClose} style = {{fontWeight:900, marginLeft:'auto',fontSize:50 }} />
             </div>
+            <div style = {{borderBottom:'2px solid #eaeaea'}}>
+                    <p style ={{fontWeight:600, fontSize:'20px', marginLeft:'9%',marginBottom:'10px'}} >Edit Profile</p>
+                </div>
             <div className = {styles.signup_content}>
-                <p style ={{fontWeight:600, fontSize:'20px'}} >Edit Profile</p>
+                
+              
                 <div className = {styles.signup_input}>
                     <label className = {styles.flabel}>
                         <p>Full Name</p>

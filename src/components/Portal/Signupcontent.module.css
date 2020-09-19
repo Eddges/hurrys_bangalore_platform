@@ -47,6 +47,10 @@
     margin-top: 8px;
 }
 
+.signup_wrapper .signup_content .signup_input label input:focus {
+    outline: none;
+}
+
 .signup_wrapper .signup_content .btn_wrapper {
     display: flex;
     width: 100%;
@@ -56,6 +60,7 @@
     align-items: center;
     padding-bottom: 10px;
     margin-bottom: 10px;
+    padding-top: 10px;
 }
 
 .signup_wrapper .signup_content .btn_wrapper .btn {
