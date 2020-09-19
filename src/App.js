@@ -5,6 +5,8 @@ import Delivery from './components/Delivery/Delivery';
 import Homepage from './components/Homepage/Homepage';
 import ProductsGrocery from './components/ProductsGrocery/ProductsGrocery';
 import ShopsAvailable from './components/ShopsAvailable/ShopsAvailable';
+import OrderConfirm from './components/orderConfirm/OrderConfirm';
+import ReferralPage from './components/Referral/ReferralPage';
 import Cancellation from './components/FooterComponents/Cancellation';
 import Privacy from './components/FooterComponents/Privacy';
 import Terms from './components/FooterComponents/Terms';
@@ -29,6 +31,8 @@ class App extends React.Component{
         <Route path="/vendor" exact render={() => <Vendor />} />
         <Route path="/grocery" exact render={() => <ProductsGrocery />} />
         <Route path="/shops" exact render={() => <ShopsAvailable />} />
+        <Route path="/orderconfirmed" exact render={() =>  <OrderConfirm/> } />
+        <Route path="/referral" exact render={() =>  <ReferralPage/> } />
         <Route path="/shopdetails" exact render={() => <ShopDetails />} />
         <Route path="/cancellation" exact render={() => <Cancellation />} />
         <Route path="/privacy" exact render={() => <Privacy />} />
