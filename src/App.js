@@ -51,6 +51,8 @@ class App extends React.Component{
         <Route path="/package" exact render={() => <PackageDrop />} />
         <Route path="/customer-support" exact render={() => <ProfileSection active="customer" />} />
         <Route path="/customer-faq" exact render={() => <ProfileSection active="faq" />} />
+        <Route path="/faq-question" exact render={() => <ProfileSection active="fques" />} />
+
 
         {/* <LocationSearchInput /> */}
       </div>
