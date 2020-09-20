@@ -19,6 +19,7 @@ import ProductDetails from './components/ProductDetails/ProductDetails';
 import Checkout from './components/Checkout/Checkout';
 import ProfileSection from './components/ProfileSection/ProfileSection';
 import PackageDrop from './components/PackageDrop/PackageDrop';
+import CustomerSupport from './components/CustomerSupport/CustomerSupport';
 
 class App extends React.Component{
   render(){
@@ -48,6 +49,8 @@ class App extends React.Component{
         <Route path="/profile-orders" exact render={() => <ProfileSection active="orders" />} />
         <Route path="/wallet" exact render={() => <ProfileSection active="wallet" />} />
         <Route path="/package" exact render={() => <PackageDrop />} />
+        <Route path="/customer-support" exact render={() => <ProfileSection active="customer" />} />
+
         {/* <LocationSearchInput /> */}
       </div>
     )
