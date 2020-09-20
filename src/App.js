@@ -50,6 +50,7 @@ class App extends React.Component{
         <Route path="/wallet" exact render={() => <ProfileSection active="wallet" />} />
         <Route path="/package" exact render={() => <PackageDrop />} />
         <Route path="/customer-support" exact render={() => <ProfileSection active="customer" />} />
+        <Route path="/customer-faq" exact render={() => <ProfileSection active="faq" />} />
 
         {/* <LocationSearchInput /> */}
       </div>

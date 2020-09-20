@@ -17,6 +17,7 @@ import ProfileDash from '../ProfileDash/ProfileDash'
 import MyWallet from '../MyWallet/MyWallet';
 import ProfileEditPortal from '../Portal/ProfileEdit/ProfileEditPortal';
 import CustomerSupport from '../CustomerSupport/CustomerSupport';
+import CustomerFAQ from '../CustomerSupport/CustomerFAQ/CustomerFAQ'
 
 
 class ProfileSection extends React.Component{
@@ -45,6 +46,9 @@ class ProfileSection extends React.Component{
                 break
             case 'customer' :
                 active = <CustomerSupport/>
+                break
+            case 'faq' :
+                active = <CustomerFAQ/>
                 break
         }
 
