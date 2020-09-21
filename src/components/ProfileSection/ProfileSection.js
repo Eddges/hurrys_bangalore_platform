@@ -16,6 +16,9 @@ import {NavLink, Route} from 'react-router-dom'
 import ProfileDash from '../ProfileDash/ProfileDash'
 import MyWallet from '../MyWallet/MyWallet';
 import ProfileEditPortal from '../Portal/ProfileEdit/ProfileEditPortal';
+import CustomerSupport from '../CustomerSupport/CustomerSupport';
+import CustomerFAQ from '../CustomerSupport/CustomerFAQ/CustomerFAQ'
+import FaqQues from '../CustomerSupport/FaqQues/FaqQues'
 
 
 class ProfileSection extends React.Component{
@@ -42,6 +45,14 @@ class ProfileSection extends React.Component{
             case 'wallet' : 
                 active = <MyWallet />
                 break
+            case 'customer' :
+                active = <CustomerSupport/>
+                break
+            case 'faq' :
+                active = <CustomerFAQ/>
+                break
+            case 'fques' :
+                active = <FaqQues/>
         }
 
 
@@ -90,8 +101,8 @@ class ProfileSection extends React.Component{
                                 <ion-icon name="chevron-forward"></ion-icon>
                             </div>
                         </NavLink>
-
-                        <div className={classes.ProfileItem}>
+                        <NavLink to="/Customer-support" className = {classes.ProfileItem} onClick = {() => this.changeDisplay('Customer')}>
+                        
                             <div className={classes.Left}>
                                 <img src={Support} alt="Location" />
                                 <span>Customer Support</span>
@@ -99,7 +110,8 @@ class ProfileSection extends React.Component{
                             <div className={classes.ProfileItemRight}>
                                 <ion-icon name="chevron-forward"></ion-icon>
                             </div>
-                        </div>
+                       
+                        </NavLink>
 
                         <div className={classes.ProfileItem}>
                             <div className={classes.Left}>
