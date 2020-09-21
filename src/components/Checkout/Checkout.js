@@ -6,14 +6,12 @@ import NavbarAlt from '../NavbarAlt/NavbarAlt'
 import classes from './Checkout.module.css'
 import haldirams from '../../assets/haldirams.jpeg'
 import deliveryLocation from '../../assets/deliveryLocation.svg'
-import payment from '../../assets/payment.jpeg'
-import debitCard from '../../assets/debitCard.svg'
 import PaymentAccordion from '../PaymentAccordion/PaymentAccordion'
 
 class Checkout extends React.Component{
     state = {
         deliveryOpen : true,
-        paymentOpen : false,
+        
         show : true,
         products : [
             {
@@ -82,12 +80,7 @@ class Checkout extends React.Component{
             deliveryOpen : !this.state.deliveryOpen
         })
     }
-    handlePaymentAccordion = () => {
-        this.setState({
-            ...this.state,
-            paymentOpen : !this.state.paymentOpen
-        })
-    }
+
 
     render(){
         return(
