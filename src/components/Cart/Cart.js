@@ -3,6 +3,7 @@ import classes from './Cart.module.css'
 import haldirams from '../../assets/haldirams.jpeg'
 import CartItems from './CartItems/CartItems'
 import CartCard from './CartCard/CartCard'
+import { NavLink } from 'react-router-dom'
 
 class Cart extends React.Component{
     state = {
@@ -88,6 +89,7 @@ class Cart extends React.Component{
                         })
                     }
                     <button className={classes.ExitButton} onClick={this.props.handleCartBack}>Back</button>
+                    <NavLink to="/checkout" className={classes.ExitButton} onClick={this.props.handleCartBack}>Checkout</NavLink>
                 </div>
             </div>
         )

@@ -41,7 +41,7 @@ class ProfileDrawer extends React.Component{
                     <span className={classes.HRLine}></span>
 
 
-                    <div className={classes.ProfileItem}>
+                    <NavLink to="/address" className={classes.ProfileItem}>
                         <div className={classes.Left}>
                             <img src={Location} alt="Location" />
                             <span>Manage Address</span>
@@ -49,7 +49,7 @@ class ProfileDrawer extends React.Component{
                         <div className={classes.Right}>
                             <ion-icon name="chevron-forward"></ion-icon>
                         </div>
-                    </div>
+                    </NavLink>
 
                     <NavLink to="/profile-orders" className={classes.ProfileItem}>
                         <div className={classes.Left}>
@@ -71,7 +71,7 @@ class ProfileDrawer extends React.Component{
                         </div>
                     </NavLink>
 
-                    <div className={classes.ProfileItem}>
+                    <NavLink to="/customer-support" className={classes.ProfileItem}>
                         <div className={classes.Left}>
                             <img src={Support} alt="Location" />
                             <span>Customer Support</span>
@@ -79,7 +79,7 @@ class ProfileDrawer extends React.Component{
                         <div className={classes.Right}>
                             <ion-icon name="chevron-forward"></ion-icon>
                         </div>
-                    </div>
+                    </NavLink>
 
                     <div className={classes.ProfileItem}>
                         <div className={classes.Left}>
@@ -91,7 +91,7 @@ class ProfileDrawer extends React.Component{
                         </div>
                     </div>
 
-                    <div className={classes.ProfileItem}>
+                    <NavLink to="/referral" className={classes.ProfileItem}>
                         <div className={classes.Left}>
                             <img src={Gift} alt="Location" />
                             <span>Refer Your Friends</span>
@@ -99,7 +99,7 @@ class ProfileDrawer extends React.Component{
                         <div className={classes.Right}>
                             <ion-icon name="chevron-forward"></ion-icon>
                         </div>
-                    </div>
+                    </NavLink>
 
                     <div className={classes.ProfileItem}>
                         <div className={classes.Left}>
@@ -115,12 +115,12 @@ class ProfileDrawer extends React.Component{
                         </div>
                     </NavLink>
 
-                    <div className={classes.ProfileItem}>
+                    <NavLink to="/" className={classes.ProfileItem}>
                         <div className={classes.Left}>
                             <img src={Logout} alt="Location" />
                             <span>Logout</span>
                         </div>
-                    </div>
+                    </NavLink>
                     <div className={classes.ButtonDiv}>
                         <button className={classes.ExitButton} onClick={this.props.handleProfile}>Back</button>
                     </div>

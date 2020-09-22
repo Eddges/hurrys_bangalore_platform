@@ -65,10 +65,6 @@
   font-family: 'Avenir Heavy';
 }
 
-.Container .Main .ContainerLeft .ProfileInfo .EditButton:focus {
-  outline: none;
-}
-
 .Container .Main .ContainerLeft .ProfileItem {
   display: -webkit-box;
   display: -ms-flexbox;
