@@ -63,9 +63,9 @@ class ProfileSection extends React.Component{
                     <div className={classes.ContainerLeft}>
                         <div className={classes.ProfileInfo}>
                             <div className={classes.Left}>
-                                <span className={classes.Name}>{this.props.user.name}</span>
-                                <span className={classes.Info}>{this.props.user.phone}</span>
-                                <span className={classes.Info}>{this.props.user.email}</span>
+                                <span className={classes.Name}>{this.props.user.Name}</span>
+                                <span className={classes.Info}>{this.props.user.MobileNumber}</span>
+                                <span className={classes.Info}>{this.props.user.Email}</span>
                             </div>
                             <button type="button" className={classes.EditButton}> <ProfileEditPortal/> </button>
                         </div>
@@ -165,7 +165,7 @@ class ProfileSection extends React.Component{
 
 const mapStateToProps = state => {
     return {
-        user : state.user
+        user : state.usr
     }
 }
 

@@ -228,8 +228,8 @@ class ShopsAvailable extends React.Component{
                     const lat1 = shopLocation[0]
                     const lon1 = shopLocation[1]
                     
-                    const lat2 = 51.8787
-                    const lon2 = -0.41748
+                    const lat2 = this.props.activeLocation.latitude
+                    const lon2 = this.props.activeLocation.longitude
                     var R = 6371; // Radius of the earth in km
                     var dLat = this.deg2rad(lat2-lat1);  // deg2rad below
                     var dLon = this.deg2rad(lon2-lon1); 
@@ -294,7 +294,7 @@ class ShopsAvailable extends React.Component{
                             {
                                 this.state.availableShopsActive.map((iterator, index) => {
                                     if(this.props.activeCategory===iterator.Category) {
-                                        console.log('Iterator : ', iterator)
+                                        {/* console.log('Iterator : ', iterator) */}
                                         return(
                                             <AvailableShopsCard icon={bazaar} discount="Upto 40% Off" {...iterator} available={false} key={index} />
                                         )
@@ -325,7 +325,8 @@ class ShopsAvailable extends React.Component{
 
 const mapStateToProps = state => {
     return{
-        activeCategory : state.red.categoryDisplay
+        activeCategory : state.red.categoryDisplay,
+        activeLocation : state.red.location
     }
 }
 

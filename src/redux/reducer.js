@@ -64,10 +64,10 @@ const initialState = {
     categoryDisplay : 'Groceries & Essentials',
     productCategoryDisplay : 'snacks',
     location : {
-        latitude : null,
-        longitude : null,
+        latitude : localStorage.getItem('latitude') ? localStorage.getItem('latitude') : null,
+        longitude : localStorage.getItem('longitude') ? localStorage.getItem('longitude') : null,
         userAddress : null,
-        generalAddress : null
+        generalAddress : localStorage.getItem('generalAddress') ? localStorage.getItem('generalAddress') : null,
     }
 }
 

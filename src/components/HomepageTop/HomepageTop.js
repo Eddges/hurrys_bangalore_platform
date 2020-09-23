@@ -51,9 +51,6 @@ class HomepageTop extends React.Component{
             }, () => {
                 this.props.onChangeLocation(this.state)
             })
-            // setTimeout(() => {
-            //     this.props.onChangeLocation(this.state)
-            // }, 0)
         })
             
         .catch(error => alert(error))
@@ -104,22 +101,35 @@ class HomepageTop extends React.Component{
         });
       };
      
-      handleSelect = address => {
-          console.log('Selected address : ', address)
-        geocodeByAddress(address)
-          .then(results => getLatLng(results[0]))
-          .then(latLng => console.log('Success', latLng))
-          .then(() => {
-              this.setState({
+    handleSelect = address => {
+        console.log('Selected address : ', address)
+    geocodeByAddress(address)
+        .then(results => getLatLng(results[0]))
+        .then(latLng => {
+            console.log(latLng)
+            this.setState({
                 ...this.state,
-                generalAddress : address
-              })
-          })
-          .catch(error => console.error('Error', error));
-      };
+                generalAddress : address,
+                latitude : latLng.lat,
+                longitude : latLng.lng
+            }, () => {
+                console.log('Changed state : ', this.state)
+            })
+        })
+        // .then(() => {
+        //     this.setState({
+        //     ...this.state,
+        //     generalAddress : address
+        //     })
+        // })
+        .catch(error => console.error('Error', error));
+    };
 
     handleProceed = () => {
         this.props.onChangeLocation(this.state)
+        localStorage.setItem('latitude', this.state.latitude)
+        localStorage.setItem('longitude', this.state.longitude)
+        localStorage.setItem('generalAddress', this.state.generalAddress)
     }
 
     findDistance = (lat1,lon1,lat2,lon2) => {
