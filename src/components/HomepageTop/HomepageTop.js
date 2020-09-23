@@ -16,7 +16,8 @@ class HomepageTop extends React.Component{
         longitude : null,
         userAddress : null,
         generalAddress : null,
-        address : ''
+        address : '',
+        city : ''
     }
 
     getLocation = () => {
@@ -42,6 +43,7 @@ class HomepageTop extends React.Component{
         .then(response => response.json())
         .then(data => {
             console.log('Current Location : ', data.results)
+
             this.setState({
                 ...this.state,
                 userAddress : data.results[0].formatted_address,
@@ -116,8 +118,32 @@ class HomepageTop extends React.Component{
           .catch(error => console.error('Error', error));
       };
 
-      handleProceed = () => {
-          this.props.onChangeLocation(this.state)
+    handleProceed = () => {
+        this.props.onChangeLocation(this.state)
+    }
+
+    findDistance = (lat1,lon1,lat2,lon2) => {
+     
+            lat1 = this.state.latitude
+            lon1 = this.state.longitude
+            lat2 = 12.975352963296594
+            lon2 = 77.61883911132811
+            var R = 6371; // Radius of the earth in km
+            var dLat = this.deg2rad(lat2-lat1);  // deg2rad below
+            var dLon = this.deg2rad(lon2-lon1); 
+            var a = 
+              Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(this.deg2rad(lat1)) * Math.cos(this.deg2rad(lat2)) * 
+              Math.sin(dLon/2) * Math.sin(dLon/2)
+              ; 
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+            var d = R * c; // Distance in km
+            // return d;
+            console.log('Distance : ', d)
+    }
+
+    deg2rad = (deg) => {
+        return deg * (Math.PI/180)
       }
 
     render(){
@@ -127,8 +153,6 @@ class HomepageTop extends React.Component{
                 <span className={classes.MainText}>Get <span className={classes.Highlite}>home food</span> delivered at your doorstep.</span>
                 <div className={classes.Rectangle}>
                     {/* <input type="text" placeholder="Enter delivery location" value={this.state.generalAddress} onChange={(e) => this.handleLocationChange(e)} /> */}
-
-
 
                     <PlacesAutocomplete
                         value={this.state.generalAddress}
@@ -168,12 +192,6 @@ class HomepageTop extends React.Component{
                         )}
                     </PlacesAutocomplete>
 
-
-
-
-
-
-
                     <div className={classes.Locate} onClick={this.getLocation}>
                         <img src={Pin} alt="Pin" />
                         <span>Locate Me</span>
@@ -184,6 +202,7 @@ class HomepageTop extends React.Component{
                     <span>Frequent Locations: </span>
                     <span>Bangalore, Pune, Hyderabad, Chennai</span>   
                 </div> */}
+                {/* <button style={{zIndex : '1000000'}} onClick={this.findDistance}>Find Distance</button> */}
             </div>
         )
     }

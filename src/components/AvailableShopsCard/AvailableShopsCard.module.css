@@ -13,8 +13,10 @@
 }
 
 .Container .Icon {
-  width: 130px;
-  height: 130px;
+  max-width: 130px;
+  max-height: 130px;
+  min-width: 130px;
+  min-height: 130px;
   border-radius: 8px;
   overflow: hidden;
   display: -webkit-box;

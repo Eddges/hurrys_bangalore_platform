@@ -19,11 +19,13 @@ import CategoryCard from '../Categories/CategoryCard/CategoryCard'
 import CategoryCardShops from '../CategoryCardShops/CategoryCardShops'
 import AvailableShopsCard from '../AvailableShopsCard/AvailableShopsCard'
 import { connect } from 'react-redux'
+import firebase, {database} from '../../firebase'
 
 class ShopsAvailable extends React.Component{
 
     state={
-        active: "food",
+        active: "Groceries & Essentials",
+        availableShopsActive : [],
         shops : [
             {
                 name : 'Bangalore Bazaar',
@@ -215,15 +217,66 @@ class ShopsAvailable extends React.Component{
         })
     }
 
+    componentDidMount() {
+        database.ref('/Vendor').on('value', snapshot => {
+            const allShopsObject = snapshot.val()
+            const allShopsKeys = Object.keys(snapshot.val())
+            const allShopsArray = allShopsKeys.map((iterator, index) => {
+                if(allShopsObject[iterator].Location){
+                    const shopLocation = allShopsObject[iterator].Location.split(',')
+
+                    const lat1 = shopLocation[0]
+                    const lon1 = shopLocation[1]
+                    
+                    const lat2 = 51.8787
+                    const lon2 = -0.41748
+                    var R = 6371; // Radius of the earth in km
+                    var dLat = this.deg2rad(lat2-lat1);  // deg2rad below
+                    var dLon = this.deg2rad(lon2-lon1); 
+                    var a = 
+                    Math.sin(dLat/2) * Math.sin(dLat/2) +
+                    Math.cos(this.deg2rad(lat1)) * Math.cos(this.deg2rad(lat2)) * 
+                    Math.sin(dLon/2) * Math.sin(dLon/2)
+                    ; 
+                    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+                    var d = R * c; // Distance in km
+                    // return d;
+
+                    if(d<=10) {
+                        const ava = this.state.availableShopsActive
+                        ava.push({
+                            ...allShopsObject[iterator],
+                            d
+                        })
+                        this.setState({
+                            ...this.state,
+                            availableShopsActive : ava
+                        })
+                    }
+
+                }
+                
+            })
+        })
+    }
+    deg2rad = (deg) => {
+        return deg * (Math.PI/180)
+      }
+
+    printActive = () => {
+        console.log(this.state.availableShopsActive)
+    }
+
     render(){
 
         return(
             <div className={classes.Container}>
                 <NavbarAlt />
+                {/* <button onClick={this.printActive}>Print Available Active Shops</button> */}
                 <div className={classes.Main}>
                     <div className={classes.Left}>
-                        <CategoryCardShops icon={grocery} text="Grocery & Essentials" toLink="grocery" />
-                        <CategoryCardShops icon={food} text="Food" toLink="food" active={this.state.active} />
+                        <CategoryCardShops icon={grocery} text="Groceries & Essentials" toLink="grocery" />
+                        <CategoryCardShops icon={food} text="Food Delivery" toLink="food" active={this.state.active} />
                         <CategoryCardShops icon={fruits} text="Fruits & Vegetables" toLink="fruits_veggies" />
                         <CategoryCardShops icon={homeFood} text="Home Food" toLink="home" />
                         {/* <CategoryCardShops icon={fish} text="Fish & Meat" toLink="fish_meat" />
@@ -239,12 +292,11 @@ class ShopsAvailable extends React.Component{
                         <span className={classes.Heading}>Available Shops</span>
                         <div className={classes.AvailableList}>
                             {
-                                this.state.shops.map((iterator, index) => {
-                                    console.log('Active Category : ', this.props.activeCategory)
-                                    if(this.props.activeCategory===iterator.category && iterator.available) {
-                                        
+                                this.state.availableShopsActive.map((iterator, index) => {
+                                    if(this.props.activeCategory===iterator.Category) {
+                                        console.log('Iterator : ', iterator)
                                         return(
-                                            <AvailableShopsCard {...iterator} available={true} key={index} />
+                                            <AvailableShopsCard icon={bazaar} discount="Upto 40% Off" {...iterator} available={false} key={index} />
                                         )
                                     }
                                 })
@@ -252,15 +304,16 @@ class ShopsAvailable extends React.Component{
                         </div>
                         <span className={classes.Heading}>Unvailable Shops</span>
                         <div className={classes.AvailableList}>
-                        {
-                                this.state.shops.map((iterator, index) => {
-                                    if(this.props.activeCategory===iterator.category && !iterator.available) {
+                        {/* {
+                                this.state.availableShopsActive.map((iterator, index) => {
+                                    if(this.props.activeCategory===iterator.Category) {
+                                        console.log('Iterator : ', iterator)
                                         return(
                                             <AvailableShopsCard {...iterator} available={false} key={index} />
                                         )
                                     }
                                 })
-                            }
+                            } */}
                         </div>
                     </div>
                 </div>

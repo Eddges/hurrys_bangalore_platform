@@ -10,12 +10,13 @@ const AvailableShopsCard = (props) => {
             }}
         >
             <div className={classes.Icon}>
-                <img style={props.available ? null : {'filter' : 'grayscale(100%)'}} className={classes.Icon} src={props.icon} alt={props.name} />
+                <img className={classes.Icon} src={props.icon} alt={props.Name} />
+                {/* <img style={props.available ? null : {'filter' : 'grayscale(100%)'}} className={classes.Icon} src={props.icon} alt={props.name} /> */}
             </div>
             <div className={classes.Details}>
-                <span className={classes.Name}>{props.name}</span>
-                <span className={classes.Delivery}>{props.delivery} delivery | {props.distance} away</span>
-                <span className={classes.Location}>{props.location}</span>
+                <span className={classes.Name}>{props.Name}</span>
+                <span className={classes.Delivery}>{props.DeliveryTime} delivery | {props.d.toFixed(1)} km away</span>
+                <span className={classes.Location}>{props.BusinessAddress}</span>
                 <span className={classes.Discount}>{props.discount}</span>
             </div>
         </NavLink>

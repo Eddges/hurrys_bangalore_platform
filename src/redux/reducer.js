@@ -61,7 +61,7 @@ const initialState = {
         ]
     },
     
-    categoryDisplay : 'grocery',
+    categoryDisplay : 'Groceries & Essentials',
     productCategoryDisplay : 'snacks',
     location : {
         latitude : null,

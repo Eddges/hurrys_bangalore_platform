@@ -5,9 +5,9 @@ import {connect} from 'react-redux'
 const CategoryCardShops = (props) => {
 
     return(
-        <div className={classes.Container } style={props.activeCategory===props.toLink ? {'backgroundColor' : '#00b246'} : null} 
+        <div className={classes.Container } style={props.activeCategory===props.text ? {'backgroundColor' : '#00b246'} : null} 
             onClick={() => {
-                props.changeCategory(props.toLink)
+                props.changeCategory(props.text)
                 window.scrollTo(0, 0)
             }}>
             <div className={classes.Icon}>
@@ -20,7 +20,7 @@ const CategoryCardShops = (props) => {
 
 const mapStateToProps = state => {
     return{
-        activeCategory : state.categoryDisplay
+        activeCategory : state.red.categoryDisplay
     }
 }
 
