@@ -41,14 +41,17 @@ class HomepageTop extends React.Component{
         fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${this.state.latitude},${this.state.longitude}&key=AIzaSyBhYZ7B9Qf6DWiixOxZf2GYciJIrmbQHoA`)
         .then(response => response.json())
         .then(data => {
+            console.log('Current Location : ', data.results)
             this.setState({
                 ...this.state,
                 userAddress : data.results[0].formatted_address,
                 generalAddress : data.results[4].formatted_address
-            })
-            setTimeout(() => {
+            }, () => {
                 this.props.onChangeLocation(this.state)
-            }, 0)
+            })
+            // setTimeout(() => {
+            //     this.props.onChangeLocation(this.state)
+            // }, 0)
         })
             
         .catch(error => alert(error))
@@ -188,7 +191,7 @@ class HomepageTop extends React.Component{
 
 const mapStateToProps = state => {
     return {
-        location : state.location
+        location : state.usr.currentLocation
     }
 }
 

@@ -272,7 +272,7 @@ class ShopsAvailable extends React.Component{
 
 const mapStateToProps = state => {
     return{
-        activeCategory : state.categoryDisplay
+        activeCategory : state.red.categoryDisplay
     }
 }
 

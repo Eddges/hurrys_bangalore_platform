@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {BrowserRouter} from 'react-router-dom'
-import { createStore } from 'redux'
+import { createStore, combineReducers } from 'redux'
 import {Provider} from 'react-redux'
 import Reducer from './redux/reducer';
+import User from './redux/user';
 
-const store = createStore(Reducer)
+const rootReducer = combineReducers({
+  usr : User,
+  red : Reducer
+})
+
+const store = createStore(rootReducer)
 
 ReactDOM.render(
   <BrowserRouter>

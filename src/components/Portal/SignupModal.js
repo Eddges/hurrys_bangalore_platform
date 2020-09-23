@@ -4,7 +4,6 @@ import styles from './modal.module.css';
 import SignupContent from './SignupContent';
 
 
-
 const Button_el = {
     border:'none',
     backgroundColor:'gray',
@@ -33,5 +32,7 @@ function ModalSignUp({ open , onClose}) {
       
     )
 }
+
+
 
 export default ModalSignUp;

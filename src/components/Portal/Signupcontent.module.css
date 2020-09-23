@@ -69,9 +69,17 @@
     height: 47px;
     border-radius: 5px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+    color : white;
+    font-family: 'Avenir Heavy';
+    font-size : 0.8rem;
     border: none;
 }
 
 .signup_wrapper .signup_content .btn_wrapper .btn:focus {
     outline: none;
+}
+
+.signup_wrapper .signup_content .btn_wrapper .btn:hover {
+    outline: none;
+    cursor: pointer;
 }

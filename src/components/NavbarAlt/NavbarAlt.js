@@ -82,7 +82,7 @@ class NavbarAlt extends React.Component{
 
 const mapStateToProps = state => {
     return {
-        location : state.location
+        location : state.red.location
     }
 }
 

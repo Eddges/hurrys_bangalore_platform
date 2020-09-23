@@ -85,6 +85,17 @@
     /* align-items: center; */
 }
 
+.login_wrapper .login_content .inputArea button {
+    margin-top : 30px;
+    color : white;
+    border : none;
+    background-color : #00b246;
+    border-radius : 5px;
+    font-family: 'Avenir Heavy';
+    padding : 12px 10px;
+    font-size : 0.8rem;
+}
+
 .login_wrapper .login_content .inputArea label {
     display: flex;
     flex-direction: column;
@@ -111,8 +122,8 @@
 }
 
 .login_wrapper .login_content .inputArea .otp .otpInput input {
-    width: 15%;
-   
+    width: 60%;
+   /* padding : 2px 10px; */
 }
 
 .login_wrapper .login_content .inputArea .otp .otpInput .s_input {
@@ -140,6 +151,7 @@
 .login_wrapper .login_content .footer img {
     width: 170px;
     height: 80%;
+    margin-right : 10px;
 }
 
 .Overlay_Styles{

@@ -1,12 +1,4 @@
 const initialState = {
-    user : {
-        name : 'Michael Cera', 
-        phone : '+44 9876543210',
-        email : 'ceramichael@business.com',
-        orders : {
-            active : 2
-        }
-    },
 
     currentProduct : {
         veg : true,
