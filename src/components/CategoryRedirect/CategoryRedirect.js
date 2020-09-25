@@ -21,8 +21,8 @@ const CategoryRedirect = (props) => {
                 <span className={classes.Soon}>Coming Soon</span>
                 <span className={classes.Available}>The following categories are already available</span>
                 <div className={classes.Categories}>
-                    <CategoryCard icon={food} text="Restaurants" toLink="food" />
-                    <CategoryCard icon={grocery} text="Grocery & Essentials" toLink="grocery" />
+                    <CategoryCard icon={food} text="Food Delivery" toLink="food" />
+                    <CategoryCard icon={grocery} text="Groceries & Essentials" toLink="grocery" />
                     <CategoryCard icon={fruits} text="Fruits & Vegetables" toLink="fruits_veggies" />
                     <CategoryCard icon={homeFood} text="Home Food" toLink="home" />
                 </div>

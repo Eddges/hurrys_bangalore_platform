@@ -5,22 +5,23 @@ import {NavLink} from 'react-router-dom'
 class ProductGroceryCard extends React.Component {
 
     state={
-        current : this.props.options[0],
+        current : this.props.productsList.Weights[Object.keys(this.props.productsList.Weights)[0]],
         showOption : false
     }
 
-    handleOptionSelect = (i) => {
+    handleOptionSelect = (iterator) => {
         console.log('current : ', this.state.current)
         console.log('Show Options' , this.state.showOption)
         this.setState({
             showOption : false,
-            current : this.props.options[i]
+            current : this.props.productsList.Weights[iterator]
         })
     }
 
     render(){
+        console.log('Card props : ', this.props)
         return(
-            <NavLink to="/product" className={classes.Container} onClick={() => { window.scroll(0,0) }}>
+            <div  className={classes.Container}>
             {
                 this.props.few ?
                     <span className={classes.Few}>ONLY FEW LEFT</span> : 
@@ -28,16 +29,16 @@ class ProductGroceryCard extends React.Component {
             }
                 
                 <div className={classes.Icon}>
-                    <img src={this.props.icon} alt="Product Icon" />
+                    <img src={this.props.productsList.ItemImage1} alt="Product Icon" />
                 </div>
                 <div className={classes.Details}>
                     <div className={classes.Brand}>
                         <div className={classes.VegBorder}><div className={classes.VegDot}></div></div>
-                        <span>{this.props.brand}</span>
+                        <span>{this.props.productsList.ItemName}</span>
                     </div>
-                    <span className={classes.Name}>{this.props.name}</span>
+                    <span className={classes.Name}>{this.props.productsList.ItemDescription}</span>
                     <div className={classes.OptionsSelector} onClick={() => { this.setState({...this.state, showOption : true})}}>
-                        <span>{this.state.current.value}</span>
+                        <span>{this.state.current.Name}</span>
                         <span className={classes.Triangle}></span>
 
 
@@ -46,13 +47,13 @@ class ProductGroceryCard extends React.Component {
                     {
                             this.state.showOption ? 
                                 <div className={classes.Options}>
-                                    {this.props.options.map((iterator, i) => {
+                                    {Object.keys(this.props.productsList.Weights).map((iterator, i) => {
                                     return (
-                                        <div key={i} className={classes.Option} onClick={() => this.handleOptionSelect(i)}>
-                                            <span>{iterator.value}</span>
+                                        <div key={i} className={classes.Option} onClick={() => this.handleOptionSelect(iterator)}>
+                                            <span>{this.props.productsList.Weights[iterator].Name}</span>
                                             <div className={classes.Prices}>
-                                                <span>{iterator.price}</span>
-                                                <span>{iterator.stdprice}</span>
+                                                <span>{this.props.productsList.Weights[iterator].Price}</span>
+                                                
                                             </div>
                                         </div>
                                     )})}
@@ -61,16 +62,18 @@ class ProductGroceryCard extends React.Component {
                         }
                     <div className={classes.Prices}>
                         <div className={classes.Left}>
-                            <span className={classes.TruePrice}>₹ {this.state.current.price}</span>
-                            <span className={classes.StdPrice}>₹{this.state.current.stdPrice}</span>
+                            <span className={classes.TruePrice}>₹ {this.state.current.Price}</span>
+                            {/* <span className={classes.StdPrice}>₹{this.state.current.stdPrice}</span> */}
                         </div>
                         <button className={classes.ButtonAdd}>ADD</button>
                     </div>
                 </div>
     
-            </NavLink>
+            </div>
         )
     }
 }
+
+{/* <span>{iterator.stdprice}</span> */}
 
 export default ProductGroceryCard

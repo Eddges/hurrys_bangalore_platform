@@ -7,7 +7,7 @@ import fbLogin from '../../assets/facebookLogin.png';
 import gLogin from '../../assets/bitmap.png';
 import styles from './/modal.module.css'
 // import LoginModal from './LoginModal';
-import {database, auth} from '../../firebase'
+import {database, auth, googleAuthProvider, facebookAuthProvider} from '../../firebase'
 import firebase from '../../firebase'
 import {connect} from 'react-redux'
 
@@ -108,6 +108,57 @@ class LoginModal extends React.Component {
   );
   }
 
+  handleGoogleSignin = () => {
+    auth.signInWithPopup(googleAuthProvider)
+    .then(result => {
+      console.log(result)
+      database.ref('/Users').child(result.user.uid).once('value', snapshot => {
+        console.log('Snapshot google : ', snapshot.val())
+        if(snapshot.val()) {
+          console.log('Yes snapshot has a val')
+          localStorage.setItem('UserId', result.user.uid)
+          localStorage.setItem('Name', result.user.displayName)
+          localStorage.setItem('Email', result.user.email)
+          localStorage.setItem('LoggedIn', true)
+          this.props.loginUser({
+              Name : result.user.displayName,
+              Email : result.user.email,
+              UserId : result.user.uid
+          })
+          this.props.onClose()
+        }
+        else {
+          console.log('No val in snapshot')
+          database.ref('/Users').child(result.user.uid).child('Name').set(result.user.displayName)
+          database.ref('/Users').child(result.user.uid).child('Email').set(result.user.email)
+          database.ref('/Users').child(result.user.uid).child('UserId').set(result.user.uid)
+          .then(() => {
+            console.log('New User creation should be complete')
+            this.props.onClose()
+            this.props.loginUser({
+              Name : result.user.displayName,
+              Email : result.user.email,
+              UserId : result.user.uid
+            })
+          })
+          localStorage.setItem('UserId', result.user.uid)
+          localStorage.setItem('Name', result.user.displayName)
+          localStorage.setItem('Email', result.user.email)
+          localStorage.setItem('LoggedIn', true)
+
+        }
+      })
+    })
+    .catch(error => alert(error))
+  }
+
+  handleFacebookSignin = () => {
+    auth.signInWithPopup(facebookAuthProvider)
+    .then(result => {
+      console.log(result)
+    })
+  }
+
   componentDidMount() {
     console.log('Available hai kya? '  )
     database.ref('/Users').child('99OMBfekKgYZmhHPPftmJOrDEKa2').once('value', snapshot => {
@@ -154,8 +205,8 @@ class LoginModal extends React.Component {
                   <button >{this.state.showOtp ? 'Verify OTP' : 'Get OTP'}</button>
                 </form>
                 <div className = {styles.footer}>
-                  <img src = {gLogin}/>
-                  <img src = {fbLogin}/>
+                  <img src = {gLogin} onClick={this.handleGoogleSignin}/>
+                  <img src = {fbLogin} onClick={this.handleFacebookSignin}/>
                 </div>
               </div>
               <div id="recaptcha-container" name="recaptcha-container"></div>

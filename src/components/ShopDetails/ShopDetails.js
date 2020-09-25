@@ -7,7 +7,7 @@ import ShopCategories from '../ShopCategories/ShopCategories'
 import ShopSlider from '../ShopSlider/ShopSlider'
 import banner1 from '../../assets/banner1.png'
 import banner2 from '../../assets/banner2.png'
-
+import {connect} from 'react-redux'
 
 const ShopDetails = (props) => {
 
@@ -60,4 +60,10 @@ const ShopDetails = (props) => {
     )
 }
 
-export default ShopDetails
+const mapStateToProps = (state) => {
+    return{
+        shop : state.red.selectedShop
+    }
+}
+
+export default connect(mapStateToProps)(ShopDetails)

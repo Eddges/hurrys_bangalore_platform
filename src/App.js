@@ -31,7 +31,7 @@ class App extends React.Component{
         <Route path="/" exact render={() => <Homepage />} />
         <Route path="/delivery" exact render={() => <Delivery />} />
         <Route path="/vendor" exact render={() => <Vendor />} />
-        <Route path="/grocery" exact render={() => <ProductsGrocery />} />
+        <Route path="/categories" exact render={() => <ProductsGrocery />} />
         <Route path="/shops" exact render={() => <ShopsAvailable />} />
         <Route path="/orderconfirmed" exact render={() =>  <OrderConfirm/> } />
         <Route path="/referral" exact render={() =>  <ReferralPage/> } />

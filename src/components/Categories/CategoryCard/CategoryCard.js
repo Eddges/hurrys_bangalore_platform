@@ -20,7 +20,7 @@ const CategoryCard = (props) => {
 
     return(
         <NavLink className={classes.Container } to={props.unavailable ? "/redirect" : link } onClick={() => {
-            props.onChangeCategory(props.toLink)
+            props.onChangeCategory(props.text)
             window.scrollTo(0, 0)
             }} >
             <div className={classes.Icon}>
@@ -33,7 +33,7 @@ const CategoryCard = (props) => {
 
 const mapStateToProps = state => {
     return {
-        ctr : state
+        ctr : state.red
     }
 }
 

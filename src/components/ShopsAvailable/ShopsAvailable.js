@@ -218,7 +218,7 @@ class ShopsAvailable extends React.Component{
     }
 
     componentDidMount() {
-        database.ref('/Vendor').on('value', snapshot => {
+        database.ref('/Vendor').once('value', snapshot => {
             const allShopsObject = snapshot.val()
             const allShopsKeys = Object.keys(snapshot.val())
             const allShopsArray = allShopsKeys.map((iterator, index) => {
@@ -275,8 +275,8 @@ class ShopsAvailable extends React.Component{
                 {/* <button onClick={this.printActive}>Print Available Active Shops</button> */}
                 <div className={classes.Main}>
                     <div className={classes.Left}>
-                        <CategoryCardShops icon={grocery} text="Groceries & Essentials" toLink="grocery" />
                         <CategoryCardShops icon={food} text="Food Delivery" toLink="food" active={this.state.active} />
+                        <CategoryCardShops icon={grocery} text="Groceries & Essentials" toLink="grocery" />
                         <CategoryCardShops icon={fruits} text="Fruits & Vegetables" toLink="fruits_veggies" />
                         <CategoryCardShops icon={homeFood} text="Home Food" toLink="home" />
                         {/* <CategoryCardShops icon={fish} text="Fish & Meat" toLink="fish_meat" />
@@ -296,7 +296,7 @@ class ShopsAvailable extends React.Component{
                                     if(this.props.activeCategory===iterator.Category) {
                                         {/* console.log('Iterator : ', iterator) */}
                                         return(
-                                            <AvailableShopsCard icon={bazaar} discount="Upto 40% Off" {...iterator} available={false} key={index} />
+                                            <AvailableShopsCard icon={iterator.Doc7} discount="Upto 40% Off" {...iterator} available={false} key={index} />
                                         )
                                     }
                                 })

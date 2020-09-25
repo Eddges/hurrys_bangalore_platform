@@ -1,12 +1,23 @@
 import React from 'react'
 import classes from './AvailableShopsCard.module.css'
 import { NavLink } from 'react-router-dom'
+import {connect} from 'react-redux'
 
 const AvailableShopsCard = (props) => {
+
+    let link = '/shopdetails'
+    if(props.Category==='Food Delivery'){
+        link = '/grocery'
+    }
+    if(props.Category==='Home Food'){
+        link = '/grocery'
+    }
     return(
-        <NavLink to="/shopdetails" className={classes.Container} 
+        // <NavLink to={props.Category==='Food Delivery' || props.Category==='Home Food' ? '/grocery ': "/shopdetails"} className={classes.Container} 
+        <NavLink to={link} className={classes.Container} 
             onClick={() => {
                 window.scrollTo(0, 0)
+                props.setActiveShop(props)
             }}
         >
             <div className={classes.Icon}>
@@ -23,4 +34,13 @@ const AvailableShopsCard = (props) => {
     )
 }
 
-export default AvailableShopsCard
+const mapDispatchToProps = dispatch => {
+    return{
+        setActiveShop : (shop) => dispatch({
+            type : 'SET_ACTIVE_SHOP',
+            payload : shop
+        })
+    }
+}
+
+export default connect(null, mapDispatchToProps)(AvailableShopsCard)

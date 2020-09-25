@@ -68,7 +68,10 @@ const initialState = {
         longitude : localStorage.getItem('longitude') ? localStorage.getItem('longitude') : null,
         userAddress : null,
         generalAddress : localStorage.getItem('generalAddress') ? localStorage.getItem('generalAddress') : null,
-    }
+    },
+    selectedShop : null,
+    itemSubCategory : null,
+    itemCategory : null
 }
 
 const Reducer = (state = initialState, action) => {
@@ -97,6 +100,24 @@ const Reducer = (state = initialState, action) => {
                     userAddress : action.location.userAddress,
                     generalAddress : action.location.generalAddress
                 },
+            }
+        case 'SET_ACTIVE_SHOP' : 
+            console.log('Action dispatched, shop set : ', action.payload)
+            return{
+                ...state,
+                selectedShop : action.payload
+            }
+        case 'CHANGE_ITEM_CATEGORY' : 
+            console.log('Changed Item subcategory', action.payload)
+            return{
+                ...state,
+                itemSubCategory : action.payload
+            }
+        case 'CHANGE_ACTIVE_ITEM' : 
+            console.log('Item changed : ', action.payload)
+            return{
+                ...state,
+                itemCategory : action.payload
             }
     }
     

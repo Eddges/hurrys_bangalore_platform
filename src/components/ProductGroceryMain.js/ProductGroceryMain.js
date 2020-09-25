@@ -8,285 +8,10 @@ class ProductGroceryMain extends React.Component{
 
     state={
         active : 'snacks',
-        products : [
-            {
-                id : '123',
-                category : 'snacks',
-                icon : ProductIcon,
-                name : "Beaten Moong Dal: Spicy Masala Mix",
-                brand : "Haldiram's",
-                vegetarian : 'true',
-                few : true,
-                options : [
-                    {
-                        value : 'Pack of 2 (100g)',
-                        price : 180,
-                        stdPrice : 200
-                    },
-                    {
-                        value : '500g',
-                        price : 200,
-                        stdPrice : 220
-                    },
-                    {
-                        value : '1kg',
-                        price : 330,
-                        stdPrice : 380
-                    }
-                ]
-            },
-            {
-                id : '1456',
-                category : 'snacks',
-                icon : ProductIcon,
-                name : "Beaten Moong Dal: Spicy Masala Mix",
-                brand : "Haldiram's",
-                vegetarian : 'true',
-                options : [
-                    {
-                        value : 'Pack of 2 (100g)',
-                        price : 180,
-                        stdPrice : 200
-                    },
-                    {
-                        value : '500g',
-                        price : 200,
-                        stdPrice : 220
-                    },
-                    {
-                        value : '1kg',
-                        price : 330,
-                        stdPrice : 380
-                    }
-                ]
-            },
-            {
-                id : '1456',
-                category : 'snacks',
-                icon : ProductIcon,
-                name : "Beaten Moong Dal: Spicy Masala Mix",
-                brand : "Haldiram's",
-                vegetarian : 'true',
-                few : true,
-                options : [
-                    {
-                        value : 'Pack of 2 (100g)',
-                        price : 180,
-                        stdPrice : 200
-                    },
-                    {
-                        value : '500g',
-                        price : 200,
-                        stdPrice : 220
-                    },
-                    {
-                        value : '1kg',
-                        price : 330,
-                        stdPrice : 380
-                    }
-                ]
-            },
-            {
-                id : '1456',
-                category : 'snacks',
-                icon : ProductIcon,
-                name : "Beaten Moong Dal: Spicy Masala Mix",
-                brand : "Haldiram's",
-                vegetarian : 'true',
-                options : [
-                    {
-                        value : 'Pack of 2 (100g)',
-                        price : 180,
-                        stdPrice : 200
-                    },
-                    {
-                        value : '500g',
-                        price : 200,
-                        stdPrice : 220
-                    },
-                    {
-                        value : '1kg',
-                        price : 330,
-                        stdPrice : 380
-                    }
-                ]
-            },
-            {
-                id : '1456',
-                category : 'snacks',
-                icon : ProductIcon,
-                name : "Beaten Moong Dal: Spicy Masala Mix",
-                brand : "Haldiram's",
-                vegetarian : 'true',
-                options : [
-                    {
-                        value : 'Pack of 2 (100g)',
-                        price : 180,
-                        stdPrice : 200
-                    },
-                    {
-                        value : '500g',
-                        price : 200,
-                        stdPrice : 220
-                    },
-                    {
-                        value : '1kg',
-                        price : 330,
-                        stdPrice : 380
-                    }
-                ]
-            },
-            {
-                id : '1456',
-                category : 'snacks',
-                icon : ProductIcon,
-                name : "Beaten Moong Dal: Spicy Masala Mix",
-                brand : "Haldiram's",
-                vegetarian : 'true',
-                options : [
-                    {
-                        value : 'Pack of 2 (100g)',
-                        price : 180,
-                        stdPrice : 200
-                    },
-                    {
-                        value : '500g',
-                        price : 200,
-                        stdPrice : 220
-                    },
-                    {
-                        value : '1kg',
-                        price : 330,
-                        stdPrice : 380
-                    }
-                ]
-            },
-            {
-                id : '1456',
-                category : 'snacks',
-                icon : ProductIcon,
-                name : "Beaten Moong Dal: Spicy Masala Mix",
-                brand : "Haldiram's",
-                vegetarian : 'true',
-                options : [
-                    {
-                        value : 'Pack of 2 (100g)',
-                        price : 180,
-                        stdPrice : 200
-                    },
-                    {
-                        value : '500g',
-                        price : 200,
-                        stdPrice : 220
-                    },
-                    {
-                        value : '1kg',
-                        price : 330,
-                        stdPrice : 380
-                    }
-                ]
-            },
-            {
-                id : '1456',
-                category : 'dairy',
-                icon : ProductIcon,
-                name : "Dairy Item 1",
-                brand : "Haldiram's",
-                vegetarian : 'true',
-                options : [
-                    {
-                        value : 'Pack of 2 (100g)',
-                        price : 180,
-                        stdPrice : 200
-                    },
-                    {
-                        value : '500g',
-                        price : 200,
-                        stdPrice : 220
-                    },
-                    {
-                        value : '1kg',
-                        price : 330,
-                        stdPrice : 380
-                    }
-                ]
-            },
-            {
-                id : '1456',
-                category : 'dairy',
-                icon : ProductIcon,
-                name : "Dairy Item 2",
-                brand : "Haldiram's",
-                vegetarian : 'true',
-                options : [
-                    {
-                        value : 'Pack of 2 (100g)',
-                        price : 180,
-                        stdPrice : 200
-                    },
-                    {
-                        value : '500g',
-                        price : 200,
-                        stdPrice : 220
-                    },
-                    {
-                        value : '1kg',
-                        price : 330,
-                        stdPrice : 380
-                    }
-                ]
-            },
-            {
-                id : '1456',
-                category : 'dairy',
-                icon : ProductIcon,
-                name : "Dairy Item 3",
-                brand : "Haldiram's",
-                vegetarian : 'true',
-                options : [
-                    {
-                        value : 'Pack of 2 (100g)',
-                        price : 180,
-                        stdPrice : 200
-                    },
-                    {
-                        value : '500g',
-                        price : 200,
-                        stdPrice : 220
-                    },
-                    {
-                        value : '1kg',
-                        price : 330,
-                        stdPrice : 380
-                    }
-                ]
-            },
-            {
-                id : '1456',
-                category : 'breakfast',
-                icon : ProductIcon,
-                name : "Breakfast Item",
-                brand : "Haldiram's",
-                vegetarian : 'true',
-                options : [
-                    {
-                        value : 'Pack of 2 (100g)',
-                        price : 180,
-                        stdPrice : 200
-                    },
-                    {
-                        value : '500g',
-                        price : 200,
-                        stdPrice : 220
-                    },
-                    {
-                        value : '1kg',
-                        price : 330,
-                        stdPrice : 380
-                    }
-                ]
-            }
-        ]
+    }
+
+    componentDidMount() {
+        this.props.changeActiveItem(this.props.itemSubCategory.ItemCategory.split(',')[0])
     }
     render(){
 
@@ -294,7 +19,21 @@ class ProductGroceryMain extends React.Component{
         return(
             <div className={classes.Container}>
                 <div className={classes.Menu}>
-                    <div className={ this.props.productCategoryDisplay==='snacks' ? `${classes.MenuItem} ${classes.active}` : classes.MenuItem}
+                {
+                    this.props.itemSubCategory.ItemCategory ? 
+                    this.props.itemSubCategory.ItemCategory.split(',').map((iterator, index) => {
+                        return(
+                            <div key={index} className={ this.props.itemCategory===iterator ? `${classes.MenuItem} ${classes.active}` : classes.MenuItem}
+                                onClick={() => {
+                                    this.props.changeActiveItem(iterator)
+                                    window.scrollTo(0, 0)
+                                    }}>
+                                <span>{iterator}</span>
+                            </div>
+                        )
+                    }) : null
+                }
+                    {/* <div className={ this.props.productCategoryDisplay==='snacks' ? `${classes.MenuItem} ${classes.active}` : classes.MenuItem}
                         onClick={() => {
                             this.props.changeCategory('snacks')
                             window.scrollTo(0, 0)
@@ -315,19 +54,28 @@ class ProductGroceryMain extends React.Component{
                     </div>
                     <div className={ this.props.productCategoryDisplay==='sauce_dips' ? `${classes.MenuItem} ${classes.active}` : classes.MenuItem} onClick={() => this.props.changeCategory('sauce_dips')}>
                         <span>Sauce & Dips</span>
-                    </div>
+                    </div> */}
                 </div>
                 <div className={classes.HRLine}></div>
                 <div className={classes.Main}>
                     {
-                        this.state.products.map((iterator, index) => {
+                        Object.keys(this.props.selectedShop.Products).map((iterator, index) => {
+                            if(this.props.selectedShop.Products[iterator].ItemCategory===this.props.itemCategory) {
+                                return(
+                                    <ProductGroceryCard key={index} productsList={this.props.selectedShop.Products[iterator]}  />
+                                )
+                            }
+                        })
+                    }
+                    {/* {
+                        this.props.selectedShop.map((iterator, index) => {
                             if(iterator.category===this.props.productCategoryDisplay) {
                                 return(
                                     <ProductGroceryCard key={index} {...iterator}  />
                                 )
                             }
                         })
-                    }
+                    } */}
                     
                 </div>
             </div>
@@ -337,7 +85,10 @@ class ProductGroceryMain extends React.Component{
 
 const mapStateToProps = state => {
     return{
-        productCategoryDisplay : state.productCategoryDisplay
+        productCategoryDisplay : state.red.productCategoryDisplay,
+        selectedShop : state.red.selectedShop,
+        itemSubCategory : state.red.itemSubCategory,
+        itemCategory : state.red.itemCategory
     }
 }
 
@@ -346,6 +97,10 @@ const mapDispatchToProps = dispatch => {
         changeCategory : (category) => dispatch({
             type : 'CHANGE_PRODUCT_CATEGORY',
             category
+        }),
+        changeActiveItem : (item) => dispatch({
+            type : 'CHANGE_ACTIVE_ITEM',
+            payload : item
         })
     }
 }

@@ -154,6 +154,14 @@
     margin-right : 10px;
 }
 
+.login_wrapper .login_content .footer img:hover{
+    cursor: pointer;
+    transform: translateY(-1px);
+}
+
+button{
+    cursor: pointer;
+}
 .Overlay_Styles{
     position: fixed;
     top: 0;

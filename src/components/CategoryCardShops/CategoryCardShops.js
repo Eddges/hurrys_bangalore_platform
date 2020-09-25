@@ -10,10 +10,11 @@ const CategoryCardShops = (props) => {
                 props.changeCategory(props.text)
                 window.scrollTo(0, 0)
             }}>
+            {console.log(props.activeCategory)}
             <div className={classes.Icon}>
                 <img src={props.icon} alt="Icon" />
             </div>
-            <span className={classes.Text} style={props.activeCategory===props.toLink ? {'color' : '#fff'} : null}>{props.text}</span>
+            <span className={classes.Text} style={props.activeCategory===props.text ? {'color' : '#fff'} : null}>{props.text}</span>
         </div>
     )
 }

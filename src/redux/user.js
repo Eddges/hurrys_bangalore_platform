@@ -1,9 +1,9 @@
 const initialState = {
-        Email : '',
+        Email : localStorage.getItem('Email') ? localStorage.getItem('Email') : null,
         joiningDate : null,
         messagingToken : null,
-        MobileNumber : null,
-        Name : null, 
+        MobileNumber : localStorage.getItem('MobileNumber') ? localStorage.getItem('MobileNumber') : null,
+        Name : localStorage.getItem('Name') ? localStorage.getItem('Name') : null, 
         orders : {
             active : 2
         },
@@ -12,7 +12,7 @@ const initialState = {
         role : 'User',
         status : 'Active',
         stripeId : null,
-        UserId : null,
+        UserId : localStorage.getItem('UserId') ? localStorage.getItem('UserId') : null,
         wallet : 0,
         LoggedIn : localStorage.getItem('LoggedIn') ? true : false,
         currentLocation : localStorage.getItem('Location') ? localStorage.getItem('Location') : null
