@@ -7,6 +7,8 @@
     display : flex;
     justify-content: flex-end;
     z-index : 100;
+    overflow: auto;
+    // margin-top : 100px;
     .Backdrop{
         position: absolute;
         width : 100%;
@@ -21,6 +23,9 @@
         right : 0px;
         z-index : 10;
         padding : 30px 20px;
+        height : auto;
+        padding-bottom : 200px;
+        overflow: auto;
         .ExitButton{
             font-family: 'Avenir Heavy';
             color : white;

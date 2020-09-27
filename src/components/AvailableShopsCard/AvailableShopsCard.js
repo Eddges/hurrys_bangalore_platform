@@ -17,6 +17,7 @@ const AvailableShopsCard = (props) => {
         <NavLink to={link} className={classes.Container} 
             onClick={() => {
                 window.scrollTo(0, 0)
+                console.log('Active Shop : ', props)
                 props.setActiveShop(props)
             }}
         >

@@ -4,10 +4,13 @@ import haldirams from '../../assets/haldirams.jpeg'
 import CartItems from './CartItems/CartItems'
 import CartCard from './CartCard/CartCard'
 import { NavLink } from 'react-router-dom'
+import {connect} from 'react-redux'
+import {database} from '../../firebase'
 
 class Cart extends React.Component{
     state = {
         show : true,
+        cart : null,
         products : [
             {
                 shop : 'Bangalore Bazaar',
@@ -76,6 +79,16 @@ class Cart extends React.Component{
         })
     }
 
+    componentDidMount() {
+        database.ref('/Users').child(this.props.user.UserId).child('Cart').once('value', snapshot => {
+            console.log('User cart : ', snapshot.val())
+            this.setState({
+                ...this.state,
+                cart : snapshot.val()
+            })
+        })
+    }
+
     render(){
         return(
             <div className={classes.Container}>
@@ -84,7 +97,7 @@ class Cart extends React.Component{
                     {
                         this.state.products.map((iterator, index) => {
                                 return(
-                                    <CartCard {...iterator} key={index} />
+                                    <CartCard {...iterator} key={index} cart={this.state.cart} />
                                 )
                         })
                     }
@@ -96,4 +109,17 @@ class Cart extends React.Component{
     }
 }
 
-export default Cart
+const mapStateToProps = state => {
+    return{
+        red : state.red,
+        user : state.usr
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+        
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart)

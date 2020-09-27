@@ -1,10 +1,11 @@
 import React from 'react'
 import classes from './CartItems.module.css'
+import {connect} from 'react-redux'
 
 class CartItems extends React.Component {
 
     state={
-        current : this.props.options[0],
+        current : this.props.quant,
         showOption : false
     }
 
@@ -15,6 +16,10 @@ class CartItems extends React.Component {
             showOption : false,
             current : this.props.options[i]
         })
+    }
+
+    componentDidMount(){
+        console.log('Cart items props : ', this.props)
     }
 
     render(){
@@ -31,14 +36,14 @@ class CartItems extends React.Component {
                 </div>
                 <div className={classes.Right}>
                     <div className={classes.Details}>
-                        <span classname={classes.PdtName}>{this.props.name}</span>
+                        <span className={classes.PdtName}>{this.props.name}</span>
                         <div className={classes.OptionsSelector} onClick={() => { this.setState({...this.state, showOption : true})}}>
-                            <span>{this.state.current.value}</span>
+                            <span>{this.props.quant}</span>
                             <span className={classes.Triangle}></span>
 
 
                         </div>
-                        {
+                        {/* {
                                 this.state.showOption ? 
                                     <div className={classes.Options}>
                                         {this.props.options.map((iterator, i) => {
@@ -53,7 +58,7 @@ class CartItems extends React.Component {
                                         )})}
                                     </div>
                                 : null
-                            }
+                            } */}
 
                     </div>
                     <div className={classes.Quantity}>
@@ -62,8 +67,8 @@ class CartItems extends React.Component {
                         <span className={classes.Highlite}>+</span>
                     </div>
                     <div className={classes.Prices}>
-                            <span className={classes.TruePrice}>₹ {this.state.current.price}</span>
-                            <span className={classes.StdPrice}>₹{this.state.current.stdPrice}</span>
+                            <span className={classes.TruePrice}>₹ {this.props.price}</span>
+                            {/* <span className={classes.StdPrice}>₹{this.state.current.stdPrice}</span> */}
                     </div>
                 </div>
 
@@ -73,4 +78,11 @@ class CartItems extends React.Component {
     }
 }
 
-export default CartItems
+const mapStateToProps = state => {
+    return{
+        user : state.usr,
+        red : state.red
+    }
+}
+
+export default connect(mapStateToProps)(CartItems)

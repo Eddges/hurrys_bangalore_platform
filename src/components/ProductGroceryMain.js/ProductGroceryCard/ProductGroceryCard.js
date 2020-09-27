@@ -1,6 +1,8 @@
 import React from 'react'
 import classes from './ProductGroceryCard.module.css'
 import {NavLink} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {database} from '../../../firebase'
 
 class ProductGroceryCard extends React.Component {
 
@@ -17,6 +19,19 @@ class ProductGroceryCard extends React.Component {
             current : this.props.productsList.Weights[iterator]
         })
     }
+
+    handleAdd = () => {
+        console.log('UserId', this.props.user.UserId)
+        console.log('PushId', this.state.current.PushId)
+        database.ref('/Users').child(this.props.user.UserId).child('Cart').child(this.props.productId).child(this.state.current.PushId).set(this.state.current)
+        .then((result) => {
+            console.log('Result : ', result)
+        })
+        .catch(err => console.log(err))
+    }
+
+
+
 
     render(){
         console.log('Card props : ', this.props)
@@ -65,7 +80,7 @@ class ProductGroceryCard extends React.Component {
                             <span className={classes.TruePrice}>₹ {this.state.current.Price}</span>
                             {/* <span className={classes.StdPrice}>₹{this.state.current.stdPrice}</span> */}
                         </div>
-                        <button className={classes.ButtonAdd}>ADD</button>
+                        <button className={classes.ButtonAdd} onClick={this.handleAdd} >ADD</button>
                     </div>
                 </div>
     
@@ -76,4 +91,11 @@ class ProductGroceryCard extends React.Component {
 
 {/* <span>{iterator.stdprice}</span> */}
 
-export default ProductGroceryCard
+const mapStateToProps = state => {
+    return{
+        red : state.red,
+        user : state.usr
+    }
+}
+
+export default connect(mapStateToProps)(ProductGroceryCard)

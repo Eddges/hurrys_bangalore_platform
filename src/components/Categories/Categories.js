@@ -27,7 +27,6 @@ class Categories extends React.Component{
                 ...this.state,
                 ...snapshot.val()
             }, () => {
-                console.log('Category state : ', this.state)
                 this.setState({
                     ...this.state,
                     loadCategory : true

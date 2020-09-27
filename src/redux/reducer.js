@@ -69,6 +69,7 @@ const initialState = {
         userAddress : null,
         generalAddress : localStorage.getItem('generalAddress') ? localStorage.getItem('generalAddress') : null,
     },
+    selectedShopId : null,
     selectedShop : null,
     itemSubCategory : null,
     itemCategory : null
@@ -78,19 +79,16 @@ const Reducer = (state = initialState, action) => {
 
     switch(action.type) {
         case 'CHANGE_CATEGORY' : 
-            console.log('Action dispatch ', action.category)
             return {
                 ...state,
                 categoryDisplay : action.category
             }
         case 'CHANGE_PRODUCT_CATEGORY' : 
-            console.log('Action dispatch ', action.category)
             return {
                 ...state,
                 productCategoryDisplay : action.category
             }
         case 'CHANGE_LOCATION' : 
-            console.log('Action dispatch ', action.location)
             return {
                 ...state,
                 location : {
@@ -102,19 +100,16 @@ const Reducer = (state = initialState, action) => {
                 },
             }
         case 'SET_ACTIVE_SHOP' : 
-            console.log('Action dispatched, shop set : ', action.payload)
             return{
                 ...state,
                 selectedShop : action.payload
             }
         case 'CHANGE_ITEM_CATEGORY' : 
-            console.log('Changed Item subcategory', action.payload)
             return{
                 ...state,
                 itemSubCategory : action.payload
             }
         case 'CHANGE_ACTIVE_ITEM' : 
-            console.log('Item changed : ', action.payload)
             return{
                 ...state,
                 itemCategory : action.payload

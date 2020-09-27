@@ -62,7 +62,7 @@ class ProductGroceryMain extends React.Component{
                         Object.keys(this.props.selectedShop.Products).map((iterator, index) => {
                             if(this.props.selectedShop.Products[iterator].ItemCategory===this.props.itemCategory) {
                                 return(
-                                    <ProductGroceryCard key={index} productsList={this.props.selectedShop.Products[iterator]}  />
+                                    <ProductGroceryCard key={index} productId={iterator} productsList={this.props.selectedShop.Products[iterator]}  />
                                 )
                             }
                         })

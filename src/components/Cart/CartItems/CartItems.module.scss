@@ -7,8 +7,10 @@
     // flex-direction: column;
     // padding : 20px 20px;
     position : relative;
+    // justify-content: space-between;
     transition : all 0.2s;
     padding : 10px 10px 10px 0px;
+    overflow: auto;
     .Icon{
         width : 30%;
         // height : 45%;
@@ -16,9 +18,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding : 10px;
         img{
             // width : 100%;
             width : 100%;
+            border-radius: 5px;
             // object-fit: cover;
         }
     }
@@ -36,6 +40,7 @@
     .Right{
         display : flex;
         align-items: center;
+        width : 70%;
         // width : 50%;
         .Details{
             width : 55%;

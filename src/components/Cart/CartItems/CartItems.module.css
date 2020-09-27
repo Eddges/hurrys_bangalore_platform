@@ -9,6 +9,7 @@
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   padding: 10px 10px 10px 0px;
+  overflow: auto;
 }
 
 .Container .Icon {
@@ -23,10 +24,12 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 10px;
 }
 
 .Container .Icon img {
   width: 100%;
+  border-radius: 5px;
 }
 
 .Container .Few {
@@ -47,6 +50,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 70%;
 }
 
 .Container .Right .Details {

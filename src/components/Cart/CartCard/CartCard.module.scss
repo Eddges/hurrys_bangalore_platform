@@ -4,6 +4,7 @@
     // background-color : coral;
     display : flex;
     flex-direction: column;
+    overflow: auto;
     .Top{
         display : flex;
         justify-content: space-between;

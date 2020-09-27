@@ -5,7 +5,6 @@ import {NavLink} from 'react-router-dom'
 import {connect} from 'react-redux'
 
 const ShopCategories = (props) => {
-    console.log('Selected Shop : ', props.shop)
     return(
         <div className={classes.Container}>
             <span className={classes.Heading}>Categories</span>
