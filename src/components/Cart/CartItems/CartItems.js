@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './CartItems.module.css'
 import {connect} from 'react-redux'
+import {database} from '../../../firebase'
 
 class CartItems extends React.Component {
 
@@ -23,6 +24,7 @@ class CartItems extends React.Component {
     }
 
     render(){
+        let quantity = this.props.quantity ? this.props.quantity : 1
         return(
             <div className={classes.Container}>
             {
@@ -39,7 +41,7 @@ class CartItems extends React.Component {
                         <span className={classes.PdtName}>{this.props.name}</span>
                         <div className={classes.OptionsSelector} onClick={() => { this.setState({...this.state, showOption : true})}}>
                             <span>{this.props.quant}</span>
-                            <span className={classes.Triangle}></span>
+                            {/* <span className={classes.Triangle}></span> */}
 
 
                         </div>
@@ -62,12 +64,12 @@ class CartItems extends React.Component {
 
                     </div>
                     <div className={classes.Quantity}>
-                        <span className={classes.Highlite}>-</span>
-                        <span className={classes.Quant}>1</span>
-                        <span className={classes.Highlite}>+</span>
+                        <span className={classes.Highlite} onClick={() => this.props.handleDecrease(this.props.shopId, this.props.productId)}>-</span>
+                        <span className={classes.Quant}>{this.props.quantity ? this.props.quantity : 1}</span>
+                        <span className={classes.Highlite} onClick={() => this.props.handleIncrease(this.props.shopId, this.props.productId)}>+</span>
                     </div>
                     <div className={classes.Prices}>
-                            <span className={classes.TruePrice}>₹ {this.props.price}</span>
+                            <span className={classes.TruePrice}>₹ {quantity * this.props.price}</span>
                             {/* <span className={classes.StdPrice}>₹{this.state.current.stdPrice}</span> */}
                     </div>
                 </div>

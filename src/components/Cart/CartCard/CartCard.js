@@ -6,36 +6,111 @@ import {database} from '../../../firebase'
 
 class CartCard extends React.Component {
     state = {
-        store : this.props.red.selectedShop,
+        store : this.props.red.selectedShop ? this.props.red.selectedShop : 'Empty',
         cart : null,
-        structure : []
+        structure : [],
+        cost : 0
+    }
+
+    handleIncrease = (shopId, productId) => {
+        console.log('ShopID : ', shopId, ' ProductId  ', productId)
+        database.ref('/Users').child(this.props.user.UserId).child('Cart').child(shopId).child(productId).child('quantity').once('value', snapshot => {
+            console.log('Snapshot', snapshot.val())
+            let quantity = snapshot.val() ? snapshot.val() + 1 : 2
+            this.state.structure.map((iterator, index) => {
+                console.log('iterator : ', iterator)
+                if(iterator.id === shopId) {
+                    iterator.items.map((iterator_i, i) => {
+                        if(iterator_i.PushId===productId) {
+                            database.ref('/Users').child(this.props.user.UserId).child('Cart').child(shopId).child(productId).child('quantity').set(quantity)
+                            let st = this.state.structure
+                            st[index].items[i].quantity = quantity
+                            this.setState({
+                                ...this.state,
+                                structure : st
+                            })
+                        }
+                    })
+                }
+            })
+        })
+
+    }
+
+    handleDecrease = (shopId, productId) => {
+        console.log(shopId, productId)
+        database.ref('/Users').child(this.props.user.UserId).child('Cart').child(shopId).child(productId).child('quantity').once('value', snapshot => {
+            console.log('Snapshot', snapshot.val())
+            let quantity = snapshot.val() ? snapshot.val() - 1 : 0
+
+            console.log('Quantity : ', quantity)
+            if(quantity===0) {
+                database.ref('/Users').child(this.props.user.UserId).child('Cart').child(shopId).child(productId).set(null)
+                // let x = this.state.structure.map((iterator, index) => {
+                //     if(iterator.id===shopId) {
+                //         return iterator.items.filter((iterator_i, i) => {
+                //             if(iterator_i.PushId!==productId) {
+                //                 return true
+                //             }
+                //         })
+                //     }
+                // })
+                // console.log('value of x : ', x)
+            }
+            else{
+                this.state.structure.map((iterator, index) => {
+                    console.log('iterator : ', iterator)
+                    if(iterator.id === shopId) {
+                        iterator.items.map((iterator_i, i) => {
+                            if(iterator_i.PushId===productId) {
+                                database.ref('/Users').child(this.props.user.UserId).child('Cart').child(shopId).child(productId).child('quantity').set(quantity)
+                                let st = this.state.structure
+                                st[index].items[i].quantity = quantity
+                                this.setState({
+                                    ...this.state,
+                                    structure : st
+                                })
+                            }
+                        })
+                    }
+                })
+            }
+            
+        })
+    }
+
+    clearCart = () => {
+        database.ref('/Users').child(this.props.user.UserId).child('Cart').set(null)
     }
 
     componentDidMount(){
         console.log(this.props.red)
-        database.ref('/Users').child(this.props.user.UserId).child('Cart').on('value', snapshot => {
-            Object.keys(snapshot.val()).map((iterator, index) => {
-                database.ref('/Vendor').child(this.props.red.selectedShop.shopId).child('Products').child(iterator).once('value')
-                .then(snapshot_v => {
-                    const x = this.state.structure
-                    const item = {
-                        id : iterator,
-                        icon : snapshot_v.val().ItemImage1,
-                        name : snapshot_v.val().ItemName,
-                        items : []
-                    }
-                    Object.keys(snapshot.val()[iterator]).map(i => {
-                        item.items.push(snapshot.val()[iterator][i])
-                    })
-                    x.push(item)
-                    this.setState({
-                        ...this.state,
-                        structure : x
-                    }, state => {
-                        console.log('Structure : ', this.state.structure)
+        database.ref('/Users').child(this.props.user.UserId).child('Cart').once('value', snapshot => {
+            if(snapshot.val()){
+                Object.keys(snapshot.val()).map((iterator, index) => {
+                    database.ref('/Vendor').child(this.props.red.selectedShop.shopId).child('Products').child(iterator).on('value',
+                    snapshot_v => {
+                        const x = this.state.structure
+                        const item = {
+                            id : iterator,
+                            icon : snapshot_v.val().ItemImage1,
+                            name : snapshot_v.val().ItemName,
+                            items : []
+                        }
+                        Object.keys(snapshot.val()[iterator]).map(i => {
+                            item.items.push(snapshot.val()[iterator][i])
+                        })
+                        x.push(item)
+                        this.setState({
+                            ...this.state,
+                            structure : x
+                        }, state => {
+                            console.log('Structure : ', this.state.structure)
+                        })
                     })
                 })
-            })
+            }
+
         })
     }
 
@@ -53,7 +128,7 @@ class CartCard extends React.Component {
                 <div className={classes.Mid}>
                     <div className={classes.MidTop}>
                         <span className={classes.ItemCount}>{this.props.items.length} ITEMS</span>
-                        <button>CLEAR</button>
+                        <button type="button" onClick={this.clearCart} >CLEAR</button>
                     </div>
                     <div className={classes.MidMid}>
                         {/* {
@@ -66,10 +141,12 @@ class CartCard extends React.Component {
                             })
                         } */}
                         {
-                            this.state.structure ? 
+                            this.state.structure!==[] ? 
                             this.state.structure.map((iterator) => {
                                 return(
-                                    iterator.items.map((i, index) => <CardItems key={index} icon={iterator.icon} name={iterator.name} price={i.Price} quant={i.Name} />)
+                                    iterator.items.map((i, index) => {
+                                        console.log('i : ', i)
+                                        return (<CardItems key={index} icon={iterator.icon} name={iterator.name} price={i.Price} quant={i.Name} quantity={i.quantity} shopId={iterator.id} productId={i.PushId} handleIncrease={this.handleIncrease} handleDecrease={this.handleDecrease} />)})
 
                                 )
                             })
@@ -90,7 +167,7 @@ class CartCard extends React.Component {
                 </div> */}
                 <div className={classes.HRLine}></div>
                 <div className={classes.Total}>
-                    <span>Total</span>
+                    <span onClick={() => {console.log(this.state.structure)}}>Total</span>
                     <span>₹ 363</span>
                 </div>
             </div>
