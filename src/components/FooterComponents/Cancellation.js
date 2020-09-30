@@ -14,7 +14,7 @@ class Cancellation extends React.Component{
         return(
             <React.Fragment>
                 <Navbar />
-                <div class="col-lg-12 col-sm-12" style={{marginTop:"20vh"}} >
+                <div class="col-lg-12 col-sm-12" style={{marginTop:"20vh", padding: '10px 10%'}} >
                      <div class="about-content">
                         <h1 style={{fontSize:'36px !important',textAlign:'center',marginBottom:'5%'}}>Refund policy</h1>
 <p>We're so convinced you'll absolutely love our products, that we're willing to offer a 3 day risk free money back guarantee. If you receive your order and are not satisfied for any reason you can return the product for a refund within 3 days of making a purchase.</p>

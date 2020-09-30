@@ -140,6 +140,23 @@
                     cursor: pointer;
                 }
             }
+            .Quantity{
+                background-color : #f4f4f4;
+                padding : 2px 15px;
+                border-radius : 5px;
+                .Highlite{
+                    font-size : 1rem;
+                    color : #00b246;
+                    font-family: 'Avenir Heavy';
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                .Quant{
+                    font-family: 'Avenir Heavy';
+                    padding : 0px 5px;
+                }
+            }
         }
     }
 

@@ -29,7 +29,9 @@ class CartCard extends React.Component {
                                 ...this.state,
                                 structure : st,
                                 cost : this.state.cost + Number(st[index].items[i].Price)
-                            }, this.props.changeTotal(this.state.cost))
+                            }, () => {
+                                this.props.changeTotal(this.state.cost)
+                            } )
                         }
                     })
                 }
@@ -84,6 +86,11 @@ class CartCard extends React.Component {
 
     clearCart = () => {
         database.ref('/Users').child(this.props.user.UserId).child('Cart').set(null)
+        this.setState({
+            ...this.state,
+            cost : 0,
+            structure : []
+        })
     }
 
     componentDidMount(){
@@ -186,7 +193,7 @@ class CartCard extends React.Component {
                 <div className={classes.HRLine}></div>
                 <div className={classes.Total}>
                     <span onClick={() => {console.log(this.state.structure)}}>Total</span>
-                    <span>{this.state.cost}</span>
+                    <span>£ {this.state.cost}</span>
                 </div>
             </div>
         )

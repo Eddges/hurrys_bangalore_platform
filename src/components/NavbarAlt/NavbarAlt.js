@@ -11,11 +11,13 @@ import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import ProfileGreen from '../../assets/profileGreen.svg'
 import ProfileDrawer from '../ProfileDrawer/ProfileDrawer'
+import {database} from '../../firebase'
 
 class NavbarAlt extends React.Component{
     state={
         showCart : false,
-        showProfile : false
+        showProfile : false,
+        count : 0
     }
 
     handleCart = () => {
@@ -30,6 +32,24 @@ class NavbarAlt extends React.Component{
             showProfile : !this.state.showProfile
         })
     }
+
+    // componentDidMount() {
+    //     var count = 0
+    //     database.ref('/Users').child(this.props.user.UserId).child('Cart').on('value', snapshot => {
+    //         Object.keys(snapshot.val()).map((iterator, index) => {
+    //             Object.keys(snapshot.val()[iterator]).map(i => {
+    //                 count = count +1
+    //             })
+    //         })
+    //         this.setState({
+    //             ...this.state,
+    //             count : count
+    //         })
+    //     })
+        
+        
+
+    // }
 
     render() {
         return(
@@ -62,7 +82,7 @@ class NavbarAlt extends React.Component{
                                 :
                             <div className={classes.Cart}>
                                 <img className={classes.Cart} src={CartIcon} alt="Cart" onClick={this.handleCart} />
-                                {/* <span className={classes.Count}>2</span> */}
+                                {/* <span className={classes.Count}>{this.state.count}</span> */}
                             </div>
                         }
 
@@ -82,7 +102,9 @@ class NavbarAlt extends React.Component{
 
 const mapStateToProps = state => {
     return {
-        location : state.red.location
+        location : state.red.location,
+        user : state.usr,
+        red : state.red
     }
 }
 

@@ -11,7 +11,9 @@ const initialState = {
     selectedShop : localStorage.getItem('activeShop') ? JSON.parse(localStorage.getItem('activeShop')) : null,
     itemSubCategory : null,
     itemCategory : null,
-    total : 0
+    total : 0,
+    productId : null,
+    current : null
 }
 
 const Reducer = (state = initialState, action) => {
@@ -58,6 +60,12 @@ const Reducer = (state = initialState, action) => {
             return{
                 ...state,
                 total : Number(state.total) + Number(action.payload)
+            }
+        case 'CHANGE_PRODUCT_ID' : 
+            return{
+                ...state,
+                productId : action.payload,
+                current : action.current
             }
     }
     

@@ -14,7 +14,7 @@ class Privacy extends React.Component{
         return(
             <React.Fragment>
                 <Navbar />
-                <div class="about-content" style={{'marginTop' : '20vh'}}>
+                <div class="about-content" style={{'marginTop' : '20vh', padding: '10px 10%'}}>
                         <h1 style={{fontSize:'36px !important',textAlign:'center',marginBottom:'5%'}}>Privacy policy</h1>
 <p> This privacy policy (&quot;Policy&quot;) describes how the personally identifiable information (&quot;Personal Information&quot;) you may provide on the <a target="_blank" rel="nofollow" href="https://hurrys.co.uk" >hurrys.co.uk</a> website (&quot;Website&quot; or &quot;Service&quot;) and any of its related products and services (collectively, &quot;Services&quot;) is collected, protected and used. It also describes the choices available to you regarding our use of your Personal Information and how you can access and update this information. This Policy is a legally binding agreement between you (&quot;User&quot;, &quot;you&quot; or &quot;your&quot;) and hurrys (&quot;hurrys&quot;, &quot;we&quot;, &quot;us&quot; or &quot;our&quot;). By accessing and using the Website and Services, you acknowledge that you have read, understood, and agree to be bound by the terms of this Agreement. This Policy does not apply to the practices of companies that we do not own or control, or to individuals that we do not employ or manage.</p>
 <h2>Automatic collection of information</h2>

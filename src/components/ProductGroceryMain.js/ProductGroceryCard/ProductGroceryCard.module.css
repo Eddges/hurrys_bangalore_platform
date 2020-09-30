@@ -214,6 +214,27 @@
   cursor: pointer;
 }
 
+.Container .Details .Prices .Quantity {
+  background-color: #f4f4f4;
+  padding: 2px 15px;
+  border-radius: 5px;
+}
+
+.Container .Details .Prices .Quantity .Highlite {
+  font-size: 1rem;
+  color: #00b246;
+  font-family: 'Avenir Heavy';
+}
+
+.Container .Details .Prices .Quantity .Highlite:hover {
+  cursor: pointer;
+}
+
+.Container .Details .Prices .Quantity .Quant {
+  font-family: 'Avenir Heavy';
+  padding: 0px 5px;
+}
+
 .Container:hover {
   -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.102);
           box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.102);

@@ -35,7 +35,10 @@
 }
 
 .Container .Main .Left img {
-  width: 400px;
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .Container .Main .Right {
@@ -141,7 +144,7 @@
   color: #9b9b9b;
 }
 
-.Container .Main .Right .VarietyTable .Item .AddButton {
+.Container .Main .Right .VarietyTable .Item .ButtonAdd {
   justify-self: flex-end;
   font-family: 'Avenir Heavy';
   background-color: #eaeaea;
@@ -159,6 +162,27 @@
 
 .Container .Main .Right .VarietyTable .Item:hover .AddButton {
   cursor: pointer;
+}
+
+.Container .Main .Right .VarietyTable .Quantity {
+  background-color: #f4f4f4;
+  padding: 2px 15px;
+  border-radius: 5px;
+}
+
+.Container .Main .Right .VarietyTable .Quantity .Highlite {
+  font-size: 1rem;
+  color: #00b246;
+  font-family: 'Avenir Heavy';
+}
+
+.Container .Main .Right .VarietyTable .Quantity .Highlite:hover {
+  cursor: pointer;
+}
+
+.Container .Main .Right .VarietyTable .Quantity .Quant {
+  font-family: 'Avenir Heavy';
+  padding: 0px 5px;
 }
 
 .Container .Main .Right .HRLine {

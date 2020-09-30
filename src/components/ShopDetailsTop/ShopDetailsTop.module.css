@@ -20,7 +20,10 @@
 
 .Top .Left img {
   width: 180px;
+  height: 180px;
   border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .Top .Left .Details {

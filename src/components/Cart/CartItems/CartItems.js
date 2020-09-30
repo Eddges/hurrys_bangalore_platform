@@ -69,7 +69,7 @@ class CartItems extends React.Component {
                         <span className={classes.Highlite} onClick={() => this.props.handleIncrease(this.props.shopId, this.props.productId)}>+</span>
                     </div>
                     <div className={classes.Prices}>
-                            <span className={classes.TruePrice}>₹ {quantity * this.props.price}</span>
+                            <span className={classes.TruePrice}>£ {quantity * this.props.price}</span>
                             {/* <span className={classes.StdPrice}>₹{this.state.current.stdPrice}</span> */}
                     </div>
                 </div>
