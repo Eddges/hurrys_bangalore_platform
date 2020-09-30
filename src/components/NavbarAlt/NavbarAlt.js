@@ -62,7 +62,7 @@ class NavbarAlt extends React.Component{
                                 :
                             <div className={classes.Cart}>
                                 <img className={classes.Cart} src={CartIcon} alt="Cart" onClick={this.handleCart} />
-                                <span className={classes.Count}>2</span>
+                                {/* <span className={classes.Count}>2</span> */}
                             </div>
                         }
 

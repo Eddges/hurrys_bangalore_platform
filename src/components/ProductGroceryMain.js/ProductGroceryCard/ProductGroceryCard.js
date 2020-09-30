@@ -26,6 +26,7 @@ class ProductGroceryCard extends React.Component {
         database.ref('/Users').child(this.props.user.UserId).child('Cart').child(this.props.productId).child(this.state.current.PushId).set(this.state.current)
         .then((result) => {
             console.log('Result : ', result)
+            this.props.onChangeTotal(this.state.current.Price)
         })
         .catch(err => console.log(err))
     }
@@ -98,4 +99,13 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(ProductGroceryCard)
+const mapDispatchToProps = dispatch => {
+    return{
+        onChangeTotal : (price) => dispatch({
+            type : 'CHANGE_TOTAL',
+            payload : price
+        })
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductGroceryCard)

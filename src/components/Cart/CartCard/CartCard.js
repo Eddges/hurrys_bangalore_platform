@@ -27,8 +27,9 @@ class CartCard extends React.Component {
                             st[index].items[i].quantity = quantity
                             this.setState({
                                 ...this.state,
-                                structure : st
-                            })
+                                structure : st,
+                                cost : this.state.cost + Number(st[index].items[i].Price)
+                            }, this.props.changeTotal(this.state.cost))
                         }
                     })
                 }
@@ -68,7 +69,8 @@ class CartCard extends React.Component {
                                 st[index].items[i].quantity = quantity
                                 this.setState({
                                     ...this.state,
-                                    structure : st
+                                    structure : st,
+                                    cost : this.state.cost - Number(st[index].items[i].Price)
                                 })
                             }
                         })
@@ -77,6 +79,7 @@ class CartCard extends React.Component {
             }
             
         })
+
     }
 
     clearCart = () => {
@@ -85,6 +88,7 @@ class CartCard extends React.Component {
 
     componentDidMount(){
         console.log(this.props.red)
+        let total = 0
         database.ref('/Users').child(this.props.user.UserId).child('Cart').once('value', snapshot => {
             if(snapshot.val()){
                 Object.keys(snapshot.val()).map((iterator, index) => {
@@ -106,28 +110,41 @@ class CartCard extends React.Component {
                             structure : x
                         }, state => {
                             console.log('Structure : ', this.state.structure)
+                            this.state.structure.map((priceIterator, priceIndex) => {
+                                priceIterator.items.map((itemsIterator, itemsIndex) => {
+                                    let itemQuantity = itemsIterator.quantity ? itemsIterator.quantity : 1
+                                    total = total + itemQuantity*Number(itemsIterator.Price)
+                                })
+                            })
+                            this.setState({
+                                ...this.state,
+                                cost : total
+                            })
                         })
                     })
                 })
             }
 
         })
+        
+
     }
 
     render(){
+        let totalCost = 0
         return(
             <div className={classes.Container}>
                 <div className={classes.Top}>
                     <div className={classes.Shop}>
                         <span className={classes.Name}>{this.state.store ? this.state.store.Name : null}</span>
-                        <span className={classes.Details}>{this.state.store ? this.state.store.DeliveryTime : null} mins delivery | {this.state.store ? this.state.store.d.toFixed(1) : null} miles away</span>
+                        <span className={classes.Details}>{this.state.store.DeliveryTime ? this.state.store.DeliveryTime : null} mins delivery | {this.state.store.d ? this.state.store.d.toFixed(1) : null} miles away</span>
                     </div>
                     {/* <button className={classes.ButtonAddMore}>+ ADD MORE</button> */}
                 </div>
 
                 <div className={classes.Mid}>
                     <div className={classes.MidTop}>
-                        <span className={classes.ItemCount}>{this.props.items.length} ITEMS</span>
+                        <span className={classes.ItemCount}>ITEMS</span>
                         <button type="button" onClick={this.clearCart} >CLEAR</button>
                     </div>
                     <div className={classes.MidMid}>
@@ -145,6 +162,8 @@ class CartCard extends React.Component {
                             this.state.structure.map((iterator) => {
                                 return(
                                     iterator.items.map((i, index) => {
+                                        let quantity = i.quantity ? i.quantity : 1
+                                        totalCost = quantity * i.Price                             
                                         console.log('i : ', i)
                                         return (<CardItems key={index} icon={iterator.icon} name={iterator.name} price={i.Price} quant={i.Name} quantity={i.quantity} shopId={iterator.id} productId={i.PushId} handleIncrease={this.handleIncrease} handleDecrease={this.handleDecrease} />)})
 
@@ -154,7 +173,6 @@ class CartCard extends React.Component {
                             <span>Cart is empty</span>
                         }
                     </div>
-
                 </div>
                 <div className={classes.HRLine}></div>
                 {/* <div className={classes.Cutlery}>
@@ -168,7 +186,7 @@ class CartCard extends React.Component {
                 <div className={classes.HRLine}></div>
                 <div className={classes.Total}>
                     <span onClick={() => {console.log(this.state.structure)}}>Total</span>
-                    <span>₹ 363</span>
+                    <span>{this.state.cost}</span>
                 </div>
             </div>
         )
@@ -184,7 +202,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return{
-        
+        changeTotal : (price) => dispatch({
+            type : 'CHANGE_TOTAL',
+            payload : price
+        })
     }
 }
 

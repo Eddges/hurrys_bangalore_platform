@@ -18,6 +18,7 @@ const AvailableShopsCard = (props) => {
             onClick={() => {
                 window.scrollTo(0, 0)
                 console.log('Active Shop : ', props)
+                localStorage.setItem('activeShop', JSON.stringify(props))
                 props.setActiveShop(props)
             }}
         >
