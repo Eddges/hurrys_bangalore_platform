@@ -1,0 +1,72 @@
+.Container{
+    position : fixed;
+    width : 100%;
+    height : 100vh;
+    z-index : 1000;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    .Backdrop{
+        width : 100%;
+        height : 100%;
+        position : absolute;
+        z-index: 0;
+        background-color : rgba(0, 0, 0, 0.412);
+    }
+    .Main{
+        z-index: 10;
+        width : 700px;
+        height : auto;
+        background-color : white;
+        border-radius: 10px;
+        position : relative;
+        display : flex;
+        flex-direction: column;
+        padding : 10px;
+        align-items: center;
+        ion-icon{
+            position : absolute;
+            top : 15px;
+            right : 25px;
+            font-size : 1.5rem;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .Heading{
+            font-family : 'Avenir Heavy';
+            margin-top : 10px;
+        }
+        .InputAddress{
+            width : 90%;
+            border-radius : 5px;
+            border : none;
+            background-color: white;
+            box-shadow : 5px 5px 10px rgba(0, 0, 0, 0.282);
+            height : 40px;
+            padding : 0px 20px;
+            margin-top : 30px;
+        }
+        .MapDisplay{
+            width : 90%;
+            margin-top : 20px;
+            height : 350px;
+            // background-color: coral;
+        }
+        .ButtonAdd{
+            margin-top : 15px;
+            border : none;
+            width : 50%;
+            height : 35px;
+            background-color : #00b246;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.241);
+            color : white;
+            font-family: 'Avenir Heavy';
+            transition : all 0.1s;
+            &:hover{
+                background-color: #06a345;
+            }
+        }
+    }
+}

@@ -15,7 +15,8 @@ const initialState = {
         UserId : localStorage.getItem('UserId') ? localStorage.getItem('UserId') : null,
         wallet : 0,
         LoggedIn : localStorage.getItem('LoggedIn') ? true : false,
-        currentLocation : localStorage.getItem('Location') ? localStorage.getItem('Location') : null
+        currentLocation : localStorage.getItem('Location') ? localStorage.getItem('Location') : null,
+        address : []
 }
 
 const User = (state = initialState, action) => {
@@ -31,15 +32,24 @@ const User = (state = initialState, action) => {
                 UserId : action.payload.UserId
             }
         case 'REMOVE_USER' : 
-        console.log('User is being removed')
-        return {
-            ...state,
-            Name : null,
-            Email : null,
-            MobileNumber : null,
-            UserId : null,
-            LoggedIn : false
-        }
+            console.log('User is being removed')
+            return {
+                ...state,
+                Name : null,
+                Email : null,
+                MobileNumber : null,
+                UserId : null,
+                LoggedIn : false
+            }
+        case 'PUSH_ADDRESS' : 
+            console.log('Pushing address : ', action.payload)
+            const pushingAddress = state.address
+            pushingAddress.push(action.payload)
+            console.log('Variable pushing addresss', pushingAddress)
+            return{
+                ...state,
+                // address : state.address.push(action.payload)
+            }
     }
     return state
 }
