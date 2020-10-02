@@ -22,8 +22,8 @@ class PaymentAccordion extends React.Component{
 
 
 
-            <div className={classes.Accordion} onClick={this.handlePaymentAccordion}>
-                <div className={classes.AccordionTop}>
+            <div className={classes.Accordion} >
+                <div className={classes.AccordionTop} onClick={this.handlePaymentAccordion}>
                     <div className={classes.AccordionTopText}>
                         <img src={payment} alt="Payment Icon" />
                         <span>Payment Method</span>
@@ -35,9 +35,9 @@ class PaymentAccordion extends React.Component{
                     <div className={classes.PaymentDropItem}>
                         <input type="checkbox" />
                         <img src={debitCard} alt="Debit Card" />
-                        <span>Debit/Credit Card</span>
+                        <span>Pay On Delivery</span>
                     </div>
-                    <div className={classes.PaymentDropItem}>
+                    {/* <div className={classes.PaymentDropItem}>
                         <input type="checkbox" />
                         <img src={debitCard} alt="Debit Card" />
                         <span>Debit/Credit Card</span>
@@ -46,7 +46,7 @@ class PaymentAccordion extends React.Component{
                         <input type="checkbox" />
                         <img src={debitCard} alt="Debit Card" />
                         <span>Debit/Credit Card</span>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

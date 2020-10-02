@@ -21,6 +21,8 @@ class CartItems extends React.Component {
 
     componentDidMount(){
         console.log('Cart items props : ', this.props)
+        // console.log('Setprice props ', quantity * this.props.price)
+        // this.props.setPrice(quantity * this.props.price)
     }
 
     render(){
@@ -86,5 +88,13 @@ const mapStateToProps = state => {
         red : state.red
     }
 }
+const mapDispatchToProps = dispatch => {
+    return{
+        setPrice : (cost) => dispatch({
+            type : 'SET_ITEMS_COST',
+            payload : cost
+        })
+    }
+}
 
-export default connect(mapStateToProps)(CartItems)
+export default connect(mapStateToProps, mapDispatchToProps)(CartItems)

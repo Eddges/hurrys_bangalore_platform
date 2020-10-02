@@ -22,6 +22,10 @@
           align-items: flex-start;
 }
 
+.Accordion .AccordionTop:hover {
+  cursor: pointer;
+}
+
 .Accordion .AccordionTop .AccordionTopText {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -165,9 +169,5 @@
   min-height: 200px;
   height: auto;
   overflow: auto;
-}
-
-.Accordion:hover {
-  cursor: pointer;
 }
 /*# sourceMappingURL=PaymentAccordion.module.css.map */

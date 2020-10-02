@@ -7,6 +7,9 @@
         display : flex;
         justify-content: space-between;
         align-items: flex-start;
+        &:hover{
+            cursor: pointer;
+        }
         .AccordionTopText{
             display : flex;
             align-items: flex-start;
@@ -111,7 +114,5 @@
         height : auto;
         overflow: auto;
     }
-    &:hover{
-        cursor: pointer;
-    }
+    
 }

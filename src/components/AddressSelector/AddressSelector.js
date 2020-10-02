@@ -21,6 +21,13 @@ class AddressSelector extends React.Component{
         this.props.modalClose()
     }
 
+    handleInputChange = (e) => {
+        this.setState({
+            ...this.state,
+            address : e.target.value
+        })
+    }
+
     render(){
         console.log('Lat : ', this.props.red.location.latitude, ' Long : ', this.props.red.location.longitude)
         const Map = compose(
@@ -68,7 +75,7 @@ class AddressSelector extends React.Component{
                 <div className={classes.Main}>
                     <ion-icon name="close-outline" onClick={this.props.modalClose}></ion-icon>
                     <span className={classes.Heading}>Add New Address</span>
-                    <input className={classes.InputAddress} value={this.state.address} placeholder="Search your location or click on map" />
+                    <input className={classes.InputAddress} value={this.state.address} onChange={this.handleInputChange} placeholder="Click on the map to set location" />
                     <div className={classes.MapDisplay}>
                         <Map
                             googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhYZ7B9Qf6DWiixOxZf2GYciJIrmbQHoA"

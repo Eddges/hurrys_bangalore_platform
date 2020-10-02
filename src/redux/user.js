@@ -16,7 +16,14 @@ const initialState = {
         wallet : 0,
         LoggedIn : localStorage.getItem('LoggedIn') ? true : false,
         currentLocation : localStorage.getItem('Location') ? localStorage.getItem('Location') : null,
-        address : []
+        address : [{
+            latitude : localStorage.getItem('latitude'),
+            longitude : localStorage.getItem('longitude'),
+            address : 'Chelsea, London'
+        }],
+        itemsCost : 0,
+        deliveryCost : 0,
+        totalCost : 0
 }
 
 const User = (state = initialState, action) => {
@@ -48,7 +55,19 @@ const User = (state = initialState, action) => {
             console.log('Variable pushing addresss', pushingAddress)
             return{
                 ...state,
-                // address : state.address.push(action.payload)
+                address : pushingAddress
+            }
+        case 'SET_ITEMS_COST' : 
+            console.log('Items cost changing to : ', action.payload)
+            return{
+                ...state,
+                itemsCost : action.payload
+            }
+        case 'SET_DELIVERY_COST' : 
+            console.log('Setting delivery cost to : ', action.payload)
+            return{
+                ...state,
+                deliveryCost : action.payload
             }
     }
     return state

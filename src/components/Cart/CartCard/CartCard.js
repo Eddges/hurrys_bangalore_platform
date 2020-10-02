@@ -73,6 +73,8 @@ class CartCard extends React.Component {
                                     ...this.state,
                                     structure : st,
                                     cost : this.state.cost - Number(st[index].items[i].Price)
+                                }, () => {
+                                    this.props.changeTotal(this.state.cost)
                                 })
                             }
                         })
@@ -126,6 +128,9 @@ class CartCard extends React.Component {
                             this.setState({
                                 ...this.state,
                                 cost : total
+                            }, () => {
+                                console.log('State cost : ', this.state.cost)
+                                this.props.changeTotal(this.state.cost)
                             })
                         })
                     })
@@ -133,8 +138,6 @@ class CartCard extends React.Component {
             }
 
         })
-        
-
     }
 
     render(){
@@ -210,7 +213,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return{
         changeTotal : (price) => dispatch({
-            type : 'CHANGE_TOTAL',
+            type : 'SET_ITEMS_COST',
             payload : price
         })
     }
