@@ -104,6 +104,7 @@ class CartCard extends React.Component {
                     database.ref('/Vendor').child(this.props.red.selectedShop.shopId).child('Products').child(iterator).on('value',
                     snapshot_v => {
                         const x = this.state.structure
+                        console.log('Snapshot_v :', snapshot_v.val())
                         const item = {
                             id : iterator,
                             icon : snapshot_v.val().ItemImage1,

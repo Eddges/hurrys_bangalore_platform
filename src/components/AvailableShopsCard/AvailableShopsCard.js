@@ -28,7 +28,7 @@ const AvailableShopsCard = (props) => {
             </div>
             <div className={classes.Details}>
                 <span className={classes.Name}>{props.Name}</span>
-                <span className={classes.Delivery}>{props.DeliveryTime} delivery | {props.d.toFixed(1)} km away</span>
+                <span className={classes.Delivery}>{props.DeliveryTime} min delivery | {props.d.toFixed(1)} mi away</span>
                 <span className={classes.Location}>{props.BusinessAddress}</span>
                 <span className={classes.Discount}>{props.discount}</span>
             </div>

@@ -14,7 +14,7 @@ const initialState = {
     total : 0,
     productId : null,
     current : null,
-    city : null
+    city : localStorage.getItem('activeCity') ? JSON.parse(localStorage.getItem('activeCity')) : null
 }
 
 const Reducer = (state = initialState, action) => {

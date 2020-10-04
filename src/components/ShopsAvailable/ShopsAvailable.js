@@ -59,8 +59,7 @@ class ShopsAvailable extends React.Component{
                     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
                     var d = R * c; // Distance in km
                     // return d;
-
-                    if(d<=10) {
+                    if(d<=this.props.activeCity.Radius) {
                         const ava = this.state.availableShopsActive
                         ava.push({
                             ...allShopsObject[iterator],
@@ -145,7 +144,8 @@ class ShopsAvailable extends React.Component{
 const mapStateToProps = state => {
     return{
         activeCategory : state.red.categoryDisplay,
-        activeLocation : state.red.location
+        activeLocation : state.red.location,
+        activeCity : state.red.city
     }
 }
 

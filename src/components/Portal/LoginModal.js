@@ -188,7 +188,7 @@ class LoginModal extends React.Component {
                 <form className = {styles.inputArea} onSubmit={this.state.showOtp ? this.verifyOtp : this.sendOtp}>
                   <label>
                     <p style = {{fontWeight:600}}>Mobile with country code</p>
-                    <input type = "text" onChange={this.handleMobileInput} />
+                    <input type = "text" placeholder="Eg. +919988776655" onChange={this.handleMobileInput} />
                   </label>
 
                   {

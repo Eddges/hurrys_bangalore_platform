@@ -126,18 +126,24 @@ class HomepageTop extends React.Component{
                         if(snapshot.val()[iterator].Name===selectedCity) {
                             this.setState({
                                 ...this.state,
-                                deliverable : true
-                            }, () => {
-                                this.props.history.push('/shops')
-                                this.props.onChangeLocation(this.state)
-                                this.props.setCity(snapshot.val()[iterator])
-                                localStorage.setItem('latitude', this.state.latitude)
-                                localStorage.setItem('longitude', this.state.longitude)
-                                localStorage.setItem('generalAddress', this.state.generalAddress)
+                                deliverable : true,
+                                city : snapshot.val()[iterator]
                             })
                             console.log('Found in database : ', snapshot.val()[iterator])
                         }
                     })
+                    if(!this.state.deliverable) {
+                        alert('We do not currently deliver to this location')
+                    }
+                    else{
+                        this.props.setCity(this.state.city)
+                        localStorage.setItem('activeCity', JSON.stringify(this.state.city))
+                        this.props.onChangeLocation(this.state)
+                        localStorage.setItem('latitude', this.state.latitude)
+                        localStorage.setItem('longitude', this.state.longitude)
+                        localStorage.setItem('generalAddress', this.state.generalAddress)
+                        this.props.history.push('/shops')
+                    }
                 })
             }
             else{
