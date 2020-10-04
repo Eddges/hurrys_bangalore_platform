@@ -45,10 +45,22 @@ class CartCard extends React.Component {
         database.ref('/Users').child(this.props.user.UserId).child('Cart').child(shopId).child(productId).child('quantity').once('value', snapshot => {
             console.log('Snapshot', snapshot.val())
             let quantity = snapshot.val() ? snapshot.val() - 1 : 0
-
             console.log('Quantity : ', quantity)
             if(quantity===0) {
                 database.ref('/Users').child(this.props.user.UserId).child('Cart').child(shopId).child(productId).set(null)
+                let newStr = this.state.structure.filter((iterator, index) => {
+                    console.log('iterator : ', iterator)
+                    let valid = true
+                    if(iterator.id === shopId) {
+                        valid = false
+                    }
+                    console.log('valid : ', valid)
+                    return valid
+                })
+                this.setState({
+                    ...this.state,
+                    structure : newStr
+                })
                 // let x = this.state.structure.map((iterator, index) => {
                 //     if(iterator.id===shopId) {
                 //         return iterator.items.filter((iterator_i, i) => {
