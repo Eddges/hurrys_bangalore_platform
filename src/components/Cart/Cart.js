@@ -36,13 +36,6 @@ class Cart extends React.Component{
                 <div className={classes.Backdrop}></div>
                 <div className={classes.Main}>
                 <CartCard  cart={this.state.cart} />
-                    {/* {
-                        this.state.products.map((iterator, index) => {
-                                return(
-                                    
-                                )
-                        })
-                    } */}
                     <button className={classes.ExitButton} onClick={this.props.handleCartBack}>Back</button>
                     <NavLink to="/checkout" className={classes.ExitButton} onClick={this.props.handleCartBack}>Checkout</NavLink>
                 </div>

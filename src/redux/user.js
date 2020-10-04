@@ -19,7 +19,7 @@ const initialState = {
         address : [{
             latitude : localStorage.getItem('latitude'),
             longitude : localStorage.getItem('longitude'),
-            address : 'Chelsea, London'
+            address : 'Luton Airport, Bedfordshire, UK'
         }],
         itemsCost : 0,
         deliveryCost : 0,

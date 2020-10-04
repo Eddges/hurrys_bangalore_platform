@@ -61,7 +61,7 @@ class AddressSelector extends React.Component{
         )
             (props =>
                 <GoogleMap
-                    defaultZoom={10}
+                    defaultZoom={12}
                     defaultCenter={{ lat: Number(this.props.red.location.latitude), lng: Number(this.props.red.location.longitude) }}
                     onClick={props.onMapClick}
                 >

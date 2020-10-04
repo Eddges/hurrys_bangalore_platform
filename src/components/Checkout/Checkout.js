@@ -186,22 +186,7 @@ class Checkout extends React.Component{
     }
 
     render(){
-        // if(this.props.user.address.length !== 0) {
-        //     console.log('User address length : ', this.props.user.address.length)
-        //     const LocationArray = this.props.red.selectedShop.Location.split(',')
-        //     const shopLat = LocationArray[0]
-        //     const shopLng = LocationArray[1]
-        //     const userLat = this.props.user.address[this.props.user.address.length - 1].latitude
-        //     const userLng = this.props.user.address[this.props.user.address.length - 1].longitude
-        //     // console.log(`https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${shopLat},${shopLng}&destinations=${userLat},${userLng}&key=AIzaSyBhYZ7B9Qf6DWiixOxZf2GYciJIrmbQHoA`)
-        //     fetch(`https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${shopLat},${shopLng}&destinations=${userLat},${userLng}&key=AIzaSyBhYZ7B9Qf6DWiixOxZf2GYciJIrmbQHoA`)
-        //     .then(response => {
-        //         console.log(response.data)
-        //     })
-        // }
-        // else{
-        //     console.log('User Address length : 0')
-        // }
+
         return(
             <div className={classes.Container}>
                 <NavbarAlt />
@@ -231,10 +216,11 @@ class Checkout extends React.Component{
                             <div className={this.state.deliveryOpen ? `${classes.AccordionDrop} ${classes.AccordionDropExpand}` : `${classes.AccordionDrop}`}>
                             {
                                 this.props.user.address.map((iterator, index) => {
+                                    console.log('Checked ? ', index, this.props.user.address-1 )
                                     return(
                                         <div className={classes.AddressDropItem}>
                                             <div className={classes.AddressDropItemLeft}>
-                                                <input type="checkbox" />
+                                                <input type="checkbox" checked={index===this.props.user.address.length - 1 ? true : false} />
                                                 <div className={classes.AddressDropMiddle}>
                                                     <span className={classes.AddressDropDetail}>{iterator.address}</span>
                                                 </div>
@@ -244,34 +230,7 @@ class Checkout extends React.Component{
                                     )
                                 })
                             }
-                                {/* {
-                                    this.props.user.address!=[] ? 
-                                    this.props.user.address.map((iterator, index) => {
-                                        return(
-                                            <div className={classes.AddressDropItem}>
-                                                <div className={classes.AddressDropItemLeft}>
-                                                    <input type="checkbox" />
-                                                    <div className={classes.AddressDropMiddle}>
-                                                        <span className={classes.AddressDropDetail}>{iterator.address}</span>
-                                                    </div>
-                                                </div>
-                                                <button type="button">EDIT</button>
-                                            </div>
-                                        )
-                                    })
-                                    :
-                                    <span>Please add a new address</span>
-                                } */}
 
-                                {/* <div className={classes.AddressDropItem}>
-                                    <div className={classes.AddressDropItemLeft}>
-                                        <input type="checkbox" />
-                                        <div className={classes.AddressDropMiddle}>
-                                            <span className={classes.AddressDropDetail}>TK Towers, HSR Layout, Whitefield </span>
-                                        </div>
-                                    </div>
-                                    <button type="button">EDIT</button>
-                                </div> */}
 
                                 <div className={classes.DeliveryControls}>
                                     <button className={classes.AddressAdd} onClick={this.addAddress} >+ ADD NEW ADDRESS</button>
