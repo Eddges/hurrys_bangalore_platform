@@ -40,7 +40,7 @@ class LoginModal extends React.Component {
     console.log('State : ', this.state)
     this.setUpRecaptcha()
     let appVerifier = window.recaptchaVerifier
-    auth.signInWithPhoneNumber(`+91${this.state.MobileNumber}`, appVerifier)
+    auth.signInWithPhoneNumber(`${this.state.MobileNumber}`, appVerifier)
     .then((confirmationResult) => {
         console.log('Confirmation result', confirmationResult)
         this.setState({
@@ -187,7 +187,7 @@ class LoginModal extends React.Component {
                 </div>
                 <form className = {styles.inputArea} onSubmit={this.state.showOtp ? this.verifyOtp : this.sendOtp}>
                   <label>
-                    <p style = {{fontWeight:600}}>Enter Mobile Number</p>
+                    <p style = {{fontWeight:600}}>Mobile with country code</p>
                     <input type = "text" onChange={this.handleMobileInput} />
                   </label>
 

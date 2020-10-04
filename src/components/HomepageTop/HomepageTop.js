@@ -4,10 +4,8 @@ import HomepageBG from '../../assets/HomepageMain.png'
 import Pin from '../../assets/pin.svg'
 import {connect} from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import PlacesAutocomplete, {
-    geocodeByAddress,
-    getLatLng,
-  } from 'react-places-autocomplete';
+import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
+import {database} from '../../firebase'
 
 class HomepageTop extends React.Component{
 
@@ -43,7 +41,6 @@ class HomepageTop extends React.Component{
         .then(response => response.json())
         .then(data => {
             console.log('Current Location : ', data.results)
-
             this.setState({
                 ...this.state,
                 userAddress : data.results[0].formatted_address,
@@ -73,28 +70,14 @@ class HomepageTop extends React.Component{
           }
     }
 
-    // handleSearchClick = () => {
-    //     this.setState({
-    //         ...this.state,
-    //         generalAddress : ''
-    //     })
-    // }
-
     handleLocationChange = (e) => {
         this.setState({
             ...this.state,
             generalAddress : e.target.value
         })
-        // setTimeout(() => {
-        //     fetch(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=${this.state.generalAddress}&key=AIzaSyBhYZ7B9Qf6DWiixOxZf2GYciJIrmbQHoA`)
-        //     .then(res => {
-        //         console.log('response data : ', res.data)
-        //     })
-        // }, 0)
     }
 
     handleChange = address => {
-        console.log('ChangedAddress : ', address)
         this.setState({
             ...this.state,
             generalAddress : address
@@ -104,7 +87,8 @@ class HomepageTop extends React.Component{
     handleSelect = address => {
         console.log('Selected address : ', address)
     geocodeByAddress(address)
-        .then(results => getLatLng(results[0]))
+        .then(results => {
+            return getLatLng(results[0])})
         .then(latLng => {
             console.log(latLng)
             this.setState({
@@ -116,20 +100,33 @@ class HomepageTop extends React.Component{
                 console.log('Changed state : ', this.state)
             })
         })
-        // .then(() => {
-        //     this.setState({
-        //     ...this.state,
-        //     generalAddress : address
-        //     })
-        // })
         .catch(error => console.error('Error', error));
     };
 
     handleProceed = () => {
-        this.props.onChangeLocation(this.state)
-        localStorage.setItem('latitude', this.state.latitude)
-        localStorage.setItem('longitude', this.state.longitude)
-        localStorage.setItem('generalAddress', this.state.generalAddress)
+        fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${this.state.latitude},${this.state.longitude}&key=AIzaSyBhYZ7B9Qf6DWiixOxZf2GYciJIrmbQHoA`)
+        .then(response => response.json())
+        .then(data => {
+            console.log('Current Location : ', data.results)
+            const locationType = ["locality", 'political']
+            let selectedCity = ''
+            data.results.map((location, index) => {
+                if(location.types[0]==="locality" && location.types[1]==='political'){
+                    console.log('Found : ', location)
+                    selectedCity =  location.address_components[0].short_name
+                    return
+                }
+                
+            })
+            console.log('Selected city : ', selectedCity)
+        })
+            
+        .catch(error => alert(error))
+
+        // this.props.onChangeLocation(this.state)
+        // localStorage.setItem('latitude', this.state.latitude)
+        // localStorage.setItem('longitude', this.state.longitude)
+        // localStorage.setItem('generalAddress', this.state.generalAddress)
     }
 
     findDistance = (lat1,lon1,lat2,lon2) => {
@@ -206,13 +203,9 @@ class HomepageTop extends React.Component{
                         <img src={Pin} alt="Pin" />
                         <span>Locate Me</span>
                     </div>
-                    <NavLink className={classes.ProceedButton} to="/shops" onClick={() => this.handleProceed()}>Proceed</NavLink>
+                    <button className={classes.ProceedButton} onClick={() => this.handleProceed()}>Proceed</button>
+                    {/* <NavLink className={classes.ProceedButton} to="/shops" onClick={() => this.handleProceed()}>Proceed</NavLink> */}
                 </div>
-                {/* <div className={classes.Frequent}>
-                    <span>Frequent Locations: </span>
-                    <span>Bangalore, Pune, Hyderabad, Chennai</span>   
-                </div> */}
-                {/* <button style={{zIndex : '1000000'}} onClick={this.findDistance}>Find Distance</button> */}
             </div>
         )
     }
