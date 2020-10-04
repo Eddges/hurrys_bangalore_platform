@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 import {database} from '../../firebase'
+import {withRouter} from 'react-router-dom'
 
 class HomepageTop extends React.Component{
 
@@ -15,7 +16,8 @@ class HomepageTop extends React.Component{
         userAddress : null,
         generalAddress : null,
         address : '',
-        city : ''
+        city : '',
+        deliverable : false
     }
 
     getLocation = () => {
@@ -116,17 +118,36 @@ class HomepageTop extends React.Component{
                     selectedCity =  location.address_components[0].short_name
                     return
                 }
-                
             })
             console.log('Selected city : ', selectedCity)
+            if(selectedCity){
+                database.ref('/Masters').child('City').once('value', snapshot => {
+                    Object.keys(snapshot.val()).map((iterator, index) => {
+                        if(snapshot.val()[iterator].Name===selectedCity) {
+                            this.setState({
+                                ...this.state,
+                                deliverable : true
+                            }, () => {
+                                this.props.history.push('/shops')
+                                this.props.onChangeLocation(this.state)
+                                this.props.setCity(snapshot.val()[iterator])
+                                localStorage.setItem('latitude', this.state.latitude)
+                                localStorage.setItem('longitude', this.state.longitude)
+                                localStorage.setItem('generalAddress', this.state.generalAddress)
+                            })
+                            console.log('Found in database : ', snapshot.val()[iterator])
+                        }
+                    })
+                })
+            }
+            else{
+                alert('We do not deliver to this location currently.')
+            }
         })
             
         .catch(error => alert(error))
 
-        // this.props.onChangeLocation(this.state)
-        // localStorage.setItem('latitude', this.state.latitude)
-        // localStorage.setItem('longitude', this.state.longitude)
-        // localStorage.setItem('generalAddress', this.state.generalAddress)
+
     }
 
     findDistance = (lat1,lon1,lat2,lon2) => {
@@ -222,8 +243,12 @@ const mapDispatchToProps = dispatch => {
         onChangeLocation : (location) => dispatch({
             type : 'CHANGE_LOCATION',
             location : location
+        }),
+        setCity : city => dispatch({
+            type : 'SET_CITY',
+            payload : city
         })
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomepageTop)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HomepageTop))

@@ -13,7 +13,8 @@ const initialState = {
     itemCategory : null,
     total : 0,
     productId : null,
-    current : null
+    current : null,
+    city : null
 }
 
 const Reducer = (state = initialState, action) => {
@@ -66,6 +67,12 @@ const Reducer = (state = initialState, action) => {
                 ...state,
                 productId : action.payload,
                 current : action.current
+            }
+        case 'SET_CITY' : 
+            console.log('Setting city : ', action.payload)
+            return{
+                ...state,
+                city : action.payload
             }
     }
     
