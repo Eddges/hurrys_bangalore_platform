@@ -7,7 +7,7 @@ function CouponPortal() {
     return (
     <>
         <div>
-            <p  onClick = {() => setIsOpen(true)} > Apply Coupon </p>
+            <p  onClick = {() => setIsOpen(true)} > Offer Zone </p>
         </div>
         <CouponModal open = {isOpen} onClose = {()=> setIsOpen(false)}/>
     </>
