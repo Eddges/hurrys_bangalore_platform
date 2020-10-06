@@ -6,38 +6,59 @@ import Portal from '../../components/Portal/Portal';
 import PortalSignup from '../Portal/PortalSignup';
 import {connect} from 'react-redux'
 import { auth } from '../../firebase'
+import ProfileGreen from '../../assets/profileGreen.svg'
+import ProfileDrawer from '../ProfileDrawer/ProfileDrawer'
+import UserIcon from '../../assets/user.svg'
 
-const Navbar = (props) => {
-
-    const signOutHandler = () => {
-        auth.signOut()
-        localStorage.removeItem('LoggedIn')
-        localStorage.removeItem('Name')
-        localStorage.removeItem('MobileNumber')
-        localStorage.removeItem('Email')
-        props.removeUser()
+class Navbar extends React.Component {
+    state = {
+        showProfile : false
     }
 
-    return(
-        <div className={classes.Navbar}>
-            <NavLink className={classes.Logo} to="/">
-                <img src={LogoBlack} alt="Logo" />
-            </NavLink>
-            
-            {
-                localStorage.getItem('LoggedIn') ? 
-                    <div className={classes.NavButtons}>
-                        <button className={classes.SignUpButton} onClick={signOutHandler}>Sign Out</button>
-                    </div>
-                : 
-                    <div className={classes.NavButtons}>
-                        <button className={classes.LoginButton}> <Portal/> </button>
-                        <button className={classes.SignUpButton}> <PortalSignup/> </button>
-                    </div>
-            }
+    handleProfile = () => {
+        this.setState({
+            ...this.state,
+            showProfile : !this.state.showProfile
+        })
+    }
 
-        </div>
-    )
+    render(){
+        const signOutHandler = () => {
+            auth.signOut()
+            localStorage.removeItem('LoggedIn')
+            localStorage.removeItem('Name')
+            localStorage.removeItem('MobileNumber')
+            localStorage.removeItem('Email')
+            this.props.removeUser()
+        }
+    
+        return(
+            <div className={classes.Navbar}>
+                <NavLink className={classes.Logo} to="/">
+                    <img src={LogoBlack} alt="Logo" />
+                </NavLink>
+                
+                {
+                    localStorage.getItem('LoggedIn') ? 
+                        <div className={classes.NavButtons}>
+                            {/* <img className={classes.User} src={UserIcon}  alt="User" /> */}
+                            <span className={classes.User} onClick={this.handleProfile}>My Profile</span>
+                            <button className={classes.SignUpButton} onClick={signOutHandler}>Sign Out</button>
+                        </div>
+                    : 
+                        <div className={classes.NavButtons}>
+                            <button className={classes.LoginButton}> <Portal/> </button>
+                            <button className={classes.SignUpButton}> <PortalSignup/> </button>
+                        </div>
+                }
+
+                {this.state.showProfile && <ProfileDrawer handleProfile={this.handleProfile} />}
+    
+            </div>
+        )
+    }
+
+    
 }
 
 const mapStateToProps = (state) => {

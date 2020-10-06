@@ -34,6 +34,16 @@
           align-items: center;
 }
 
+.Navbar .NavButtons .User {
+  margin-right: 40px;
+  text-decoration: underline;
+  font-size: 1.25rem;
+}
+
+.Navbar .NavButtons .User:hover {
+  cursor: pointer;
+}
+
 .Navbar .NavButtons .LoginButton {
   color: black;
   font-size: 1.2rem;
