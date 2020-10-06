@@ -3,7 +3,7 @@ import classes from './AddressSelector.module.css'
 import { compose, withStateHandlers } from "recompose";
 import { InfoWindow, withGoogleMap, withScriptjs, GoogleMap, Marker } from 'react-google-maps';
 import {connect} from 'react-redux'
-
+import Pin from '../../assets/pin.svg'
 
 
 
@@ -14,6 +14,55 @@ class AddressSelector extends React.Component{
         longitude : this.props.red.location.longitude,
         address : '',
         markerPosition : null
+    }
+
+    getLocation = () => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(this.getCoordinates, this.handleLocationErrors);
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+
+    getCoordinates = (position) => {
+        this.setState({
+            ...this.state,
+            latitude : position.coords.latitude,
+            longitude : position.coords.longitude
+        })
+        this.reverseGeoEncode()
+    }
+
+    reverseGeoEncode = () => {
+        console.log('State : ', this.state)
+        fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${this.state.latitude},${this.state.longitude}&key=AIzaSyBhYZ7B9Qf6DWiixOxZf2GYciJIrmbQHoA`)
+        .then(response => response.json())
+        .then(data => {
+            console.log('Current Location : ', data.results)
+            this.setState({
+                ...this.state,
+                address : data.results[0].formatted_address,
+            })
+        })
+            
+        .catch(error => alert(error))
+    }
+
+    handleLocationErrors = (error) => {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+              alert("User denied the request for Geolocation.")
+              break;
+            case error.POSITION_UNAVAILABLE:
+              alert("Location information is unavailable.")
+              break;
+            case error.TIMEOUT:
+              alert("The request to get user location timed out.")
+              break;
+            case error.UNKNOWN_ERROR:
+              alert("An unknown error occurred.")
+              break;
+          }
     }
 
     handleAddress = () => {
@@ -75,7 +124,13 @@ class AddressSelector extends React.Component{
                 <div className={classes.Main}>
                     <ion-icon name="close-outline" onClick={this.props.modalClose}></ion-icon>
                     <span className={classes.Heading}>Add New Address</span>
-                    <input className={classes.InputAddress} value={this.state.address} onChange={this.handleInputChange} placeholder="Click on the map to set location" />
+                    <div className={classes.AddressBar}>
+                        <div className={classes.Locate} onClick={this.getLocation}>
+                            <img src={Pin} alt="Pin" />
+                        </div>
+                        <input className={classes.InputAddress} value={this.state.address} onChange={this.handleInputChange} placeholder="Click on the map to set location" />
+                    </div>
+                    
                     <div className={classes.MapDisplay}>
                         <Map
                             googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhYZ7B9Qf6DWiixOxZf2GYciJIrmbQHoA"

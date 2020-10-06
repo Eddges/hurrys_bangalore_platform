@@ -14,8 +14,8 @@ const MobileSection = () => (
             <span className={classes.Title}>Get things done</span>
             <span className={classes.SubText}>right from your phone</span>
             <div className={classes.Icons}>
-                <img src={PlayStore} alt="Play Store" />
-                <img src={AppleStore} alt="Apple Store" />
+                <img src={PlayStore} onClick={() => { window.open('https://play.google.com/store/apps/details?id=hurrys.corp.ltd', '_blank')}} alt="Play Store" />
+                <img src={AppleStore} onClick={() => { window.open('https://play.google.com/store/apps/details?id=hurrys.corp.ltd', '_blank')}} alt="Apple Store" />
             </div>
         </div>
         <div className={classes.Right}>

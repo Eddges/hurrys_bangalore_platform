@@ -5,6 +5,7 @@ import Pound from '../../assets/pound.svg'
 import fruit from '../../assets/fruits-vegetables.svg'
 import PlayStore from '../../assets/PlayStoreIcon.png'
 import AppleStore from '../../assets/AppleStoreIcon.png'
+import {withRouter} from 'react-router-dom'
 
 const MyWallet  = (props) => {
     return(
@@ -29,8 +30,8 @@ const MyWallet  = (props) => {
                     <div className={classes.Phone}>
                         <span className={classes.Heading}>Download the app for a smoother experience</span>
                         <span className={classes.SubHeading}>Get things done right from your phone</span>
-                        <img src={PlayStore} alt="Play Store Icon" />
-                        <img src={AppleStore} alt="Apple Store Icon" />
+                        <img src={PlayStore} onClick={() => { window.open('https://play.google.com/store/apps/details?id=hurrys.corp.ltd', '_blank')}} alt="Play Store Icon" />
+                        <img src={AppleStore} onClick={() => { window.open('https://play.google.com/store/apps/details?id=hurrys.corp.ltd', '_blank')}} alt="Apple Store Icon" />
                     </div>
                 </div>
             </div>
@@ -38,4 +39,4 @@ const MyWallet  = (props) => {
     )
 }
 
-export default MyWallet
+export default withRouter(MyWallet)

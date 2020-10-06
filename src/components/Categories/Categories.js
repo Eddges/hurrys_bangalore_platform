@@ -43,7 +43,7 @@ class Categories extends React.Component{
                     <div className={classes.CategoriesMain}>
                     <CategoryCard icon={food} text="Food Delivery" toLink="food" unavailable={this.state['Food Delivery'].Status==='InActive' ? true : false} />
                     <CategoryCard icon={grocery} text="Groceries & Essentials" toLink="grocery" unavailable={this.state['Groceries & Essentials'].Status==='InActive' ? true : false} />
-                    <CategoryCard icon={fruits} text="Fruits & Vegetables" toLink="fruits_veggies" unavailable={this.state['Fruits & Vegetables'].Status==='InActive' ? true : false} />
+                    <CategoryCard icon={fish} text="Meat & Fish" toLink="fish_meat" unavailable={true} unavailable={this.state['Meat & Fish'].Status==='InActive' ? true : false} />
                     <CategoryCard icon={homeFood} text="Home Food" toLink="home" unavailable={this.state['Home Food'].Status==='InActive' ? true : false} />
                     <CategoryCard icon={pet} text="Pet Supplies" toLink="pet" unavailable={this.state['Pet Supplies'].Status==='InActive' ? true : false} />
                     <CategoryCard icon={meds} text="Medicine Stores" toLink="meds" unavailable={this.state['Medicine Store'].Status==='InActive' ? true : false}/>
@@ -52,7 +52,8 @@ class Categories extends React.Component{
                     <CategoryCard icon={health} text="Health & Wellness" toLink="health" unavailable={this.state['Health & Wellness'].Status==='InActive' ? true : false} />
                     <CategoryCard icon={pkg} text="Package Pickup" toLink="package" unavailable={this.state['Package Pickup'].Status==='InActive' ? true : false} />
                     <CategoryCard icon={taxi} text="Taxi Service" toLink="taxi" unavailable={this.state['Taxi Service'].Status==='InActive' ? true : false} />
-                    <CategoryCard icon={fish} text="Fish & Meat" toLink="fish_meat" unavailable={true} unavailable={this.state['Meat & Fish'].Status==='InActive' ? true : false} />
+                    <CategoryCard icon={fruits} text="Fruits & Vegetables" toLink="fruits_veggies" unavailable={this.state['Fruits & Vegetables'].Status==='InActive' ? true : false} />
+                
                 </div> : 
                 null
                 }

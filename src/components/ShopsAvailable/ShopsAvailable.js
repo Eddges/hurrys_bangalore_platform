@@ -95,7 +95,8 @@ class ShopsAvailable extends React.Component{
                     <div className={classes.Left}>
                         <CategoryCardShops icon={food} text="Food Delivery" toLink="food" active={this.state.active} />
                         <CategoryCardShops icon={grocery} text="Groceries & Essentials" toLink="grocery" />
-                        <CategoryCardShops icon={fruits} text="Fruits & Vegetables" toLink="fruits_veggies" />
+                        <CategoryCardShops icon={fish} text="Meat & Fish" toLink="fish_meat" />
+                        {/* <CategoryCardShops icon={fruits} text="Fruits & Vegetables" toLink="fruits_veggies" /> */}
                         <CategoryCardShops icon={homeFood} text="Home Food" toLink="home" />
                         {/* <CategoryCardShops icon={fish} text="Fish & Meat" toLink="fish_meat" />
                         <CategoryCardShops icon={pet} text="Pet Supplies" toLink="pet" />

@@ -19,6 +19,7 @@ import ProfileEditPortal from '../Portal/ProfileEdit/ProfileEditPortal';
 import CustomerSupport from '../CustomerSupport/CustomerSupport';
 import CustomerFAQ from '../CustomerSupport/CustomerFAQ/CustomerFAQ'
 import FaqQues from '../CustomerSupport/FaqQues/FaqQues'
+import ReferralPage from '../Referral/ReferralPage'
 
 
 class ProfileSection extends React.Component{
@@ -26,8 +27,8 @@ class ProfileSection extends React.Component{
     state = {
         activeComponent : 'orders'
     }
-
     changeDisplay = (active) => {
+        console.log('Active : ', active)
         this.setState({
             ...this.state,
             activeComponent : active
@@ -37,22 +38,33 @@ class ProfileSection extends React.Component{
     render(){
 
         let active = <ProfileOrders />
-
+        console.log('Active prop : ', this.props.active)
         switch(this.props.active) {
             case 'orders' : 
+                console.log('Changing active to : ', this.props.active)
                 active = <ProfileOrders />
                 break
             case 'wallet' : 
+                console.log('Changing active to : ', this.props.active)
                 active = <MyWallet />
                 break
             case 'customer' :
+                console.log('Changing active to : ', this.props.active)
                 active = <CustomerSupport/>
                 break
             case 'faq' :
+                console.log('Changing active to : ', this.props.active)
                 active = <CustomerFAQ/>
                 break
             case 'fques' :
+                console.log('Changing active to : ', this.props.active)
                 active = <FaqQues/>
+                break
+            case 'refer' : 
+                console.log('Refer is active')
+                active = <ReferralPage/>
+                break
+                
         }
 
 
@@ -123,7 +135,7 @@ class ProfileSection extends React.Component{
                             </div>
                         </div>
 
-                        <NavLink to="/referral" className={classes.ProfileItem}>
+                        <NavLink to="/refer" className={classes.ProfileItem} onClick = {() => this.changeDisplay('refer')}>
                             <div className={classes.Left}>
                                 <img src={Gift} alt="Location" />
                                 <span>Refer Your Friends</span>

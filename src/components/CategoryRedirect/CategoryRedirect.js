@@ -8,6 +8,7 @@ import grocery from '../../assets/grocery-icon.svg'
 import fruits from '../../assets/fruits-vegetables.svg'
 import homeFood from '../../assets/home-food.png'
 import CategoryCard from '../Categories/CategoryCard/CategoryCard'
+import fish_meat from '../../assets/fish-meat.svg'
 
 const CategoryRedirect = (props) => {
 
@@ -23,7 +24,7 @@ const CategoryRedirect = (props) => {
                 <div className={classes.Categories}>
                     <CategoryCard icon={food} text="Food Delivery" toLink="food" />
                     <CategoryCard icon={grocery} text="Groceries & Essentials" toLink="grocery" />
-                    <CategoryCard icon={fruits} text="Fruits & Vegetables" toLink="fruits_veggies" />
+                    <CategoryCard icon={fish_meat} text="Meat & Fish" toLink="fish_meat" />
                     <CategoryCard icon={homeFood} text="Home Food" toLink="home" />
                 </div>
             </div>

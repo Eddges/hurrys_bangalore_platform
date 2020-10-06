@@ -13,7 +13,7 @@ class Delivery extends React.Component{
         return(
             <React.Fragment>
                 <Navbar />
-                <WebTop BG={DeliveryBG} highlight="Change Lives and Start Earning" subText="Help us reach millions hearts by becoming delivery partner for Hurry's" buttonText="BECOME A PARTNER" />
+                <WebTop BG={DeliveryBG} highlight="Change Lives and Start Earning" subText="Help us reach millions hearts by becoming delivery partner for Hurry's" buttonText="RIDE WITH US" />
                 <USP />
                 <MobileSection />
                 <Testimonial/>

@@ -115,6 +115,10 @@
   width: 70%;
 }
 
+.Container .Main .MainRight .Phone img:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 576px) {
   .Container .Main {
     -webkit-box-orient: vertical;

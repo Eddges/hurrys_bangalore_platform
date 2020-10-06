@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './CategoryCard.module.css'
 import { NavLink } from 'react-router-dom'
 import {connect} from 'react-redux'
+import {withRouter} from 'react-router-dom'
 
 const CategoryCard = (props) => {
 
@@ -19,21 +20,27 @@ const CategoryCard = (props) => {
     }
 
     return(
-        <NavLink className={classes.Container } to={props.unavailable ? "/redirect" : link } onClick={() => {
+        <div className={classes.Container } onClick={() => {
             props.onChangeCategory(props.text)
             window.scrollTo(0, 0)
+            if(props.red.location.generalAddress) {
+                props.history.push(`${props.unavailable ? '/redirect' : link}`)
+            }
+            else {
+                alert('Please select an address')
+            }
             }} >
             <div className={classes.Icon}>
                 <img src={props.icon} alt="Icon" />
             </div>
             <span className={classes.Text}>{props.text}</span>
-        </NavLink>
+        </div>
     )
 }
 
 const mapStateToProps = state => {
     return {
-        ctr : state.red
+        red : state.red
     }
 }
 
@@ -46,4 +53,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CategoryCard)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CategoryCard))

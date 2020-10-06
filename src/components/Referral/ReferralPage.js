@@ -8,16 +8,15 @@ import gplay from '../../assets/gplay.png';
 function ReferralPage() {
     return (
         <>
-            <div className = {styles.header}>
-                <NavbarAlt/>
-            </div>
+            {/* <div className = {styles.header}>
+            </div> */}
             <div className = {styles.main_container}>
                 <div className = {styles.left}>
                     <div className = {styles.box}>
                         <div className = {styles.header}>
                             <p style = {{marginLeft:'15px',color:'#999999', fontSize:'15px'}}>Referral</p>
                         </div>
-                        <p>Help us react out to your</p>
+                        <p>Help us reach out to your</p>
                         <p>friends and get</p>
                         <p> <span style = {{color:'black'}}>50% off</span> on </p>
                         <p>your next order*</p>
@@ -34,12 +33,12 @@ function ReferralPage() {
                     {/* <img src = {referralImg}/> */}
                     <div className = {styles.content}>
                     <img src = {referralImg}/>
-                    <p className = {styles.heading}>Download the app for a smoother experience</p>
+                    {/* <p className = {styles.heading}>Download the app for a smoother experience</p>
                     <p className = {styles.label}>Get things done right from your phone</p>
                     <div className = {styles.btn_wrapper}>
                         <img src = {gplay}/>
                         <img src = {applestore}/>
-                    </div>
+                    </div> */}
                     </div>
                 </div>
             </div>

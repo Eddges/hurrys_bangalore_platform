@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "ladningpage",
     "public": "build",
     "ignore": [
       "firebase.json",
