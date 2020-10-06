@@ -20,6 +20,7 @@ import CustomerSupport from '../CustomerSupport/CustomerSupport';
 import CustomerFAQ from '../CustomerSupport/CustomerFAQ/CustomerFAQ'
 import FaqQues from '../CustomerSupport/FaqQues/FaqQues'
 import ReferralPage from '../Referral/ReferralPage'
+import CouponPortal from '../Portal/CouponCode/CouponPortal'
 
 
 class ProfileSection extends React.Component{
@@ -128,7 +129,7 @@ class ProfileSection extends React.Component{
                         <div className={classes.ProfileItem}>
                             <div className={classes.Left}>
                                 <img src={Offers} alt="Location" />
-                                <span> Offer Zone </span>
+                                <span> <CouponPortal/> </span>
                             </div>
                             <div className={classes.ProfileItemRight}>
                                 <ion-icon name="chevron-forward"></ion-icon>
