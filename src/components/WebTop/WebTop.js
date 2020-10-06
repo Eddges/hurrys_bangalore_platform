@@ -6,7 +6,7 @@ const WebTop = (props) => {
         <div className={classes.WebTop} style={{'backgroundImage' : `url(${props.BG})`}}>
             <span className={classes.Highlight}>{props.highlight}</span>
             <span className={classes.SubText}>{props.subText}</span>
-            <button className={classes.TopButton}>{props.buttonText}</button>
+            <button className={classes.TopButton} onClick={props.showModal}>{props.buttonText}</button>
         </div>
     )
 }
