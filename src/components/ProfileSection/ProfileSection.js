@@ -21,6 +21,7 @@ import CustomerFAQ from '../CustomerSupport/CustomerFAQ/CustomerFAQ'
 import FaqQues from '../CustomerSupport/FaqQues/FaqQues'
 import ReferralPage from '../Referral/ReferralPage'
 import CouponPortal from '../Portal/CouponCode/CouponPortal'
+import CouponContent from '../Portal/CouponCode/CouponContent'
 
 
 class ProfileSection extends React.Component{
@@ -64,6 +65,10 @@ class ProfileSection extends React.Component{
             case 'refer' : 
                 console.log('Refer is active')
                 active = <ReferralPage/>
+                break
+            case 'coupon' : 
+                console.log('Refer is active')
+                active = <CouponContent/>
                 break
                 
         }
@@ -126,15 +131,15 @@ class ProfileSection extends React.Component{
                        
                         </NavLink>
 
-                        <div className={classes.ProfileItem}>
+                        <NavLink to="/coupon" className={classes.ProfileItem}>
                             <div className={classes.Left}>
                                 <img src={Offers} alt="Location" />
-                                <span> <CouponPortal/> </span>
+                                <span> Offer Zone</span>
                             </div>
                             <div className={classes.ProfileItemRight}>
                                 <ion-icon name="chevron-forward"></ion-icon>
                             </div>
-                        </div>
+                        </NavLink>
 
                         <NavLink to="/refer" className={classes.ProfileItem} onClick = {() => this.changeDisplay('refer')}>
                             <div className={classes.Left}>

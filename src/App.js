@@ -46,6 +46,7 @@ class App extends React.Component{
         <Route path="/profile-orders" exact render={() => <ProfileSection active="orders" />} />
         <Route path="/wallet" exact render={() => <ProfileSection active="wallet" />} />
         <Route path="/refer" exact render={() => <ProfileSection active="refer" />} />
+        <Route path="/coupon" exact render={() => <ProfileSection active="coupon" />} />
         <Route path="/package" exact render={() => <PackageDrop />} />
         <Route path="/customer-support" exact render={() => <ProfileSection active="customer" />} />
         <Route path="/customer-faq" exact render={() => <ProfileSection active="faq" />} />

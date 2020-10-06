@@ -91,7 +91,7 @@ class ProfileDrawer extends React.Component{
                         </div>
                     </div>
 
-                    <NavLink to="/referral" className={classes.ProfileItem}>
+                    <NavLink to="/refer" className={classes.ProfileItem}>
                         <div className={classes.Left}>
                             <img src={Gift} alt="Location" />
                             <span>Refer Your Friends</span>

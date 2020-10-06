@@ -249,7 +249,7 @@ class Checkout extends React.Component{
                         <CartCard showTotal={false} />
 
                         <div className={classes.Tip} onClick={this.fetchGoogle}>
-                            {/* <span className={classes.TipHeading}>Tip your delivery executive</span>
+                            <span className={classes.TipHeading}>Tip your delivery executive</span>
                             <span className={classes.TipText}>Thank your delivery executive in these tough times by paying a small amount to help</span>
                             <div className={classes.TipButtons}>
                                 <button className={classes.TipButton}>1</button>
@@ -257,7 +257,7 @@ class Checkout extends React.Component{
                                 <button className={classes.TipButton}>3</button>
                                 <button className={classes.TipButton}>4</button>
                                 <input className={classes.TipInput} placeholder="Custom" />
-                            </div> */}
+                            </div>
                             <div className={classes.OrderTotal}>
                                 <div className={classes.ItemTotal}>
                                     <span className={classes.ItemTotalText}>Item Total</span>

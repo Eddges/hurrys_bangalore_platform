@@ -38,7 +38,7 @@ function Footer() {
           </div>
       </div>
       <div className = {styles.footer_down}>
-        <p>© 2020 Hurry’s Technology Pvt. Ltd. </p>
+        <p>© Hurrys Corporation Pvt Ltd </p>
       </div>
     </div>
     )

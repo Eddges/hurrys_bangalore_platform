@@ -71,13 +71,15 @@ const ContactUs = (props) => {
                     <div className={classes.InfoPanel}>
                         <div className={classes.Left}>
                             <span className={classes.Heading}>Address :</span>
-                            <span className={classes.Info}>Address line one</span>
-                            <span className={classes.Info}>Address line two, pincode - 28931</span>
+                            <span className={classes.Info}>113 Montrose Avenue</span>
+                            <span className={classes.Info}>Luton</span>
+                            <span className={classes.Info}>LU3 1HP</span>
+                            <span className={classes.Info}>Bedfordshire</span>
                             <span className={classes.Heading}>Phone :</span>
-                            <span className={classes.Info}>+81 934200234</span>
+                            <span className={classes.Info}>07306021374</span>
                             <span className={classes.Heading}>Email :</span>
-                            <span className={classes.Info}>hello@mail.com</span>
-                            <span className={classes.Support}>Looking for support? <span>Click Here</span></span>
+                            <span className={classes.Info}>support@hurrys.co.uk</span>
+                            <span className={classes.Support}>Looking for support? <a href="mailto:support@hurrys.co.uk">Click Here</a></span>
                         </div>
                         <div className={classes.Right}>
                         {

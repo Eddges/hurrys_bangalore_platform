@@ -55,6 +55,8 @@
     padding-right: 3%;
     font-size: 10px;
     cursor: pointer;
+    width : 20%;
+    text-align: right;
 }
 
 .coupon_wrapper .divider {
