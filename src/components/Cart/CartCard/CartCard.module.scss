@@ -13,7 +13,7 @@
             display : flex;
             flex-direction: column;
             .Name{
-                font-family : 'Avenir Heavy';
+                font-family : 'Avenir Heavy', 'Roboto', sans-serif;
                 font-size : 1.2rem;
             }
             .Details{
@@ -23,7 +23,7 @@
         }
         .ButtonAddMore{
             color : #00b246;
-            font-family : 'Avenir Heavy';
+            font-family : 'Avenir Heavy', 'Roboto', sans-serif;
             border : none;
             background-color : transparent;
         }
@@ -43,7 +43,7 @@
                 background-color : transparent;
                 color : #00b246;
                 border : none;
-                font-family: 'Avenir Heavy';
+                font-family: 'Avenir Heavy', 'Roboto', sans-serif;
             }
         }
         .MidMid{
@@ -71,18 +71,18 @@
             .Span2{
                 color : #999;
                 // margin-top : 5px;
-                font-family : 'Avenir Heavy';
+                font-family : 'Avenir Heavy', 'Roboto', sans-serif;
                 font-size : 0.8rem;
             }
         }
         .CutleryPrice{
-            font-family: 'Avenir Heavy';
+            font-family: 'Avenir Heavy', 'Roboto', sans-serif;
         }
     }
     .Total{
         width : 100%;
         padding : 10px 30px;
-        font-family : 'Avenir Heavy';
+        font-family : 'Avenir Heavy', 'Roboto', sans-serif;
         display : flex;
         justify-content: space-between;
         font-size : 1.2rem;

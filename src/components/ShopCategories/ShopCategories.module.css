@@ -14,7 +14,7 @@
 
 .Container .Heading {
   padding: 20px 0px;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   font-size: 1.5rem;
 }
 

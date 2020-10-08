@@ -77,7 +77,7 @@
 }
 
 .Container .Main .Contact .InfoPanel .Left .Info {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
 }
 
 .Container .Main .Contact .InfoPanel .Left .aboutInfo {

@@ -61,7 +61,7 @@
 
 .Container .Amount {
   font-size: 1.5rem;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
 }
 
 @media (max-width: 576px) {

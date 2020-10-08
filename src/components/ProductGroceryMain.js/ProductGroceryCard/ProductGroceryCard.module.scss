@@ -58,7 +58,7 @@
             span{
                 margin-left : 8px;
                 margin-top : 2px;
-                font-family : 'Avenir Heavy';
+                font-family : 'Avenir Heavy', 'Roboto', sans-serif;
                 color : #b8b8b8;
             }
         }
@@ -133,7 +133,7 @@
                 padding : 5px 18px;
                 border : none;
                 background-color : #f4f4f4;
-                font-family : 'Avenir Heavy';
+                font-family : 'Avenir Heavy', 'Roboto', sans-serif;
                 color : #00b246;
                 border-radius : 5px;
                 &:hover{
@@ -147,13 +147,13 @@
                 .Highlite{
                     font-size : 1rem;
                     color : #00b246;
-                    font-family: 'Avenir Heavy';
+                    font-family: 'Avenir Heavy', 'Roboto', sans-serif;
                     &:hover{
                         cursor: pointer;
                     }
                 }
                 .Quant{
-                    font-family: 'Avenir Heavy';
+                    font-family: 'Avenir Heavy', 'Roboto', sans-serif;
                     padding : 0px 5px;
                 }
             }

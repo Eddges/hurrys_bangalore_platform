@@ -86,14 +86,14 @@
 }
 
 .Container .Main .Right .Brand span {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   color: #9b9b9b;
   margin-left: 10px;
   font-size: 0.8rem;
 }
 
 .Container .Main .Right .ProductName {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   font-size: 1.5rem;
   padding: 10px 0px;
 }
@@ -131,12 +131,12 @@
 
 .Container .Main .Right .VarietyTable .Item .ItemLeft {
   width: 35%;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
 }
 
 .Container .Main .Right .VarietyTable .Item .ItemMiddle {
   width: 30%;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
 }
 
 .Container .Main .Right .VarietyTable .Item .ItemMiddle span {
@@ -146,7 +146,7 @@
 
 .Container .Main .Right .VarietyTable .Item .ButtonAdd {
   justify-self: flex-end;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   background-color: #eaeaea;
   padding: 8px 20px;
   border-radius: 5px;
@@ -173,7 +173,7 @@
 .Container .Main .Right .VarietyTable .Quantity .Highlite {
   font-size: 1rem;
   color: #00b246;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
 }
 
 .Container .Main .Right .VarietyTable .Quantity .Highlite:hover {
@@ -181,7 +181,7 @@
 }
 
 .Container .Main .Right .VarietyTable .Quantity .Quant {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   padding: 0px 5px;
 }
 
@@ -235,7 +235,7 @@
 }
 
 .Container .Main .Right .Description .DescriptionHeading {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   font-size: 1.5rem;
 }
 
@@ -257,7 +257,7 @@
 }
 
 .Container .Main .Right .Features .FeaturesHeading {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   font-size: 1.5rem;
 }
 
@@ -285,7 +285,7 @@
 }
 
 .Container .Main .Right .Features .FeaturesItem .FeaturesItemRight .FeaturesItemHeading {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   font-size: 1.2rem;
 }
 

@@ -9,7 +9,7 @@
 }
 
 .Container .WalletHeading {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   font-size: 1.5rem;
   padding: 30px 40px;
 }
@@ -80,7 +80,7 @@
 
 .Container .Main .MainRight .AvailableBalance .Heading {
   font-size: 1.2rem;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
 }
 
 .Container .Main .MainRight .AvailableBalance .Balance {
@@ -101,7 +101,7 @@
 
 .Container .Main .MainRight .Phone .Heading {
   margin-top: 10px;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   font-size: 1.2rem;
 }
 

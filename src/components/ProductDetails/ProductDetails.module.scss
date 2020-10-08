@@ -44,14 +44,14 @@
                     }
                 }
                 span{
-                    font-family: 'Avenir Heavy';
+                    font-family: 'Avenir Heavy', 'Roboto', sans-serif;
                     color : #9b9b9b;
                     margin-left : 10px;
                     font-size : 0.8rem;
                 }
             }
             .ProductName{
-                font-family: 'Avenir Heavy';
+                font-family: 'Avenir Heavy', 'Roboto', sans-serif;
                 font-size : 1.5rem;
                 padding : 10px 0px;
             }
@@ -74,11 +74,11 @@
                     .ItemLeft{
                         width : 35%;
                         // background-color: coral;
-                        font-family: 'Avenir Heavy';
+                        font-family: 'Avenir Heavy', 'Roboto', sans-serif;
                     }
                     .ItemMiddle{
                         width: 30%;
-                        font-family: 'Avenir Heavy';
+                        font-family: 'Avenir Heavy', 'Roboto', sans-serif;
                         span{
                             font-size : 0.8rem;
                             color : #9b9b9b;
@@ -86,7 +86,7 @@
                     }
                     .ButtonAdd{
                         justify-self: flex-end;
-                        font-family: 'Avenir Heavy';
+                        font-family: 'Avenir Heavy', 'Roboto', sans-serif;
                         background-color: #eaeaea;
                         padding : 8px 20px;
                         border-radius: 5px;
@@ -109,13 +109,13 @@
                     .Highlite{
                         font-size : 1rem;
                         color : #00b246;
-                        font-family: 'Avenir Heavy';
+                        font-family: 'Avenir Heavy', 'Roboto', sans-serif;
                         &:hover{
                             cursor: pointer;
                         }
                     }
                     .Quant{
-                        font-family: 'Avenir Heavy';
+                        font-family: 'Avenir Heavy', 'Roboto', sans-serif;
                         padding : 0px 5px;
                     }
                 }
@@ -152,7 +152,7 @@
                 display : flex;
                 flex-direction: column;
                 .DescriptionHeading{
-                    font-family: 'Avenir Heavy';
+                    font-family: 'Avenir Heavy', 'Roboto', sans-serif;
                     font-size : 1.5rem;
                 }
                 .DescriptionContent{
@@ -167,7 +167,7 @@
                 flex-direction: column;
                 padding-bottom : 100px;
                 .FeaturesHeading{
-                    font-family: 'Avenir Heavy';
+                    font-family: 'Avenir Heavy', 'Roboto', sans-serif;
                     font-size : 1.5rem;
                 }
                 .FeaturesItem{
@@ -183,7 +183,7 @@
                         display : flex;
                         flex-direction: column;
                         .FeaturesItemHeading{
-                            font-family: 'Avenir Heavy';
+                            font-family: 'Avenir Heavy', 'Roboto', sans-serif;
                             font-size : 1.2rem;
                         }
                         .FeaturesItemContent{

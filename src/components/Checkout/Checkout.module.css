@@ -153,7 +153,7 @@
 .Container .Main .Left .Accordion .AccordionDrop .AddressDropItem button {
   background-color: transparent;
   border: none;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   color: #00b246;
 }
 
@@ -174,7 +174,7 @@
 .Container .Main .Left .Accordion .AccordionDrop .DeliveryControls .AddressAdd {
   border: none;
   background-color: transparent;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   color: #00b246;
   font-size: 0.9rem;
 }
@@ -232,7 +232,7 @@
 }
 
 .Container .Main .Right .Tip .TipHeading {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   font-size: 1.2rem;
 }
 
@@ -296,7 +296,7 @@
 }
 
 .Container .Main .Right .OrderTotal .ItemTotal .ItemTotalText {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   color: #707070;
 }
 
@@ -325,12 +325,12 @@
 
 .Container .Main .Right .FinalTotal .FinalTotalHeading {
   font-size: 1.2rem;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
 }
 
 .Container .Main .Right .FinalTotal .FinalTotalTotal {
   font-size: 1.2rem;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
 }
 
 @media (max-width: 576px) {

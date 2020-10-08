@@ -33,7 +33,7 @@
 }
 
 .Container .Top .Shop .Name {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   font-size: 1.2rem;
 }
 
@@ -44,7 +44,7 @@
 
 .Container .Top .ButtonAddMore {
   color: #00b246;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   border: none;
   background-color: transparent;
 }
@@ -78,7 +78,7 @@
   background-color: transparent;
   color: #00b246;
   border: none;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
 }
 
 .Container .Mid .MidMid {
@@ -124,18 +124,18 @@
 
 .Container .Cutlery .CutleryText .Span2 {
   color: #999;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   font-size: 0.8rem;
 }
 
 .Container .Cutlery .CutleryPrice {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
 }
 
 .Container .Total {
   width: 100%;
   padding: 10px 30px;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

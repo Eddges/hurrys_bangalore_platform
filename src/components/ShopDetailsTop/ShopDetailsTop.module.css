@@ -41,7 +41,7 @@
 }
 
 .Top .Left .Details .ShopName {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   font-size: 2rem;
 }
 

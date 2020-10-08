@@ -32,7 +32,7 @@
 }
 
 .HomepageTop .Highlite {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
 }
 
 .HomepageTop .Rectangle {
@@ -150,7 +150,7 @@
 }
 
 .HomepageTop .Frequent :nth-child(2) {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
 }
 
 @media (max-width: 1030px) {

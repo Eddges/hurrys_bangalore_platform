@@ -70,7 +70,7 @@
     border-radius: 5px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
     color : white;
-    font-family: 'Avenir Heavy';
+    font-family: 'Avenir Heavy', 'Roboto', sans-serif;
     font-size : 0.8rem;
     border: none;
 }

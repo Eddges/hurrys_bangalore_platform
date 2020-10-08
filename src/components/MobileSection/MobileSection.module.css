@@ -24,7 +24,7 @@
 
 .MobileSection .Left .Title {
   color: white;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   font-size: 2.5rem;
   position: relative;
   z-index: 10;

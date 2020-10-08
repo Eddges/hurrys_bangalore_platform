@@ -33,7 +33,7 @@
 }
 
 .Container .Main .ExitButton {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   color: white;
   background-color: #00b246;
   padding: 5px 20px;

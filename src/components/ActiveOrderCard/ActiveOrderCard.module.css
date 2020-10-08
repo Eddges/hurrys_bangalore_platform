@@ -44,7 +44,7 @@
 
 .Container .ActiveTop .OrderStatus {
   font-size: 1rem;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   width: 190px;
   margin-left: 15px;
 }
@@ -54,7 +54,7 @@
   padding: 8px 20px;
   border-radius: 5px;
   color: #00b246;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
 }
 
 .Container .Details {
@@ -83,7 +83,7 @@
 .Container .Details .Right {
   width: 100px;
   font-size: 1rem;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
 }
 
 .Container .Details .Right .Remaining {
@@ -122,7 +122,7 @@
 }
 
 .Container .Payment .Left .Amount {
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
 }
 
 .Container .Payment .Right {
@@ -191,7 +191,7 @@
 
 .Container .SupportCustomer {
   margin-top: 10px;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
   font-size: 1.2rem;
   color: #00b246;
 }
