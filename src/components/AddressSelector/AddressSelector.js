@@ -4,7 +4,7 @@ import { compose, withStateHandlers } from "recompose";
 import { InfoWindow, withGoogleMap, withScriptjs, GoogleMap, Marker } from 'react-google-maps';
 import {connect} from 'react-redux'
 import Pin from '../../assets/pin.svg'
-
+import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 
 
 class AddressSelector extends React.Component{
@@ -70,11 +70,32 @@ class AddressSelector extends React.Component{
         this.props.modalClose()
     }
 
-    handleInputChange = (e) => {
+    handleInputChange = (address) => {
         this.setState({
             ...this.state,
-            address : e.target.value
+            address : address
+        });
+    }
+
+    handleSelect = address => {
+        console.log('Selected address : ', address)
+        geocodeByAddress(address)
+        .then(results => {
+            return getLatLng(results[0])})
+        .then(latLng => {
+            console.log(latLng)
+            this.setState({
+                ...this.state,
+                address : address,
+                latitude : latLng.lat,
+                longitude : latLng.lng,
+                markerPosition : latLng,
+                isMarkerShown : true
+            }, () => {
+                console.log('Changed state : ', this.state)
+            })
         })
+        .catch(error => console.error('Error', error));
     }
 
     render(){
@@ -128,9 +149,46 @@ class AddressSelector extends React.Component{
                         <div className={classes.Locate} onClick={this.getLocation}>
                             <img src={Pin} alt="Pin" />
                         </div>
-                        <input className={classes.InputAddress} value={this.state.address} onChange={this.handleInputChange} placeholder="Click on the map to set location" />
+                        <PlacesAutocomplete
+                            value={this.state.address}
+                            onChange={this.handleInputChange}
+                            onSelect={this.handleSelect}
+                        >
+                            {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                            <div className={classes.InputAddress}>
+                                <input
+                                {...getInputProps({
+                                    placeholder: 'Search Places ...',
+                                    className: 'location-search-input',
+                                })}
+                                />
+                                {/* className="autocomplete-dropdown-container" */}
+                                <div className={classes.AutocompleteContainer}>
+                                {loading && <div>Loading...</div>}
+                                {suggestions.map(suggestion => {
+                                    const className = suggestion.active
+                                    ? `${classes.SuggestionItemActive}`
+                                    : `${classes.SuggestionItem}`;
+                                    // inline style for demonstration purpose
+
+                                    return (
+                                    <div
+                                        {...getSuggestionItemProps(suggestion, {
+                                        className,
+                                        
+                                        })}
+                                    >
+                                        <span>{suggestion.description}</span>
+                                    </div>
+                                    );
+                                })}
+                                </div>
+                            </div>
+                            )}
+                        </PlacesAutocomplete>
+                        {/* <input className={classes.InputAddress} value={this.state.address} onChange={this.handleInputChange} placeholder="Click on the map to set location" /> */}
                     </div>
-                    
+                    <div className={classes.Absolute}></div>
                     <div className={classes.MapDisplay}>
                         <Map
                             googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhYZ7B9Qf6DWiixOxZf2GYciJIrmbQHoA"

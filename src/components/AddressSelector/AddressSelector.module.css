@@ -72,6 +72,8 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin-top: 30px;
+  position: relative;
+  z-index: 100;
 }
 
 .Container .Main .AddressBar .Locate {
@@ -95,6 +97,47 @@
   cursor: pointer;
 }
 
+.Container .Main .AddressBar .AutocompleteContainer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border-top: solid 1px #b5b5b5;
+  margin-top: 40px;
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.179);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.179);
+  z-index: 19500;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Container .Main .AddressBar .AutocompleteContainer .SuggestionItem {
+  padding: 15px;
+  font-family: 'Avenir';
+  width: 500px;
+  background-color: white;
+}
+
+.Container .Main .AddressBar .AutocompleteContainer .SuggestionItem:hover {
+  cursor: pointer;
+}
+
+.Container .Main .AddressBar .AutocompleteContainer .SuggestionItemActive {
+  padding: 15px;
+  font-family: 'Avenir';
+  width: 500px;
+  background-color: #f2f2f2;
+}
+
+.Container .Main .AddressBar .AutocompleteContainer .SuggestionItemActive:hover {
+  cursor: pointer;
+}
+
 .Container .Main .AddressBar .InputAddress {
   width: 90%;
   border-radius: 5px;
@@ -104,12 +147,30 @@
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.282);
   height: 40px;
   padding: 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 0;
+}
+
+.Container .Main .AddressBar .InputAddress input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  position: relative;
+  z-index: 0;
 }
 
 .Container .Main .MapDisplay {
   width: 90%;
   margin-top: 20px;
   height: 350px;
+  position: relative;
+  z-index: 10;
 }
 
 .Container .Main .ButtonAdd {
