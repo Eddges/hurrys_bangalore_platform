@@ -22,6 +22,7 @@ import FaqQues from '../CustomerSupport/FaqQues/FaqQues'
 import ReferralPage from '../Referral/ReferralPage'
 import CouponPortal from '../Portal/CouponCode/CouponPortal'
 import CouponContent from '../Portal/CouponCode/CouponContent'
+import ProfileManageAddress from '../ProfileManageAddress/ProfileManageAddress'
 
 
 class ProfileSection extends React.Component{
@@ -70,7 +71,10 @@ class ProfileSection extends React.Component{
                 console.log('Refer is active')
                 active = <CouponContent/>
                 break
-                
+            case 'address' : 
+                console.log('Manage address active')
+                active = <ProfileManageAddress />
+                break
         }
 
 

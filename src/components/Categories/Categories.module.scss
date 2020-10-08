@@ -2,11 +2,12 @@
     width : 100%;
     display : flex;
     flex-direction : column;
-    padding : 50px 100px;
+    padding : 50px 50px;
     .Heading{
         font-family : 'Avenir Heavy';
         font-size : 2rem;
-        // margin-left : 40px;
+        margin-left : 50px;
+
     }
     .CategoriesMain{
         margin-top : 40px;
@@ -14,7 +15,11 @@
         display : flex;
         flex-wrap : wrap;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
+        .MainCards{
+            display : flex;
+            width : auto;
+        }
     }
 }
 

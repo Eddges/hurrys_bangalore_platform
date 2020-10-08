@@ -7,12 +7,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 50px 100px;
+  padding: 50px 50px;
 }
 
 .Categories .Heading {
   font-family: 'Avenir Heavy';
   font-size: 2rem;
+  margin-left: 50px;
 }
 
 .Categories .CategoriesMain {
@@ -26,9 +27,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Categories .CategoriesMain .MainCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
 }
 
 @media (max-width: 576px) {

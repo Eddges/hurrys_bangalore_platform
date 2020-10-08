@@ -57,6 +57,14 @@ const User = (state = initialState, action) => {
                 ...state,
                 address : pushingAddress
             }
+        case 'REMOVE_ADDRESS' : 
+            const newAddress = state.address.filter((iterator) => {
+                return iterator.address!==action.payload
+            })
+            return{
+                ...state,
+                address : newAddress
+            }
         case 'SET_ITEMS_COST' : 
             console.log('Items cost changing to : ', action.payload)
             return{

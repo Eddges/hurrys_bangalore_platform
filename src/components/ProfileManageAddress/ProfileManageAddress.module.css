@@ -1,0 +1,87 @@
+.Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.Container .AddressItem {
+  width: 400px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.172);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.172);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.Container .AddressItem .AddressName {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'Avenir Heavy', 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.Container .AddressItem .AddressName img {
+  cursor: pointer;
+}
+
+.Container .AddressItem .AddressMiddle {
+  width: 100%;
+  margin-top: 20px;
+  color: gray;
+  text-align: left;
+}
+
+.Container .AddressAdd {
+  width: 400px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.172);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.172);
+  padding: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-top: 20px;
+}
+
+.Container .AddressAdd:hover {
+  background-color: whitesmoke;
+}
+/*# sourceMappingURL=ProfileManageAddress.module.css.map */
